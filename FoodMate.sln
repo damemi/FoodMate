@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMate", "FoodMate\FoodMate.csproj", "{5389400B-7965-4381-A135-AFE963E6E35E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodMate_Android", "FoodMate\FoodMate_Android.csproj", "{5389400B-7965-4381-A135-AFE963E6E35E}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{915047FA-7CC9-4692-AAE5-865B259A27A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

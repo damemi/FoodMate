@@ -1,1 +1,3 @@
-﻿<Properties StartupItem="FoodMate\FoodMate.csproj" />
+﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
+  <MonoDevelop.Ide.ItemProperties.FoodMate__Android MonoForAntroid.PreferredDevice="Nexus 4" />
+</Properties>
