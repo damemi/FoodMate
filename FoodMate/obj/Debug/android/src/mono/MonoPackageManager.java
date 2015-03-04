@@ -68,6 +68,7 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"FoodMate.dll",
+		"Parse.Android.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

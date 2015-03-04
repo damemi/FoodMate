@@ -1,1 +1,2 @@
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\FoodMate.dll
+C:\Users\Mike\Documents\Projects\FoodMate\Components\parse-1.3.4\lib\android\Parse.Android.dll
