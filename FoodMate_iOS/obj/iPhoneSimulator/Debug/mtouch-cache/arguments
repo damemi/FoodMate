@@ -1,0 +1,29 @@
+# Version: 8.6.3.3 (90e32d0)
+# [first argument, ignore] # /Users/Jaz/FoodMate/FoodMate_iOS/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.3.3/bin/mtouch-64 \
+	--cache \
+	/Users/Jaz/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	--sim \
+	/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.app \
+	--executable \
+	FoodMate_iOS \
+	--debug \
+	--nolink \
+	--sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--sdk \
+	8.2 \
+	--targetver \
+	8.0 \
+	--abi=i386 \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/mscorlib.dll \
+	/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug//FoodMate_iOS.exe \

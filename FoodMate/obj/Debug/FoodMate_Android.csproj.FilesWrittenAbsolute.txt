@@ -1,0 +1,2 @@
+/Users/Jaz/FoodMate/FoodMate/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/Jaz/FoodMate/FoodMate/obj/Debug/FoodMate.dll
