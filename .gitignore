@@ -26,4 +26,4 @@ UpgradeLog.*
 *.dotCover
 
 #appID file
-appID.txt
+*appID.txt
