@@ -14,3 +14,9 @@
 /Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.exe
 /Users/Jaz/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/FoodMate_iOS.exe
 /Users/Jaz/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/FoodMate_iOS.exe.mdb
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/Jaz/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
