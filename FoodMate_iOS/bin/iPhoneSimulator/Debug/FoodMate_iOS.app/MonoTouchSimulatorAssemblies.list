@@ -1,0 +1,11 @@
+mscorlib.dll
+System.dll
+System.Xml.dll
+System.Core.dll
+Mono.Dynamic.Interpreter.dll
+Xamarin.Auth.iOS.dll
+System.Json.dll
+Newtonsoft.Json.dll
+System.Runtime.Serialization.dll
+Parse.iOS.dll
+System.Net.Http.dll
