@@ -1,2 +1,3 @@
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\FoodMate.dll
+C:\Users\Mike\Documents\Projects\FoodMate\Components\facebook-sdk-6.2.2\lib\android\Facebook.dll
 C:\Users\Mike\Documents\Projects\FoodMate\Components\parse-1.3.4\lib\android\Parse.Android.dll

@@ -1,0 +1,25 @@
+﻿<Properties StartupItem="FacebookSample.Android\FacebookSample.Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\FoodMate\Properties\AndroidManifest.xml">
+    <Files>
+      <File FileName="..\..\..\..\FoodMate\MainActivity.cs" Line="16" Column="16" />
+      <File FileName="..\..\..\..\FoodMate\Resources\Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\FoodMate\FBWebViewAuthActivity.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\FoodMate\Properties\AndroidManifest.xml" Line="12" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FacebookSample.Android" expanded="True">
+            <Node name="Properties" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.FacebookSample.Android MonoForAntroid.PreferredDevice="Nexus 4" />
+</Properties>

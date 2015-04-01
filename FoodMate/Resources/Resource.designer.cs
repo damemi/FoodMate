@@ -26,6 +26,7 @@ namespace FoodMate
 		
 		public static void UpdateIdValues()
 		{
+			global::FacebookMonoDroid.Resource.String.library_name = global::FoodMate.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -60,8 +61,29 @@ namespace FoodMate
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050007
+			public const int btnFQLSample = 2131034119;
+			
+			// aapt resource value: 0x7f050006
+			public const int btnGraphSample = 2131034118;
+			
+			// aapt resource value: 0x7f050002
+			public const int btnLogin = 2131034114;
+			
+			// aapt resource value: 0x7f050004
+			public const int btnPostWall = 2131034116;
+			
+			// aapt resource value: 0x7f050005
+			public const int btnRemovePost = 2131034117;
+			
 			// aapt resource value: 0x7f050000
-			public const int myButton = 2131034112;
+			public const int imgUser = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int linearLayout1 = 2131034115;
+			
+			// aapt resource value: 0x7f050001
+			public const int txtvUserName = 2131034113;
 			
 			static Id()
 			{
@@ -92,11 +114,17 @@ namespace FoodMate
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040002
+			public const int app_name = 2130968578;
+			
 			// aapt resource value: 0x7f040001
-			public const int app_name = 2130968577;
+			public const int facebookLogin = 2130968577;
+			
+			// aapt resource value: 0x7f040003
+			public const int hello = 2130968579;
 			
 			// aapt resource value: 0x7f040000
-			public const int hello = 2130968576;
+			public const int library_name = 2130968576;
 			
 			static String()
 			{

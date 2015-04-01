@@ -10,14 +10,14 @@ using Facebook;
 using System.Collections.Generic;
 using Android.Graphics;
 
-namespace FacebookSample.Android
+namespace FoodMate
 {
-	[Activity (Label = "FacebookSample.Android", MainLauncher = true)]
-	public class Activity1 : Activity
+	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon")]
+	public class MainActivity : Activity
 	{
 		// Replace here you own Facebook App Id, if you don't have one go to
 		// https://developers.facebook.com/apps
-		private const string AppId = "YOUR_FACEBOOK_APP_ID_HERE";
+		private const string AppId = "716545131791857";
 		
 		/// <summary>
 		/// Extended permissions is a comma separated list of permissions to ask the user.
@@ -67,7 +67,7 @@ namespace FacebookSample.Android
 
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.SetTitle("Get/Replace Facebook App ID");
-				builder.SetIcon(Android.Resource.Drawable.Icon);
+				builder.SetIcon(Resource.Drawable.Icon);
 				builder.SetMessage(msg);	
 				builder.Show();
 			}
@@ -214,7 +214,7 @@ namespace FacebookSample.Android
 		{
 			AlertDialog.Builder builder = new AlertDialog.Builder(this);
 			builder.SetTitle(title);
-			builder.SetIcon(Android.Resource.Drawable.Icon);
+			builder.SetIcon(Resource.Drawable.Icon);
 			builder.SetMessage(message);
 
 			builder.SetPositiveButton("Ok", (sender, e) => {

@@ -1,0 +1,166 @@
+initLibrary()
+Initialized library.
+initOpenGLRenderer(768,1280,0026E61C,256)
+RenderServer::create creating TCP streamlisten: created loopback server
+ started renderer thread.
+rcGetFBParam(1)
+Requested FB width: return 768rcGetFBParam(2)
+Requested FB height: return 1280rcGetFBParam(8)
+rcGetFBParam(8)
+rcGetFBParam(5)
+rcGetFBParam(6)
+rcGetFBParam(7)
+rcGetFBParam(8)
+rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 1rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 9rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 13rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 16rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 22rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 30eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+initLibrary()
+Initialized library.
+initOpenGLRenderer(768,1280,0034EAFC,256)
+RenderServer::create creating TCP streamlisten: created loopback server
+ started renderer thread.
+rcGetFBParam(1)
+Requested FB width: return 768rcGetFBParam(2)
+Requested FB height: return 1280rcGetFBParam(8)
+rcGetFBParam(8)
+rcGetFBParam(5)
+rcGetFBParam(6)
+rcGetFBParam(7)
+rcGetFBParam(8)
+rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 1rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 9rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 13rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 16rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 22rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 29eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+initLibrary()
+Initialized library.
+initOpenGLRenderer(768,1280,00A0ECEC,256)
+RenderServer::create creating TCP streamlisten: created loopback server
+ started renderer thread.
+rcGetFBParam(1)
+Requested FB width: return 768rcGetFBParam(2)
+Requested FB height: return 1280rcGetFBParam(8)
+rcGetFBParam(8)
+rcGetFBParam(5)
+rcGetFBParam(6)
+rcGetFBParam(7)
+rcGetFBParam(8)
+rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 1rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 9rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 13rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 16rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 21rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 29initLibrary()
+Initialized library.
+initOpenGLRenderer(768,1280,0090E6FC,256)
+RenderServer::create creating TCP streamlisten: created loopback server
+ started renderer thread.
+rcGetFBParam(1)
+Requested FB width: return 768rcGetFBParam(2)
+Requested FB height: return 1280rcGetFBParam(8)
+rcGetFBParam(8)
+rcGetFBParam(5)
+rcGetFBParam(6)
+rcGetFBParam(7)
+rcGetFBParam(8)
+rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 1rcCreateContext: FrameBuffer::getFB returned something, calling createRenderContext...
+createRenderContext: Returning 9eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed
+eglMakeCurrent failed
+FrameBuffer::post eglMakeCurrent failed

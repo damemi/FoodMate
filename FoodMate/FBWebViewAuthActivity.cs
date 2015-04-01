@@ -15,7 +15,7 @@ using Android.Graphics;
 
 using Facebook;
 
-namespace FacebookSample.Android
+namespace FoodMate
 {
 	[Activity (Label = "FBWebViewAuthActivity")]			
 	public class FBWebViewAuthActivity : Activity

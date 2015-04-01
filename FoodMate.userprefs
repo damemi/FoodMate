@@ -1,22 +1,13 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus_5_API_21_x86" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\FBWebViewAuthActivity.cs">
     <Files>
       <File FileName="FoodMate\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\Resources\Resource.designer.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\FBWebViewAuthActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\Properties\AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="FoodMate\Properties\AssemblyInfo.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="FoodMate_Android" expanded="True">
-            <Node name="References" expanded="True" />
-            <Node name="ComponentReferenceFolder" expanded="True">
-              <Node name="ComponentReference" selected="True" />
-            </Node>
-          </Node>
-          <Node name="Shared" expanded="True" />
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
