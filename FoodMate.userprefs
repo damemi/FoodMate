@@ -1,12 +1,10 @@
-﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\FBWebViewAuthActivity.cs">
+﻿<Properties StartupItem="FoodMate/FoodMate_Android.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Shared/DatabaseOperations.cs">
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\Resources\Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\FBWebViewAuthActivity.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\Properties\AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="FoodMate\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="Shared/DatabaseOperations.cs" Line="4" Column="4" />
+      <File FileName="FoodMate_iOS/SecondViewController.cs" Line="1" Column="1" />
+      <File FileName="FoodMate_iOS/FirstViewController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

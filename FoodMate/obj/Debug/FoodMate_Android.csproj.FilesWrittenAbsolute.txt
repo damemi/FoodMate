@@ -1,2 +1,22 @@
 /Users/Jaz/FoodMate/FoodMate/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
 /Users/Jaz/FoodMate/FoodMate/obj/Debug/FoodMate.dll
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/MonoAndroid,Version=v5.0.AssemblyAttribute.cs
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/FoodMate.dll.mdb
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/FoodMate.dll
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/FoodMate.FoodMate.apk
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/android/bin/FoodMate.FoodMate.apk
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/drawable-hdpi/icon.png
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/drawable-mdpi/icon.png
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/drawable-xhdpi/icon.png
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/drawable-xxhdpi/icon.png
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/drawable-xxxhdpi/icon.png
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/values/strings.xml.bak
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/values/strings.xml
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/res/layout/main.xml
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/R.cs.flag
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/FoodMate.FoodMate-Signed.apk
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/uploadflags.txt
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/FoodMate.dll
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/FoodMate.dll.mdb
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/Parse.Android.dll
+/Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/Facebook.dll
