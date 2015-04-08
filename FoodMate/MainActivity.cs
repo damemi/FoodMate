@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
+//using Android.Runtime;
+//using Android.Views;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V4.View;
-using Android.Support.V4.App;
+//using Android.Support.V4.View;
+//using Android.Support.V4.App;
 
 using Facebook;
 using Android.Graphics;
@@ -48,13 +48,14 @@ namespace FoodMate
 				}
 
 
-				//var accessToken = ee.Account.Properties["access_token"].ToString();
-				//var expiresIn = Convert.ToDouble(ee.Account.Properties["expires_in"]);
-				//var expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
+				var accessToken = ee.Account.Properties["access_token"].ToString();
+				var expiresIn = Convert.ToDouble(ee.Account.Properties["expires_in"]);
+				var expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
 
 
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
-				/*var response = request.GetResponseAsync();
+
+				var response = request.GetResponseAsync();
 				var obj = JsonValue.Parse (response.Result.GetResponseText());
 
 				var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
@@ -62,9 +63,9 @@ namespace FoodMate
 				var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
 
 				var inventory = new Intent (this, typeof(InventoryActivity));
-				StartActivity (inventory);*/
+				StartActivity (inventory);
 
-				request.GetResponseAsync().ContinueWith (t => {
+				/*request.GetResponseAsync().ContinueWith (t => {
 					var builder = new AlertDialog.Builder (this);
 					if (t.IsFaulted) {
 						builder.SetTitle ("Error");
@@ -76,11 +77,13 @@ namespace FoodMate
 
 						builder.SetTitle ("Logged in");
 						builder.SetMessage ("Name: " + obj["name"]);
+						var id = obj["id"].ToString().Replace("\"","");
+						var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
 					}
 
 					builder.SetPositiveButton ("Ok", (o, e) => { });
 					builder.Create().Show();
-				}, UIScheduler);
+				}, UIScheduler);*/
 
 			};
 
@@ -160,7 +163,7 @@ namespace FoodMate
 
 				fb = new FacebookClient (accessToken);
 
-				ImageView imgUser = FindViewById<ImageView> (Resource.Id.imgUser);
+				//ImageView imgUser = FindViewById<ImageView> (Resource.Id.imgUser);
 				TextView txtvUserName = FindViewById<TextView> (Resource.Id.txtvUserName);
 
 				fb.GetTaskAsync ("me").ContinueWith( t => {
@@ -176,7 +179,7 @@ namespace FoodMate
 						//int fbid = (int)result["id"];
 						
 						RunOnUiThread (()=> {
-							imgUser.SetImageBitmap (bm);
+							//imgUser.SetImageBitmap (bm);
 							txtvUserName.Text = profileName;
 						});
 						Console.WriteLine(userId);

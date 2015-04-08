@@ -426,8 +426,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f080003
 			public const int box_count = 2131230723;
 			
-			// aapt resource value: 0x7f080029
-			public const int btnLogin = 2131230761;
+			// aapt resource value: 0x7f080028
+			public const int btnLogin = 2131230760;
 			
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
@@ -510,9 +510,6 @@ namespace FoodMate
 			// aapt resource value: 0x7f080024
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230756;
 			
-			// aapt resource value: 0x7f080027
-			public const int imgUser = 2131230759;
-			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
 			
@@ -522,8 +519,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f08000a
 			public const int left = 2131230730;
 			
-			// aapt resource value: 0x7f08002a
-			public const int linearLayout1 = 2131230762;
+			// aapt resource value: 0x7f080029
+			public const int linearLayout1 = 2131230761;
 			
 			// aapt resource value: 0x7f080001
 			public const int normal = 2131230721;
@@ -543,14 +540,14 @@ namespace FoodMate
 			// aapt resource value: 0x7f080005
 			public const int standard = 2131230725;
 			
-			// aapt resource value: 0x7f08002b
-			public const int textView1 = 2131230763;
+			// aapt resource value: 0x7f08002a
+			public const int textView1 = 2131230762;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
 			
-			// aapt resource value: 0x7f080028
-			public const int txtvUserName = 2131230760;
+			// aapt resource value: 0x7f080027
+			public const int txtvUserName = 2131230759;
 			
 			static Id()
 			{

@@ -301,7 +301,7 @@ containing a value of this type.
     public static final class id {
         public static final int bottom=0x7f080006;
         public static final int box_count=0x7f080003;
-        public static final int btnLogin=0x7f080029;
+        public static final int btnLogin=0x7f080028;
         public static final int button=0x7f080004;
         public static final int center=0x7f080009;
         public static final int com_facebook_body_frame=0x7f08001e;
@@ -329,20 +329,19 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f080025;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f080023;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f080024;
-        public static final int imgUser=0x7f080027;
         public static final int inline=0x7f080007;
         public static final int large=0x7f080000;
         public static final int left=0x7f08000a;
-        public static final int linearLayout1=0x7f08002a;
+        public static final int linearLayout1=0x7f080029;
         public static final int normal=0x7f080001;
         public static final int pager=0x7f080026;
         public static final int picker_subtitle=0x7f08001b;
         public static final int right=0x7f08000b;
         public static final int small=0x7f080002;
         public static final int standard=0x7f080005;
-        public static final int textView1=0x7f08002b;
+        public static final int textView1=0x7f08002a;
         public static final int top=0x7f080008;
-        public static final int txtvUserName=0x7f080028;
+        public static final int txtvUserName=0x7f080027;
     }
     public static final class layout {
         public static final int com_facebook_friendpickerfragment=0x7f030000;
