@@ -68,7 +68,10 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"FoodMate.dll",
+		"Facebook.dll",
 		"Parse.Android.dll",
+		"Xamarin.Android.Support.v4.dll",
+		"Xamarin.Facebook.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};

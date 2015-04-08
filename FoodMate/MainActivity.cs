@@ -1,167 +1,151 @@
 using System;
+using System.Json;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 using Android.App;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Android.Support.V4.View;
+using Android.Support.V4.App;
 
 using Facebook;
-using System.Collections.Generic;
 using Android.Graphics;
+
+using Parse;
+using Xamarin.Auth;
 
 namespace FoodMate
 {
 	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		// Replace here you own Facebook App Id, if you don't have one go to
-		// https://developers.facebook.com/apps
 		private const string AppId = "716545131791857";
-		
-		/// <summary>
-		/// Extended permissions is a comma separated list of permissions to ask the user.
-		/// </summary>
-		/// <remarks>
-		/// For extensive list of available extended permissions refer to 
-		/// https://developers.facebook.com/docs/reference/api/permissions/
-		/// </remarks>
-		private const string ExtendedPermissions = "user_about_me,read_stream,publish_stream";
+
+		//private const string ExtendedPermissions = "user_about_me,read_stream,publish_stream";
+		private const string ExtendedPermissions = "";
 
 		FacebookClient fb;
 		string accessToken;
 		bool isLoggedIn;
-		string lastMessageId;
+
+		void LoginToFacebook() {
+			var auth = new OAuth2Authenticator (
+				clientId: AppId,
+				scope: "",
+				authorizeUrl: new Uri ("https://m.facebook.com/dialog/oauth/"),
+				redirectUrl: new Uri ("http://www.facebook.com/connect/login_success.html"));
+
+			auth.Completed += (sender, ee) => {
+				if (!ee.IsAuthenticated) {
+					var builder = new AlertDialog.Builder (this);
+					builder.SetMessage ("Not Authenticated");
+					builder.SetPositiveButton ("Ok", (o, e) => { });
+					builder.Create().Show();
+					return;
+				}
+
+
+				//var accessToken = ee.Account.Properties["access_token"].ToString();
+				//var expiresIn = Convert.ToDouble(ee.Account.Properties["expires_in"]);
+				//var expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
+
+
+				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
+				/*var response = request.GetResponseAsync();
+				var obj = JsonValue.Parse (response.Result.GetResponseText());
+
+				var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
+
+				var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
+
+				var inventory = new Intent (this, typeof(InventoryActivity));
+				StartActivity (inventory);*/
+
+				request.GetResponseAsync().ContinueWith (t => {
+					var builder = new AlertDialog.Builder (this);
+					if (t.IsFaulted) {
+						builder.SetTitle ("Error");
+						builder.SetMessage (t.Exception.Flatten().InnerException.ToString());
+					} else if (t.IsCanceled)
+						builder.SetTitle ("Task Canceled");
+					else {
+						var obj = JsonValue.Parse (t.Result.GetResponseText());
+
+						builder.SetTitle ("Logged in");
+						builder.SetMessage ("Name: " + obj["name"]);
+					}
+
+					builder.SetPositiveButton ("Ok", (o, e) => { });
+					builder.Create().Show();
+				}, UIScheduler);
+
+			};
+
+			var intent = auth.GetUI (this);
+			StartActivity (intent);
+
+		}
+
+
+		private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "main" layout resource
+			ParseClient.Initialize ("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
+
 			SetContentView (Resource.Layout.Main);
 
 			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
-			var btnPostWall = FindViewById<Button> (Resource.Id.btnPostWall);
-			var btnRemovePost = FindViewById<Button> (Resource.Id.btnRemovePost);
-			var btnGraphSample = FindViewById<Button> (Resource.Id.btnGraphSample);
-			var btnFQLSample = FindViewById<Button> (Resource.Id.btnFQLSample);
-			
-			
-			btnLogin.Click += (sender, e) => {
-				var webAuth = new Intent (this, typeof (FBWebViewAuthActivity));
+
+			/*btnLogin.Click += (sender, e) => {
+				var webAuth = new Intent (this, typeof(FBWebViewAuthActivity));
 				webAuth.PutExtra ("AppId", AppId);
 				webAuth.PutExtra ("ExtendedPermissions", ExtendedPermissions);
 				StartActivityForResult (webAuth, 0);
+			};*/
+			btnLogin.Click += delegate {
+				LoginToFacebook ();
 			};
 
-			btnPostWall.Click += HandlePostHiToWall;
-			btnRemovePost.Click += HandleRemoveHiFromWall;
-			btnGraphSample.Click += HandleGraphApiSample;
-			btnFQLSample.Click += HandleFqlSample;
-
-			if (AppId == "YOUR_FACEBOOK_APP_ID_HERE") {
-				
-				string msg ="Please visit \n https://developers.facebook.com/ \n " +
-					"to get one or replace \"AppId\" Constant inside \"Activity1\" " +
-						"class if you already have it \n =D ";
-
-				AlertDialog.Builder builder = new AlertDialog.Builder(this);
-				builder.SetTitle("Get/Replace Facebook App ID");
-				builder.SetIcon(Resource.Drawable.Icon);
-				builder.SetMessage(msg);	
-				builder.Show();
-			}
-		}
-
-		void HandleGraphApiSample (object sender, EventArgs e)
-		{
+			/*
 			if (isLoggedIn) {
-				
-				fb.GetTaskAsync ("me").ContinueWith (t => {
-					if (!t.IsFaulted) {
+				btnLogin.Visibility = ViewStates.Gone;
+				var inventory = new Intent (this, typeof(InventoryActivity));
+				StartActivity (inventory);
+			}*/
 
-						var result = (IDictionary<string, object>)t.Result;
-						
-						string data = "Name: " + (string)result["name"] + "\n" + 
-							"First Name: " + (string)result["first_name"] + "\n" +
-								"Last Name: " + (string)result["last_name"] + "\n" +
-								"Profile Url: " + (string)result["link"];
-						RunOnUiThread ( () => {
-							Alert ("Your Info", data, false, (res) => {} );
-						});
-					}
-				});
-			} else {
-				Alert ("Not Logged In", "Please Log In First", false, (res) => { });
-			}
 		}
-
-		void HandleFqlSample (object sender, EventArgs e)
-		{
-			// query to get all the friends
-			var query = string.Format("SELECT uid,name,pic_square FROM user WHERE uid IN (SELECT uid2 FROM friend WHERE uid1={0}) ORDER BY name ASC", "me()");
 			
-			if (isLoggedIn) {
-				
-				fb.GetTaskAsync ("fql", new { q = query }).ContinueWith (t => {
-					if (!t.IsFaulted) {
-
-						var result = (IDictionary<string, object>)t.Result;
-						var data = (IList<object>)result["data"];
-						
-						var count = data.Count;
-												
-						RunOnUiThread (()=> {
-							Alert ("Info", "You have " + count + " friend(s).", false, (res) => {});
-						});
-					}
-				});
-			} else {
-				Alert ("Not Logged In", "Please Log In First", false, (res) => { });
-			}
-		}
-
-		void HandlePostHiToWall (object sender, EventArgs e)
+		public async void LoginComplete( object sender, AuthenticatorCompletedEventArgs e )
 		{
-			if (isLoggedIn) {
-				fb.PostTaskAsync ("me/feed", new { message = "Hi" }).ContinueWith (t => {
-					if (!t.IsFaulted) {
+			// We presented the UI, so it's up to us to dismiss it.
+			//DismissViewController (true, null);
 
-						var result = (IDictionary<string, object>)t.Result;
-						lastMessageId = (string)result["id"];
-						
-						RunOnUiThread ( ()=> {
-							Alert ("Success", "You have posted \"Hi\" to your wall. Id: " + lastMessageId, false, (res) => { });
-						});
-					}
-				});
-			} else {
-				Alert ("Not Logged In", "Please Log In First", false, (res) => { });
+			if (!e.IsAuthenticated) {
+				Console.WriteLine ("Not Authorised");
+				return;
 			}
+
+			var accessToken = e.Account.Properties["access_token"].ToString();
+			var expiresIn = Convert.ToDouble(e.Account.Properties["expires_in"]);
+			var expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
+
+			// Now that we're logged in, make a OAuth2 request to get the user's id.
+			var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, e.Account);
+			var response = await request.GetResponseAsync();
+			//var obj = JObject.Parse (response.GetResponseText());
+
+			//var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
+			Console.WriteLine (response.GetResponseText ());
+
+			var user = await ParseFacebookUtils.LogInAsync("123", accessToken,expiryDate);
+
 		}
-
-		void HandleRemoveHiFromWall (object sender, EventArgs e)
-		{
-			if (isLoggedIn) {
-				if (string.IsNullOrEmpty (lastMessageId)) {
-					Alert ("Error", "Please Post \"Hi\" to your wall first", false, (res) => {} );
-					return;
-				}
-
-				fb.DeleteTaskAsync (lastMessageId).ContinueWith (t => {
-					if (!t.IsFaulted) {
-
-						RunOnUiThread ( ()=> {
-							Alert ("Success", "You have deleted \"Hi\" from you wall.", false, (res) => {} );
-						});
-						lastMessageId = null;
-					}
-				});
-			} else {
-				Alert ("Not Logged In", "Please Log In First", false, (res) => { });
-			}
-		}
-
 
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
@@ -189,12 +173,14 @@ namespace FoodMate
 						string profilePictureUrl = string.Format("https://graph.facebook.com/{0}/picture?type={1}&access_token={2}", userId, "square", accessToken);
 						var bm = BitmapFactory.DecodeStream (new Java.Net.URL(profilePictureUrl).OpenStream());
 						string profileName = (string)result["name"];
+						//int fbid = (int)result["id"];
 						
 						RunOnUiThread (()=> {
 							imgUser.SetImageBitmap (bm);
 							txtvUserName.Text = profileName;
 						});
-						
+						Console.WriteLine(userId);
+						//var user = ParseFacebookUtils.LogInAsync(userId, accessToken);
 						isLoggedIn = true;
 					} else {
 						Alert ("Failed to Log In", "Reason: " + error, false, (res) => {} );

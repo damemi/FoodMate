@@ -16,3 +16,9 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\drawable-xxhd
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\drawable-xxxhdpi\icon.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\uploadflags.txt
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\FoodMate_Android.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Facebook.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Android.Support.v4.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Facebook.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\layout\home.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\layout\tab.xml

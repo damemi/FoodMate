@@ -15,6 +15,8 @@ using Android.Graphics;
 
 using Facebook;
 
+using Parse;
+
 namespace FoodMate
 {
 	[Activity (Label = "FBWebViewAuthActivity")]			
@@ -34,6 +36,7 @@ namespace FoodMate
 			extendedPermissions = Intent.GetStringExtra ("ExtendedPermissions");
 			url = GetFacebookLoginUrl (appId, extendedPermissions);
 
+
 			WebView webView = new WebView(this);
 			webView.Settings.JavaScriptEnabled = true;
 			webView.Settings.SetSupportZoom(true);
@@ -50,7 +53,7 @@ namespace FoodMate
 			webView.SetWebChromeClient(new FBWebChromeClient (this));
 			
 			AddContentView(webView, new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent));
-
+			//webView.Settings.JavaScriptEnabled = false;/*here*/
 			webView.LoadUrl(url);
 		}
 
@@ -58,7 +61,7 @@ namespace FoodMate
 		{
 			var parameters = new Dictionary<string, object>();
 			parameters["client_id"] = appId;
-			parameters["redirect_uri"] = "https://www.facebook.com/connect/login_success.html";
+			parameters["redirect_uri"] = "https://m.facebook.com/connect/login_success.html";
 			parameters["response_type"] = "token";
 			parameters["display"] = "touch";
 			
@@ -96,16 +99,18 @@ namespace FoodMate
 				{
 					// Facebook Granted Token
 					var accessToken = oauthResult.AccessToken;
-					LoginSucceded (accessToken);
+					var expires = oauthResult.Expires;
+					Console.WriteLine (accessToken);
+					LoginSucceded (accessToken,expires);
 				}
 				else
 				{
 					// user cancelled login
-					LoginSucceded (string.Empty);
+					LoginSucceded (string.Empty,DateTime.Now);
 				}
 			}
 
-			private void LoginSucceded(string accessToken)
+			private void LoginSucceded(string accessToken, DateTime expires)
 			{
 				var fb = new FacebookClient(accessToken);
 				Intent backData = new Intent ();
@@ -127,6 +132,8 @@ namespace FoodMate
 
 						backData.PutExtra ("AccessToken", accessToken);
 						backData.PutExtra ("UserId", id);
+
+						var user = ParseFacebookUtils.LogInAsync(id, accessToken, expires);
 
 						parentActivity.SetResult (Result.Ok, backData);
 						parentActivity.Finish();

@@ -19,4 +19,9 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Parse.Android.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Parse.Android.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Facebook.dll
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values\strings.xml.bak
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\home.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Android.Support.v4.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Facebook.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\tab.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.xml

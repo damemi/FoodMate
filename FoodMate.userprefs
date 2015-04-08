@@ -1,17 +1,29 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus 4 (KitKat)" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\FBWebViewAuthActivity.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\Resources\Resource.designer.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\FBWebViewAuthActivity.cs" Line="1" Column="1" />
-      <File FileName="FoodMate\Properties\AndroidManifest.xml" Line="1" Column="1" />
-      <File FileName="FoodMate\Properties\AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\MainActivity.cs" Line="111" Column="32" />
+      <File FileName="Components\xamarin.auth-1.2.3.1\samples\Xamarin.Auth.Sample.Android\MainActivity.cs" Line="16" Column="31" />
+      <File FileName="Components\xamarin.auth-1.2.3.1\samples\Xamarin.Auth.Sample.Android\Resources\values\Strings.xml" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FoodMate_Android" expanded="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="Packages" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="MainActivity.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FoodMate__Android MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.FoodMate__Android MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light" />
 </Properties>
