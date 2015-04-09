@@ -4,6 +4,8 @@ using System.Drawing;
 using Foundation;
 using UIKit;
 
+using Shared;
+
 namespace FoodMate_iOS
 {
 	public partial class SecondViewController : UIViewController
@@ -50,8 +52,19 @@ namespace FoodMate_iOS
 		{
 			base.ViewDidDisappear (animated);
 		}
-
 		#endregion
+	
+
+		partial void UIButton21_TouchUpInside (UIButton sender)
+		{
+			//test adding new food
+			string name = "banana";
+			int price = 13;
+
+			Console.WriteLine("Adding new food, button pressed");
+			DatabaseOperations db_op = new DatabaseOperations();
+			db_op.addNewFood(name, price);		
+		}
 	}
 }
 

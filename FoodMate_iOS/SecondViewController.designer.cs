@@ -14,6 +14,10 @@ namespace FoodMate_iOS
 	[Register ("SecondViewController")]
 	partial class SecondViewController
 	{
+		[Action ("UIButton21_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void UIButton21_TouchUpInside (UIButton sender);
+
 		void ReleaseDesignerOutlets ()
 		{
 		}

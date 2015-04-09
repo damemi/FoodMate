@@ -68,14 +68,19 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"FoodMate.dll",
+<<<<<<< HEAD
 		"Facebook.dll",
 		"Newtonsoft.Json.dll",
 		"Parse.Android.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Auth.Android.dll",
 		"Xamarin.Facebook.dll",
+=======
+		"Parse.Android.dll",
+		"Facebook.dll",
+>>>>>>> 79926867d0700d2a1db3c0f7a09ab6ec6ea28f08
 	};
 	public static final String[] Dependencies = new String[]{
 	};
-	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_21";
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_19";
 }
