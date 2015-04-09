@@ -11,8 +11,7 @@ namespace Shared
 		public DatabaseOperations ()
 		{
 			Console.WriteLine ("Database Operations");
-			ParseClient.Initialize("APPLICATION_ID",
-				".NET KEY");
+			ParseClient.Initialize("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
 		}
 
 		public async Task addNewFood(string name, int price, int barcode = 0)

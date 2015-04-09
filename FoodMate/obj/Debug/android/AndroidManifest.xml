@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="FoodMate.FoodMate">
   <application android:label="FoodMate" android:theme="@style/MyCustomTheme" android:icon="@drawable/icon2" android:name="mono.android.app.Application" android:debuggable="true">
@@ -22,26 +21,4 @@
   </application>
   <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="21" />
   <uses-permission android:name="android.permission.INTERNET" />
-=======
-﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="FoodMate.FoodMate">
-  <application android:label="FoodMate" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon" android:label="FoodMate" android:name="foodmate.MainActivity">
-      <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-      </intent-filter>
-    </activity>
-    <activity android:label="FBWebViewAuthActivity" android:name="foodmate.FBWebViewAuthActivity" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="FoodMate.FoodMate.mono.MonoRuntimeProvider.__mono_init__" />
-    <receiver android:name="mono.android.Seppuku">
-      <intent-filter>
-        <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.FoodMate.FoodMate" />
-      </intent-filter>
-    </receiver>
-  </application>
-  <uses-sdk android:minSdkVersion="19" />
-  <uses-permission android:name="android.permission.INTERNET" />
->>>>>>> 79926867d0700d2a1db3c0f7a09ab6ec6ea28f08
 </manifest>

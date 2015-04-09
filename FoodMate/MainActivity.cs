@@ -17,6 +17,8 @@ using Android.Graphics;
 using Parse;
 using Xamarin.Auth;
 
+using Shared;
+
 namespace FoodMate
 {
 	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon")]
@@ -35,6 +37,8 @@ namespace FoodMate
 
 		void addItem(String itemName) {
 			Console.WriteLine (itemName);
+			DatabaseOperations db_op = new DatabaseOperations();
+			db_op.addNewFood(itemName, (int)1);
 		}
 
 		void LoginToFacebook(/*GenericFragmentPagerAdaptor adaptor*/) {
