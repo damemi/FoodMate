@@ -215,6 +215,7 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_connected_shadow_color=0x7f050004;
         public static final int com_facebook_usersettingsfragment_connected_text_color=0x7f050003;
         public static final int com_facebook_usersettingsfragment_not_connected_text_color=0x7f050005;
+        public static final int my_orange=0x7f05000b;
     }
     public static final class dimen {
         public static final int com_facebook_likeboxcountview_border_radius=0x7f040015;
@@ -271,7 +272,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f020014;
         public static final int com_facebook_loginbutton_silver=0x7f020015;
         public static final int com_facebook_logo=0x7f020016;
-        public static final int com_facebook_picker_default_separator_color=0x7f020030;
+        public static final int com_facebook_picker_default_separator_color=0x7f020031;
         public static final int com_facebook_picker_item_background=0x7f020017;
         public static final int com_facebook_picker_list_focused=0x7f020018;
         public static final int com_facebook_picker_list_longpressed=0x7f020019;
@@ -297,11 +298,12 @@ containing a value of this type.
         public static final int com_facebook_top_button=0x7f02002d;
         public static final int com_facebook_usersettingsfragment_background_gradient=0x7f02002e;
         public static final int icon=0x7f02002f;
+        public static final int icon2=0x7f020030;
     }
     public static final class id {
         public static final int bottom=0x7f080006;
         public static final int box_count=0x7f080003;
-        public static final int btnLogin=0x7f080029;
+        public static final int btnLogin=0x7f080026;
         public static final int button=0x7f080004;
         public static final int center=0x7f080009;
         public static final int com_facebook_body_frame=0x7f08001e;
@@ -329,18 +331,18 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f080025;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f080023;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f080024;
-        public static final int imgUser=0x7f080027;
+        public static final int editText1=0x7f08002b;
         public static final int inline=0x7f080007;
         public static final int large=0x7f080000;
         public static final int left=0x7f08000a;
-        public static final int linearLayout1=0x7f08002a;
+        public static final int linearLayout1=0x7f080029;
         public static final int normal=0x7f080001;
-        public static final int pager=0x7f080026;
+        public static final int pager=0x7f080027;
         public static final int picker_subtitle=0x7f08001b;
         public static final int right=0x7f08000b;
         public static final int small=0x7f080002;
         public static final int standard=0x7f080005;
-        public static final int textView1=0x7f08002b;
+        public static final int textView1=0x7f08002a;
         public static final int top=0x7f080008;
         public static final int txtvUserName=0x7f080028;
     }
@@ -362,7 +364,8 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment=0x7f03000e;
         public static final int home=0x7f03000f;
         public static final int main=0x7f030010;
-        public static final int tab=0x7f030011;
+        public static final int settings=0x7f030011;
+        public static final int tab=0x7f030012;
     }
     public static final class string {
         public static final int app_name=0x7f06001f;
@@ -401,6 +404,9 @@ containing a value of this type.
         public static final int tab2_text=0x7f060021;
     }
     public static final class style {
+        /**  Inherit from the light Material Theme 
+         */
+        public static final int MyCustomTheme=0x7f070003;
         public static final int com_facebook_loginview_default_style=0x7f070000;
         public static final int com_facebook_loginview_silver_style=0x7f070001;
         public static final int tooltip_bubble_text=0x7f070002;

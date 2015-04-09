@@ -10,7 +10,7 @@ using Android.Support.V4.App;
 
 namespace FoodMate
 {
-    public class GenericFragmentPagerAdaptor : FragmentPagerAdapter
+    public class GenericFragmentPagerAdaptor : FragmentStatePagerAdapter
     {
         private List<Android.Support.V4.App.Fragment> _fragmentList = new List<Android.Support.V4.App.Fragment>();
         public GenericFragmentPagerAdaptor(Android.Support.V4.App.FragmentManager fm)

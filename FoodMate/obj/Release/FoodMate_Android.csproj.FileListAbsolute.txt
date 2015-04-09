@@ -22,3 +22,10 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Android.S
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Facebook.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\layout\home.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\layout\tab.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Auth.Android.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Release\Xamarin.Auth.Android.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\layout\settings.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\values\colors.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\values-v21\styles.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Release\res\drawable-hdpi\icon2.png

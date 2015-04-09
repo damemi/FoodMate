@@ -147,6 +147,9 @@ namespace FoodMate
 			// aapt resource value: 0x7f050005
 			public const int com_facebook_usersettingsfragment_not_connected_text_color = 2131034117;
 			
+			// aapt resource value: 0x7f05000b
+			public const int my_orange = 2131034123;
+			
 			static Color()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -329,8 +332,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f020016
 			public const int com_facebook_logo = 2130837526;
 			
-			// aapt resource value: 0x7f020030
-			public const int com_facebook_picker_default_separator_color = 2130837552;
+			// aapt resource value: 0x7f020031
+			public const int com_facebook_picker_default_separator_color = 2130837553;
 			
 			// aapt resource value: 0x7f020017
 			public const int com_facebook_picker_item_background = 2130837527;
@@ -407,6 +410,9 @@ namespace FoodMate
 			// aapt resource value: 0x7f02002f
 			public const int Icon = 2130837551;
 			
+			// aapt resource value: 0x7f020030
+			public const int Icon2 = 2130837552;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -420,14 +426,17 @@ namespace FoodMate
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f08000e
+			public const int addItem = 2131230734;
+			
 			// aapt resource value: 0x7f080006
 			public const int bottom = 2131230726;
 			
 			// aapt resource value: 0x7f080003
 			public const int box_count = 2131230723;
 			
-			// aapt resource value: 0x7f080028
-			public const int btnLogin = 2131230760;
+			// aapt resource value: 0x7f08002b
+			public const int btnLogin = 2131230763;
 			
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
@@ -435,83 +444,89 @@ namespace FoodMate
 			// aapt resource value: 0x7f080009
 			public const int center = 2131230729;
 			
-			// aapt resource value: 0x7f08001e
-			public const int com_facebook_body_frame = 2131230750;
-			
-			// aapt resource value: 0x7f080020
-			public const int com_facebook_button_xout = 2131230752;
-			
-			// aapt resource value: 0x7f08000e
-			public const int com_facebook_login_activity_progress_bar = 2131230734;
-			
-			// aapt resource value: 0x7f08000d
-			public const int com_facebook_picker_activity_circle = 2131230733;
-			
-			// aapt resource value: 0x7f080010
-			public const int com_facebook_picker_checkbox = 2131230736;
-			
-			// aapt resource value: 0x7f080014
-			public const int com_facebook_picker_checkbox_stub = 2131230740;
-			
-			// aapt resource value: 0x7f080018
-			public const int com_facebook_picker_divider = 2131230744;
-			
-			// aapt resource value: 0x7f080017
-			public const int com_facebook_picker_done_button = 2131230743;
-			
-			// aapt resource value: 0x7f080011
-			public const int com_facebook_picker_image = 2131230737;
-			
-			// aapt resource value: 0x7f080015
-			public const int com_facebook_picker_list_section_header = 2131230741;
-			
-			// aapt resource value: 0x7f08000c
-			public const int com_facebook_picker_list_view = 2131230732;
-			
-			// aapt resource value: 0x7f080012
-			public const int com_facebook_picker_profile_pic_stub = 2131230738;
-			
-			// aapt resource value: 0x7f08000f
-			public const int com_facebook_picker_row_activity_circle = 2131230735;
-			
-			// aapt resource value: 0x7f08001d
-			public const int com_facebook_picker_search_text = 2131230749;
-			
-			// aapt resource value: 0x7f080013
-			public const int com_facebook_picker_title = 2131230739;
-			
-			// aapt resource value: 0x7f08001a
-			public const int com_facebook_picker_title_bar = 2131230746;
-			
-			// aapt resource value: 0x7f080019
-			public const int com_facebook_picker_title_bar_stub = 2131230745;
-			
-			// aapt resource value: 0x7f080016
-			public const int com_facebook_picker_top_bar = 2131230742;
-			
-			// aapt resource value: 0x7f08001c
-			public const int com_facebook_search_bar_view = 2131230748;
-			
-			// aapt resource value: 0x7f080022
-			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131230754;
-			
 			// aapt resource value: 0x7f080021
-			public const int com_facebook_tooltip_bubble_view_text_body = 2131230753;
-			
-			// aapt resource value: 0x7f08001f
-			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131230751;
-			
-			// aapt resource value: 0x7f080025
-			public const int com_facebook_usersettingsfragment_login_button = 2131230757;
+			public const int com_facebook_body_frame = 2131230753;
 			
 			// aapt resource value: 0x7f080023
-			public const int com_facebook_usersettingsfragment_logo_image = 2131230755;
+			public const int com_facebook_button_xout = 2131230755;
+			
+			// aapt resource value: 0x7f080011
+			public const int com_facebook_login_activity_progress_bar = 2131230737;
+			
+			// aapt resource value: 0x7f080010
+			public const int com_facebook_picker_activity_circle = 2131230736;
+			
+			// aapt resource value: 0x7f080013
+			public const int com_facebook_picker_checkbox = 2131230739;
+			
+			// aapt resource value: 0x7f080017
+			public const int com_facebook_picker_checkbox_stub = 2131230743;
+			
+			// aapt resource value: 0x7f08001b
+			public const int com_facebook_picker_divider = 2131230747;
+			
+			// aapt resource value: 0x7f08001a
+			public const int com_facebook_picker_done_button = 2131230746;
+			
+			// aapt resource value: 0x7f080014
+			public const int com_facebook_picker_image = 2131230740;
+			
+			// aapt resource value: 0x7f080018
+			public const int com_facebook_picker_list_section_header = 2131230744;
+			
+			// aapt resource value: 0x7f08000f
+			public const int com_facebook_picker_list_view = 2131230735;
+			
+			// aapt resource value: 0x7f080015
+			public const int com_facebook_picker_profile_pic_stub = 2131230741;
+			
+			// aapt resource value: 0x7f080012
+			public const int com_facebook_picker_row_activity_circle = 2131230738;
+			
+			// aapt resource value: 0x7f080020
+			public const int com_facebook_picker_search_text = 2131230752;
+			
+			// aapt resource value: 0x7f080016
+			public const int com_facebook_picker_title = 2131230742;
+			
+			// aapt resource value: 0x7f08001d
+			public const int com_facebook_picker_title_bar = 2131230749;
+			
+			// aapt resource value: 0x7f08001c
+			public const int com_facebook_picker_title_bar_stub = 2131230748;
+			
+			// aapt resource value: 0x7f080019
+			public const int com_facebook_picker_top_bar = 2131230745;
+			
+			// aapt resource value: 0x7f08001f
+			public const int com_facebook_search_bar_view = 2131230751;
+			
+			// aapt resource value: 0x7f080025
+			public const int com_facebook_tooltip_bubble_view_bottom_pointer = 2131230757;
 			
 			// aapt resource value: 0x7f080024
-			public const int com_facebook_usersettingsfragment_profile_name = 2131230756;
+			public const int com_facebook_tooltip_bubble_view_text_body = 2131230756;
+			
+			// aapt resource value: 0x7f080022
+			public const int com_facebook_tooltip_bubble_view_top_pointer = 2131230754;
+			
+			// aapt resource value: 0x7f080028
+			public const int com_facebook_usersettingsfragment_login_button = 2131230760;
+			
+			// aapt resource value: 0x7f080026
+			public const int com_facebook_usersettingsfragment_logo_image = 2131230758;
+			
+			// aapt resource value: 0x7f080027
+			public const int com_facebook_usersettingsfragment_profile_name = 2131230759;
+			
+			// aapt resource value: 0x7f08002e
+			public const int editText1 = 2131230766;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
+			
+			// aapt resource value: 0x7f08000d
+			public const int itemName = 2131230733;
 			
 			// aapt resource value: 0x7f080000
 			public const int large = 2131230720;
@@ -519,17 +534,17 @@ namespace FoodMate
 			// aapt resource value: 0x7f08000a
 			public const int left = 2131230730;
 			
-			// aapt resource value: 0x7f080029
-			public const int linearLayout1 = 2131230761;
+			// aapt resource value: 0x7f08002c
+			public const int linearLayout1 = 2131230764;
 			
 			// aapt resource value: 0x7f080001
 			public const int normal = 2131230721;
 			
-			// aapt resource value: 0x7f080026
-			public const int pager = 2131230758;
+			// aapt resource value: 0x7f080029
+			public const int pager = 2131230761;
 			
-			// aapt resource value: 0x7f08001b
-			public const int picker_subtitle = 2131230747;
+			// aapt resource value: 0x7f08001e
+			public const int picker_subtitle = 2131230750;
 			
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
@@ -540,14 +555,20 @@ namespace FoodMate
 			// aapt resource value: 0x7f080005
 			public const int standard = 2131230725;
 			
-			// aapt resource value: 0x7f08002a
-			public const int textView1 = 2131230762;
+			// aapt resource value: 0x7f08002f
+			public const int submitButton = 2131230767;
+			
+			// aapt resource value: 0x7f08000c
+			public const int textView1 = 2131230732;
+			
+			// aapt resource value: 0x7f08002d
+			public const int textView2 = 2131230765;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
 			
-			// aapt resource value: 0x7f080027
-			public const int txtvUserName = 2131230759;
+			// aapt resource value: 0x7f08002a
+			public const int txtvUserName = 2131230762;
 			
 			static Id()
 			{
@@ -563,58 +584,64 @@ namespace FoodMate
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int com_facebook_friendpickerfragment = 2130903040;
+			public const int addItem = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int com_facebook_login_activity_layout = 2130903041;
+			public const int com_facebook_friendpickerfragment = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int com_facebook_picker_activity_circle_row = 2130903042;
+			public const int com_facebook_login_activity_layout = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int com_facebook_picker_checkbox = 2130903043;
+			public const int com_facebook_picker_activity_circle_row = 2130903043;
 			
 			// aapt resource value: 0x7f030004
-			public const int com_facebook_picker_image = 2130903044;
+			public const int com_facebook_picker_checkbox = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int com_facebook_picker_list_row = 2130903045;
+			public const int com_facebook_picker_image = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int com_facebook_picker_list_section_header = 2130903046;
+			public const int com_facebook_picker_list_row = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int com_facebook_picker_search_box = 2130903047;
+			public const int com_facebook_picker_list_section_header = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int com_facebook_picker_title_bar = 2130903048;
+			public const int com_facebook_picker_search_box = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int com_facebook_picker_title_bar_stub = 2130903049;
+			public const int com_facebook_picker_title_bar = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int com_facebook_placepickerfragment = 2130903050;
+			public const int com_facebook_picker_title_bar_stub = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int com_facebook_placepickerfragment_list_row = 2130903051;
+			public const int com_facebook_placepickerfragment = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int com_facebook_search_bar_layout = 2130903052;
+			public const int com_facebook_placepickerfragment_list_row = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int com_facebook_tooltip_bubble = 2130903053;
+			public const int com_facebook_search_bar_layout = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int com_facebook_usersettingsfragment = 2130903054;
+			public const int com_facebook_tooltip_bubble = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int Home = 2130903055;
+			public const int com_facebook_usersettingsfragment = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int Main = 2130903056;
+			public const int Home = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int tab = 2130903057;
+			public const int Main = 2130903057;
+			
+			// aapt resource value: 0x7f030012
+			public const int settings = 2130903058;
+			
+			// aapt resource value: 0x7f030013
+			public const int tab = 2130903059;
 			
 			static Layout()
 			{
@@ -743,6 +770,9 @@ namespace FoodMate
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f070003
+			public const int MyCustomTheme = 2131165187;
 			
 			// aapt resource value: 0x7f070000
 			public const int com_facebook_loginview_default_style = 2131165184;

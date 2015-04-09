@@ -4,12 +4,12 @@ using System.Threading.Tasks;
 using System.Collections.Generic;
 using Android.App;
 using Android.Content;
-//using Android.Runtime;
-//using Android.Views;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
 using Android.OS;
-//using Android.Support.V4.View;
-//using Android.Support.V4.App;
+using Android.Support.V4.View;
+using Android.Support.V4.App;
 
 using Facebook;
 using Android.Graphics;
@@ -20,7 +20,7 @@ using Xamarin.Auth;
 namespace FoodMate
 {
 	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : FragmentActivity
 	{
 		private const string AppId = "716545131791857";
 
@@ -29,9 +29,15 @@ namespace FoodMate
 
 		FacebookClient fb;
 		string accessToken;
+		//GenericFragmentPagerAdaptor adaptor = new GenericFragmentPagerAdaptor (SupportFragmentManager);
 		bool isLoggedIn;
+		ParseUser currentUser;
 
-		void LoginToFacebook() {
+		void addItem(String itemName) {
+			Console.WriteLine (itemName);
+		}
+
+		void LoginToFacebook(/*GenericFragmentPagerAdaptor adaptor*/) {
 			var auth = new OAuth2Authenticator (
 				clientId: AppId,
 				scope: "",
@@ -52,20 +58,9 @@ namespace FoodMate
 				var expiresIn = Convert.ToDouble(ee.Account.Properties["expires_in"]);
 				var expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
 
-
+				//var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
-
-				var response = request.GetResponseAsync();
-				var obj = JsonValue.Parse (response.Result.GetResponseText());
-
-				var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
-
-				var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-
-				var inventory = new Intent (this, typeof(InventoryActivity));
-				StartActivity (inventory);
-
-				/*request.GetResponseAsync().ContinueWith (t => {
+				request.GetResponseAsync().ContinueWith (t => {
 					var builder = new AlertDialog.Builder (this);
 					if (t.IsFaulted) {
 						builder.SetTitle ("Error");
@@ -74,18 +69,104 @@ namespace FoodMate
 						builder.SetTitle ("Task Canceled");
 					else {
 						var obj = JsonValue.Parse (t.Result.GetResponseText());
+						var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
 
-						builder.SetTitle ("Logged in");
-						builder.SetMessage ("Name: " + obj["name"]);
-						var id = obj["id"].ToString().Replace("\"","");
 						var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
+						currentUser = Parse.ParseUser.CurrentUser;
+						currentUser.SaveAsync();
+						isLoggedIn = true;
+						var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
+						btnLogin.Visibility = ViewStates.Gone;
+						SetContentView(Resource.Layout.Home);
+						//SetContentView(Resource.Layout.settings);
+
+						ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+						var pager = FindViewById<ViewPager> (Resource.Id.pager);
+						var adaptor = new GenericFragmentPagerAdaptor (SupportFragmentManager);
+						adaptor.AddFragmentView((i, v, b) =>
+							{
+								var view = i.Inflate(Resource.Layout.addItem, v, false);
+								var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView1);
+								sampleTextView.Text = obj["name"];
+								var itemName = view.FindViewById<EditText>(Resource.Id.itemName);
+								var AddItemButton = view.FindViewById<Button>(Resource.Id.addItem);
+								AddItemButton.Click += delegate { addItem(itemName.Text); };
+								return view;
+							}
+						);
+
+						adaptor.AddFragmentView((i, v, b) =>
+							{
+								var view = i.Inflate(Resource.Layout.tab, v, false);
+								var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView1);
+								sampleTextView.Text = "Shopping List";
+								return view;
+							}
+						);
+						adaptor.AddFragmentView((i, v, b) =>
+							{
+								var view = i.Inflate(Resource.Layout.tab, v, false);
+								var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView1);
+								sampleTextView.Text = "My List";
+								return view;
+							}
+						);
+
+						adaptor.AddFragmentView((i, v, b) =>
+							{
+								var view = i.Inflate(Resource.Layout.settings, v, false);
+								var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView2);
+								var textInput = view.FindViewById<EditText>(Resource.Id.editText1);
+								textInput.Text = "Group name";
+								var submitButton = view.FindViewById<Button>(Resource.Id.submitButton);
+								sampleTextView.Text = "Settings";
+								return view;
+							}
+						);
+
+						pager.Adapter = adaptor;
+						pager.SetOnPageChangeListener(new ViewPageListenerForActionBar(ActionBar));
+
+						ActionBar.Tab tab = ActionBar.NewTab();
+						ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Home"));
+						ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Shopping List"));
+						ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "My List"));
+						ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Settings"));
+
+						var settingsPage = adaptor.GetItem(3);
+						var editText = FindViewById<TextView>(Resource.Id.textView1);
+						editText.Text = "Tested";
+
+						//var view = (LinearLayout) View.Inflate(this, Resource.Layout.settings, null);
+						//var settingsPageView = settingsPage.View.FindViewById<EditText>(Resource.Id.editText1);
+						//View view = LayoutInflater.From(this).Inflate(Resource.Layout.settings, null);
+						//View view = LayoutInflater.Inflate(Resource.Layout.settings, null);
+
+						//var settingsPageView = view.FindViewById<EditText>(Resource.Id.editText1);
+						//settingsPageView.Text = "Test";
+						//var pager = FindViewById<ViewPager> (Resource.Id.pager);
+						//adaptor.NotifyDataSetChanged();
 					}
 
-					builder.SetPositiveButton ("Ok", (o, e) => { });
-					builder.Create().Show();
-				}, UIScheduler);*/
-
+				}, UIScheduler);
 			};
+			/*
+				var response = request.GetResponseAsync();
+				var obj = JsonValue.Parse (response.Result.GetResponseText());
+
+				var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
+
+				var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
+				isLoggedIn = true;
+				var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
+				btnLogin.Visibility = ViewStates.Gone;
+				Console.WriteLine(id);
+				var settingsPage = adaptor.GetItem(3);
+				var settingsPageView = settingsPage.View.FindViewById<EditText>(Resource.Id.editText1);
+				//settingsPageView.Text = obj["name"].ToString();
+				settingsPageView.Text = "H4CKED!!!!";
+				*/
+			//};
 
 			var intent = auth.GetUI (this);
 			StartActivity (intent);
@@ -100,27 +181,20 @@ namespace FoodMate
 			base.OnCreate (bundle);
 
 			ParseClient.Initialize ("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
+			ParseFacebookUtils.Initialize ("716545131791857");
 
 			SetContentView (Resource.Layout.Main);
 
 			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
+				
 
-			/*btnLogin.Click += (sender, e) => {
-				var webAuth = new Intent (this, typeof(FBWebViewAuthActivity));
-				webAuth.PutExtra ("AppId", AppId);
-				webAuth.PutExtra ("ExtendedPermissions", ExtendedPermissions);
-				StartActivityForResult (webAuth, 0);
-			};*/
 			btnLogin.Click += delegate {
-				LoginToFacebook ();
+				LoginToFacebook (/*adaptor*/);
 			};
 
-			/*
-			if (isLoggedIn) {
-				btnLogin.Visibility = ViewStates.Gone;
-				var inventory = new Intent (this, typeof(InventoryActivity));
-				StartActivity (inventory);
-			}*/
+			//btnLogin.Visibility = ViewStates.Gone;
+			//var inventory = new Intent (this, typeof(InventoryActivity));
+			//StartActivity (inventory);
 
 		}
 			

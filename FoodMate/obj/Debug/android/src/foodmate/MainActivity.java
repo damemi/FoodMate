@@ -2,7 +2,7 @@ package foodmate;
 
 
 public class MainActivity
-	extends android.app.Activity
+	extends android.support.v4.app.FragmentActivity
 	implements
 		mono.android.IGCUserPeer
 {

@@ -22,5 +22,10 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values\strings.
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\main.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\home.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\tab.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\settings.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values\colors.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values-v21\styles.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\icon2.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\additem.xml

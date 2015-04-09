@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="FoodMate.FoodMate">
-  <application android:label="FoodMate" android:name="mono.android.app.Application" android:debuggable="true">
+  <application android:label="FoodMate" android:theme="@style/MyCustomTheme" android:icon="@drawable/icon2" android:name="mono.android.app.Application" android:debuggable="true">
     <activity android:icon="@drawable/icon" android:label="FoodMate" android:name="foodmate.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
@@ -19,6 +19,6 @@
       </intent-filter>
     </receiver>
   </application>
-  <uses-sdk android:minSdkVersion="19" />
+  <uses-sdk android:minSdkVersion="19" android:targetSdkVersion="21" />
   <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

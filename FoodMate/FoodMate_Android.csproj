@@ -89,6 +89,11 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\layout\Home.axml" />
     <AndroidResource Include="Resources\layout\tab.axml" />
+    <AndroidResource Include="Resources\layout\settings.axml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\values-v21\styles.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon2.png" />
+    <AndroidResource Include="Resources\layout\addItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -107,5 +112,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\layout\" />
+    <Folder Include="Resources\values-v21\" />
   </ItemGroup>
 </Project>
