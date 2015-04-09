@@ -21,7 +21,7 @@ using Shared;
 
 namespace FoodMate
 {
-	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "FoodMate", MainLauncher = true, Icon = "@drawable/icon2")]
 	public class MainActivity : FragmentActivity
 	{
 		private const string AppId = "716545131791857";
