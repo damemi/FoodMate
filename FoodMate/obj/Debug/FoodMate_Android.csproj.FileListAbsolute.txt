@@ -26,7 +26,7 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\settings
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values\colors.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values-v21\styles.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\icon2.png
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\additem.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\additem.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache

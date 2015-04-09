@@ -16,7 +16,7 @@ using Android.Graphics;
 
 using Parse;
 using Xamarin.Auth;
-
+using System.Linq;
 using Shared;
 
 namespace FoodMate
@@ -33,12 +33,17 @@ namespace FoodMate
 		string accessToken;
 		//GenericFragmentPagerAdaptor adaptor = new GenericFragmentPagerAdaptor (SupportFragmentManager);
 		bool isLoggedIn;
-		ParseUser currentUser;
+		User currentUser;
 
-		void addItem(String itemName) {
+		async void addItem(String itemName) {
 			Console.WriteLine (itemName);
 			DatabaseOperations db_op = new DatabaseOperations();
 			db_op.addNewFood(itemName, (int)1);
+			var foodList = await db_op.getFoods ();
+			var sampleTextView = FindViewById<TextView>(Resource.Id.textView1);
+			foreach (ParseObject foodObj in foodList) {
+				sampleTextView.Text = foodObj.Get<string>("name");
+			}
 		}
 
 		void LoginToFacebook(/*GenericFragmentPagerAdaptor adaptor*/) {
@@ -76,8 +81,9 @@ namespace FoodMate
 						var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
 
 						var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-						currentUser = Parse.ParseUser.CurrentUser;
-						currentUser.SaveAsync();
+						//currentUser = new User(ParseUser.CurrentUser);
+						//currentUser.SaveAsync();
+
 						isLoggedIn = true;
 						var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
 						btnLogin.Visibility = ViewStates.Gone;
