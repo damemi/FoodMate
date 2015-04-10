@@ -94,10 +94,10 @@ namespace FoodMate
 			pager.SetOnPageChangeListener(new ViewPageListenerForActionBar(ActionBar));
 
 			ActionBar.Tab tab = ActionBar.NewTab();
-			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Home"));
-			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Shopping List"));
-			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "My List"));
-			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Settings"));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_home));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_shopping_list));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_my_list));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_action_settings));
 		}
 	}
 }

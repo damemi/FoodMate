@@ -332,8 +332,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f020016
 			public const int com_facebook_logo = 2130837526;
 			
-			// aapt resource value: 0x7f020031
-			public const int com_facebook_picker_default_separator_color = 2130837553;
+			// aapt resource value: 0x7f020035
+			public const int com_facebook_picker_default_separator_color = 2130837557;
 			
 			// aapt resource value: 0x7f020017
 			public const int com_facebook_picker_item_background = 2130837527;
@@ -408,10 +408,22 @@ namespace FoodMate
 			public const int com_facebook_usersettingsfragment_background_gradient = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int Icon = 2130837551;
+			public const int ic_action_settings = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int Icon2 = 2130837552;
+			public const int ic_home = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int ic_my_list = 2130837553;
+			
+			// aapt resource value: 0x7f020032
+			public const int ic_shopping_list = 2130837554;
+			
+			// aapt resource value: 0x7f020033
+			public const int Icon = 2130837555;
+			
+			// aapt resource value: 0x7f020034
+			public const int Icon2 = 2130837556;
 			
 			static Drawable()
 			{
@@ -426,8 +438,17 @@ namespace FoodMate
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f08002c
+			public const int ListView = 2131230764;
+			
+			// aapt resource value: 0x7f08002d
+			public const int Name = 2131230765;
+			
 			// aapt resource value: 0x7f08000e
 			public const int addItem = 2131230734;
+			
+			// aapt resource value: 0x7f08002b
+			public const int addItemButton = 2131230763;
 			
 			// aapt resource value: 0x7f080006
 			public const int bottom = 2131230726;
@@ -435,8 +456,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f080003
 			public const int box_count = 2131230723;
 			
-			// aapt resource value: 0x7f08002c
-			public const int btnLogin = 2131230764;
+			// aapt resource value: 0x7f08002f
+			public const int btnLogin = 2131230767;
 			
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
@@ -519,8 +540,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f080028
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230760;
 			
-			// aapt resource value: 0x7f08002e
-			public const int editText1 = 2131230766;
+			// aapt resource value: 0x7f080031
+			public const int editText1 = 2131230769;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
@@ -555,20 +576,20 @@ namespace FoodMate
 			// aapt resource value: 0x7f080005
 			public const int standard = 2131230725;
 			
-			// aapt resource value: 0x7f08002f
-			public const int submitButton = 2131230767;
+			// aapt resource value: 0x7f080032
+			public const int submitButton = 2131230770;
 			
 			// aapt resource value: 0x7f08000c
 			public const int textView1 = 2131230732;
 			
-			// aapt resource value: 0x7f08002d
-			public const int textView2 = 2131230765;
+			// aapt resource value: 0x7f080030
+			public const int textView2 = 2131230768;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
 			
-			// aapt resource value: 0x7f08002b
-			public const int txtvUserName = 2131230763;
+			// aapt resource value: 0x7f08002e
+			public const int txtvUserName = 2131230766;
 			
 			static Id()
 			{
@@ -635,13 +656,19 @@ namespace FoodMate
 			public const int Home = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int Main = 2130903057;
+			public const int inventory = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int settings = 2130903058;
+			public const int ListItemRow = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int tab = 2130903059;
+			public const int Main = 2130903059;
+			
+			// aapt resource value: 0x7f030014
+			public const int settings = 2130903060;
+			
+			// aapt resource value: 0x7f030015
+			public const int tab = 2130903061;
 			
 			static Layout()
 			{

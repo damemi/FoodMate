@@ -27,6 +27,11 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values\colors.x
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\values-v21\styles.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\icon2.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\additem.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\inventory.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\listitemrow.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_home.png
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_action_settings.png
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_my_list.png
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_shopping_list.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
