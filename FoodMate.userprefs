@@ -1,11 +1,6 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
-    <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="44" Column="11" />
-      <File FileName="Shared\DatabaseOperations.cs" Line="46" Column="46" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
