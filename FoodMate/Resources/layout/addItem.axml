@@ -21,11 +21,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/itemQuantity"
         android:text="Quantity" />
-    <CheckBox
-        android:text="CheckBox"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox1" />
     <Button
         android:text="Add Item"
         android:layout_width="match_parent"
