@@ -16,12 +16,6 @@ namespace Shared
 
 		public async Task addNewFood(string name, int price, int barcode = 0)
 		{
-			//debugging
-			Console.WriteLine ("Attempting to add new food...");
-			Console.WriteLine ("Food name: " + name);
-			Console.WriteLine ("Food price: " + price);
-			Console.WriteLine ("Food barcode: " + barcode);
-
 			//check if food already exists in database
 				//(not implemented yet)
 

@@ -15,11 +15,22 @@
         android:layout_height="wrap_content"
         android:id="@+id/itemName"
         android:text="Item" />
+    <EditText
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemQuantity"
+        android:text="Quantity" />
     <Button
         android:text="Add Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/addItem" />
+    <Button
+        android:text="Use Barcode Scanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button1" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"

@@ -272,7 +272,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f020014;
         public static final int com_facebook_loginbutton_silver=0x7f020015;
         public static final int com_facebook_logo=0x7f020016;
-        public static final int com_facebook_picker_default_separator_color=0x7f020031;
+        public static final int com_facebook_picker_default_separator_color=0x7f020035;
         public static final int com_facebook_picker_item_background=0x7f020017;
         public static final int com_facebook_picker_list_focused=0x7f020018;
         public static final int com_facebook_picker_list_longpressed=0x7f020019;
@@ -297,14 +297,21 @@ containing a value of this type.
         public static final int com_facebook_top_background=0x7f02002c;
         public static final int com_facebook_top_button=0x7f02002d;
         public static final int com_facebook_usersettingsfragment_background_gradient=0x7f02002e;
-        public static final int icon=0x7f02002f;
-        public static final int icon2=0x7f020030;
+        public static final int ic_action_settings=0x7f02002f;
+        public static final int ic_home=0x7f020030;
+        public static final int ic_my_list=0x7f020031;
+        public static final int ic_shopping_list=0x7f020032;
+        public static final int icon=0x7f020033;
+        public static final int icon2=0x7f020034;
     }
     public static final class id {
+        public static final int ListView=0x7f08002c;
+        public static final int Name=0x7f08002d;
         public static final int addItem=0x7f08000e;
+        public static final int addItemButton=0x7f08002b;
         public static final int bottom=0x7f080006;
         public static final int box_count=0x7f080003;
-        public static final int btnLogin=0x7f08002c;
+        public static final int btnLogin=0x7f08002f;
         public static final int button=0x7f080004;
         public static final int center=0x7f080009;
         public static final int com_facebook_body_frame=0x7f080022;
@@ -332,7 +339,7 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f080029;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f080027;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f080028;
-        public static final int editText1=0x7f08002e;
+        public static final int editText1=0x7f080031;
         public static final int inline=0x7f080007;
         public static final int itemName=0x7f08000d;
         public static final int large=0x7f080000;
@@ -344,11 +351,11 @@ containing a value of this type.
         public static final int right=0x7f08000b;
         public static final int small=0x7f080002;
         public static final int standard=0x7f080005;
-        public static final int submitButton=0x7f08002f;
+        public static final int submitButton=0x7f080032;
         public static final int textView1=0x7f08000c;
-        public static final int textView2=0x7f08002d;
+        public static final int textView2=0x7f080030;
         public static final int top=0x7f080008;
-        public static final int txtvUserName=0x7f08002b;
+        public static final int txtvUserName=0x7f08002e;
     }
     public static final class layout {
         public static final int additem=0x7f030000;
@@ -368,9 +375,11 @@ containing a value of this type.
         public static final int com_facebook_tooltip_bubble=0x7f03000e;
         public static final int com_facebook_usersettingsfragment=0x7f03000f;
         public static final int home=0x7f030010;
-        public static final int main=0x7f030011;
-        public static final int settings=0x7f030012;
-        public static final int tab=0x7f030013;
+        public static final int inventory=0x7f030011;
+        public static final int listitemrow=0x7f030012;
+        public static final int main=0x7f030013;
+        public static final int settings=0x7f030014;
+        public static final int tab=0x7f030015;
     }
     public static final class string {
         public static final int app_name=0x7f06001f;

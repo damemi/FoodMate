@@ -50,10 +50,11 @@ namespace FoodMate
     }
     public static class ViewPagerExtensions
     {
-        public static ActionBar.Tab GetViewPageTab(this ViewPager viewPager, ActionBar actionBar, string name)
+        public static ActionBar.Tab GetViewPageTab(this ViewPager viewPager, ActionBar actionBar, string name, int icon)
         {
             var tab = actionBar.NewTab();
             tab.SetText(name);
+			tab.SetIcon(icon);
             tab.TabSelected += (o, e) =>
             {
                 viewPager.SetCurrentItem(actionBar.SelectedNavigationIndex, false);

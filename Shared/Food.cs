@@ -25,6 +25,14 @@ namespace Shared
 			barcode = _barcode;
 			in_stock = _in_stock;
 		}
+
+		public Food(ParseObject food) {
+			name = food.Get<String>("name");
+		}
+
+		public String getName() {
+			return name;
+		}
 	}
 }
 
