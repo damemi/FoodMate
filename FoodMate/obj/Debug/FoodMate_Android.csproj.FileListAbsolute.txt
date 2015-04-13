@@ -35,3 +35,6 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\i
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_shopping_list.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
+C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
+C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate.dll
+C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate.pdb
