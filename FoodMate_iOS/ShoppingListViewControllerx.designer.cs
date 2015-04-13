@@ -11,8 +11,8 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	[Register ("SecondViewController")]
-	partial class SecondViewController
+	[Register ("ShoppingListViewController")]
+	partial class ShoppingListViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
