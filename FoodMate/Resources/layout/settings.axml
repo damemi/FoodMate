@@ -13,7 +13,7 @@
         android:layout_marginBottom="0dp"
         android:textSize="24dp" />
     <EditText
-        android:inputType="textPostalAddress"
+        android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/GroupInfo" />

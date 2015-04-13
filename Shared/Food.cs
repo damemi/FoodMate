@@ -14,6 +14,7 @@ namespace Shared
 		private int price { get; set; }
 		private int barcode { get; set; }
 		private DateTime expiration { get; set; }
+		private ParseObject _parseObj;
 
 		//food constructor. in_stock, barcode and expiration date are optional parameters.
 		// name, id and price are required
@@ -28,10 +29,15 @@ namespace Shared
 
 		public Food(ParseObject food) {
 			name = food.Get<String>("name");
+			_parseObj = food;
 		}
 
 		public String getName() {
 			return name;
+		}
+
+		public String getObjectId() {
+			return _parseObj.Get<String> ("objectId");
 		}
 	}
 }

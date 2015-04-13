@@ -6,7 +6,6 @@ using Parse;
 
 namespace Shared
 {
-	//will restructure this later to use food object, currently addNewFood should work
 	public class User
 	{
 		private ParseUser _currentUser;
@@ -17,13 +16,22 @@ namespace Shared
 
 		public async Task SaveAsync()
 		{
-			await this._currentUser.SaveAsync ();
+			await _currentUser.SaveAsync ();
+		}
+
+		public async Task updateUser()
+		{
+		}
+
+		public String getGroup()
+		{
+			return _currentUser.Get<String> ("Group");
 		}
 
 		public async void UpdateGroup(String groupName)
 		{
-			this._currentUser ["Group"] = groupName;
-			await this.SaveAsync ();
+			_currentUser ["Group"] = groupName;
+			await SaveAsync ();
 		}
 	}
 }

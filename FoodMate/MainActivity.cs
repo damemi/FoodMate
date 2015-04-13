@@ -32,6 +32,14 @@ namespace FoodMate
 		User currentUser;
 		bool isLoggedIn;
 
+		void updateUser() {
+		}
+
+		void editItemActivity() {
+			//var myIntent = new Intent (this, typeof EditItemActivity));
+			//StartActivityForResult (myIntent, 0);
+		}
+
 		void addItemActivity() {
 			var myIntent = new Intent (this, typeof(AddItemActivity));
 			StartActivityForResult (myIntent, 0);
@@ -95,10 +103,13 @@ namespace FoodMate
 								{
 									var view = i.Inflate(Resource.Layout.inventory, v, false);
 
-								
-								var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
-								foodView.Adapter = new CustomListAdapter(this, inventory);
-								
+									var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
+									foodView.Adapter = new CustomListAdapter(this, inventory);	
+									//foodView.OnItemClickListener
+
+									foodView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
+										editItemActivity();
+									};
 
 									var AddItemButton = view.FindViewById<Button>(Resource.Id.addItemButton);
 									AddItemButton.Click += delegate { addItemActivity(); };
@@ -127,10 +138,12 @@ namespace FoodMate
 								{
 									var view = i.Inflate(Resource.Layout.settings, v, false);
 									var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView2);
-									var textInput = view.FindViewById<EditText>(Resource.Id.editText1);
-									textInput.Text = "Group name";
-									var submitButton = view.FindViewById<Button>(Resource.Id.submitButton);
-									sampleTextView.Text = "Settings";
+									var textInput = view.FindViewById<EditText>(Resource.Id.GroupInfo);
+									textInput.Text = currentUser.getGroup();
+									var submitButton = view.FindViewById<Button>(Resource.Id.submitSettings);
+
+									//Need to get form information to update user settings
+									submitButton += delegate { updateUser(); };
 									return view;
 								}
 							);
@@ -153,30 +166,12 @@ namespace FoodMate
 
 
 			};
-			/*
-				var response = request.GetResponseAsync();
-				var obj = JsonValue.Parse (response.Result.GetResponseText());
-
-				var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
-
-				var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-				isLoggedIn = true;
-				var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
-				btnLogin.Visibility = ViewStates.Gone;
-				Console.WriteLine(id);
-				var settingsPage = adaptor.GetItem(3);
-				var settingsPageView = settingsPage.View.FindViewById<EditText>(Resource.Id.editText1);
-				//settingsPageView.Text = obj["name"].ToString();
-				settingsPageView.Text = "H4CKED!!!!";
-				*/
-			//};
 
 			var intent = auth.GetUI (this);
 			StartActivity (intent);
 
 		}
-
-
+			
 		private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 
 		protected override void OnCreate (Bundle bundle)
@@ -191,9 +186,9 @@ namespace FoodMate
 			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
 				
 
-			btnLogin.Click += delegate {
+			//btnLogin.Click += delegate {
 				LoginToFacebook ();
-			};
+			//};
 
 			//btnLogin.Visibility = ViewStates.Gone;
 			//var inventory = new Intent (this, typeof(InventoryActivity));

@@ -71,7 +71,6 @@
     <Compile Include="GenericFragmentPagerAdaptor.cs" />
     <Compile Include="GenericViewPagerFragment.cs" />
     <Compile Include="InventoryActivity.cs" />
-    <Compile Include="AddItemActivity.cs" />
     <Compile Include="CustomListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
