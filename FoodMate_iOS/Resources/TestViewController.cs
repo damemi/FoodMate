@@ -6,14 +6,9 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	public partial class MyListViewController : UIViewController
+	public partial class TestViewController : UIViewController
 	{
-		static bool UserInterfaceIdiomIsPhone {
-			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-		}
-
-		public MyListViewController ()
-			: base (UserInterfaceIdiomIsPhone ? "MyListViewController_iPhone" : "MyListViewController_iPad", null)
+		public TestViewController () : base ("TestViewController", null)
 		{
 		}
 
@@ -31,7 +26,6 @@ namespace FoodMate_iOS
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
-
 	}
 }
 
