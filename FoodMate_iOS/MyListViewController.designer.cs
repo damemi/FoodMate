@@ -18,10 +18,6 @@ namespace FoodMate_iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView MyList { get; set; }
 
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel MyListLabel { get; set; }
-
 		[Action ("UIButton463_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void UIButton463_TouchUpInside (UIButton sender);
@@ -31,10 +27,6 @@ namespace FoodMate_iOS
 			if (MyList != null) {
 				MyList.Dispose ();
 				MyList = null;
-			}
-			if (MyListLabel != null) {
-				MyListLabel.Dispose ();
-				MyListLabel = null;
 			}
 		}
 	}

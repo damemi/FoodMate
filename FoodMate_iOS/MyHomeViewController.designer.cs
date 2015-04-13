@@ -16,18 +16,10 @@ namespace FoodMate_iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel HomeLabel { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView MyHome { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (HomeLabel != null) {
-				HomeLabel.Dispose ();
-				HomeLabel = null;
-			}
 			if (MyHome != null) {
 				MyHome.Dispose ();
 				MyHome = null;
