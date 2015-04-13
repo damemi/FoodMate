@@ -22,9 +22,9 @@ namespace FoodMate_iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel MyListLabel { get; set; }
 
-		[Action ("UIButton110_TouchUpInside:")]
+		[Action ("UIButton463_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton110_TouchUpInside (UIButton sender);
+		partial void UIButton463_TouchUpInside (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
