@@ -14,12 +14,24 @@ namespace FoodMate_iOS
 	[Register ("SecondViewController")]
 	partial class SecondViewController
 	{
-		[Action ("UIButton21_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton21_TouchUpInside (UIButton sender);
+		UIButton CheckoutButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UILabel ShoppingListLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (CheckoutButton != null) {
+				CheckoutButton.Dispose ();
+				CheckoutButton = null;
+			}
+			if (ShoppingListLabel != null) {
+				ShoppingListLabel.Dispose ();
+				ShoppingListLabel = null;
+			}
 		}
 	}
 }

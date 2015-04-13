@@ -42,3 +42,26 @@
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.exe.mdb
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.exe
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/CZ4-MO-1fc-view-2VE-Yg-loa.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/Info.plist
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/QUy-BD-bpt-view-gMD-aP-Fq6.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-8YX-ce-x5E.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/first.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/first@2x.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/second.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/second@2x.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.exe.mdb
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.exe
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/FoodMate_iOS.exe
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/FoodMate_iOS.exe.mdb
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.iOS.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Core.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/49-view-50.nib

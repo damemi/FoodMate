@@ -11,26 +11,18 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	[Register ("FirstViewController")]
-	partial class FirstViewController
+	[Register ("MyListViewController")]
+	partial class MyListViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel HomeLabel { get; set; }
-
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		HomeTableView HomeTableView { get; set; }
+		UILabel MyListLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (HomeLabel != null) {
-				HomeLabel.Dispose ();
-				HomeLabel = null;
-			}
-			if (HomeTableView != null) {
-				HomeTableView.Dispose ();
-				HomeTableView = null;
+			if (MyListLabel != null) {
+				MyListLabel.Dispose ();
+				MyListLabel = null;
 			}
 		}
 	}

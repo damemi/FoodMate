@@ -138,6 +138,22 @@
     <Compile Include="SecondViewController.designer.cs">
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeViewController.cs" />
+    <Compile Include="HomeViewController.designer.cs">
+      <DependentUpon>HomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeTableView.cs" />
+    <Compile Include="HomeTableView.designer.cs">
+      <DependentUpon>HomeTableView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingListViewController.cs" />
+    <Compile Include="ShoppingListViewController.designer.cs">
+      <DependentUpon>ShoppingListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyListViewController.cs" />
+    <Compile Include="MyListViewController.designer.cs">
+      <DependentUpon>MyListViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
