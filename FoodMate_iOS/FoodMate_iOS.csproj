@@ -114,6 +114,9 @@
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.xib" />
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
+    <InterfaceDefinition Include="MyListViewController_iPhone.xib" />
+    <InterfaceDefinition Include="MyListViewController_iPad.xib" />
+    <InterfaceDefinition Include="AddNewItemViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\first.png" />
@@ -130,13 +133,25 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="FirstViewController.cs" />
-    <Compile Include="SecondViewController.cs" />
-    <Compile Include="FirstViewController.designer.cs">
-      <DependentUpon>FirstViewController.cs</DependentUpon>
+    <Compile Include="HomeTableView.cs" />
+    <Compile Include="HomeTableView.designer.cs">
+      <DependentUpon>HomeTableView.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecondViewController.designer.cs">
-      <DependentUpon>SecondViewController.cs</DependentUpon>
+    <Compile Include="MyListViewController.cs" />
+    <Compile Include="MyListViewController.designer.cs">
+      <DependentUpon>MyListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingListViewController.cs" />
+    <Compile Include="MyHomeViewController.cs" />
+    <Compile Include="MyHomeViewController.designer.cs">
+      <DependentUpon>MyHomeViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShoppingListViewController.designer.cs">
+      <DependentUpon>ShoppingListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNewItemViewController.cs" />
+    <Compile Include="AddNewItemViewController.designer.cs">
+      <DependentUpon>AddNewItemViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />

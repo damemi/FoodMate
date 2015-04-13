@@ -8,11 +8,11 @@ using Shared;
 
 namespace FoodMate_iOS
 {
-	public partial class SecondViewController : UIViewController
+	public partial class ShoppingListViewController : UIViewController
 	{
-		public SecondViewController (IntPtr handle) : base (handle)
+		public ShoppingListViewController (IntPtr handle) : base (handle)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("Second", "Second");
+			Title = NSBundle.MainBundle.LocalizedString ("ShoppingList", "ShoppingList");
 			TabBarItem.Image = UIImage.FromBundle ("second");
 		}
 
@@ -52,19 +52,24 @@ namespace FoodMate_iOS
 		{
 			base.ViewDidDisappear (animated);
 		}
+
+		partial void CheckoutButton_TouchUpInside (UIButton sender)
+		{
+			throw new NotImplementedException ();
+		}
 		#endregion
 	
 
-		partial void UIButton21_TouchUpInside (UIButton sender)
+/*		partial void UIButton21_TouchUpInside (UIButton sender)
 		{
 			//test adding new food
-			string name = "banana";
-			int price = 13;
+			string name = "asdasfas";
+			int price = 14;
 
 			Console.WriteLine("Adding new food, button pressed");
 			DatabaseOperations db_op = new DatabaseOperations();
 			db_op.addNewFood(name, price);		
-		}
+		}*/
 	}
 }
 

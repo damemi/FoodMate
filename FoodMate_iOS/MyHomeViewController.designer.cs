@@ -11,15 +11,27 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	[Register ("FirstViewController")]
-	partial class FirstViewController
+	[Register ("MyHomeViewController")]
+	partial class MyHomeViewController
 	{
-		[Action ("UIButton14_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton14_TouchUpInside (UIButton sender);
+		UILabel HomeLabel { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIView MyHome { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (HomeLabel != null) {
+				HomeLabel.Dispose ();
+				HomeLabel = null;
+			}
+			if (MyHome != null) {
+				MyHome.Dispose ();
+				MyHome = null;
+			}
 		}
 	}
 }

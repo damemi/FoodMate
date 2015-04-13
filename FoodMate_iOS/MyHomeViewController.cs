@@ -13,11 +13,11 @@ using Newtonsoft.Json.Linq;
 
 namespace FoodMate_iOS
 {
-	public partial class FirstViewController : UIViewController
+	public partial class MyHomeViewController : UIViewController
 	{
-		public FirstViewController (IntPtr handle) : base (handle)
+		public MyHomeViewController (IntPtr handle) : base (handle)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("First", "First");
+			Title = NSBundle.MainBundle.LocalizedString ("MyHome", "MyHome");
 			TabBarItem.Image = UIImage.FromBundle ("first");
 		}
 
@@ -102,12 +102,12 @@ namespace FoodMate_iOS
 	
 		}
 
-		partial void UIButton14_TouchUpInside (UIButton sender)
+	/*	partial void UIButton14_TouchUpInside (UIButton sender)
 		{
 			Console.WriteLine("Login button pressed");
 			LoginToFacebook();
 
-		}
+		}*/
 	}
 }
 
