@@ -6,7 +6,6 @@ using Parse;
 
 namespace Shared
 {
-	//will restructure this later to use food object, currently addNewFood should work
 	public class DatabaseOperations
 	{
 		public DatabaseOperations ()

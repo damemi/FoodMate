@@ -11,26 +11,26 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	[Register ("FirstViewController")]
-	partial class FirstViewController
+	[Register ("ShoppingListViewController")]
+	partial class ShoppingListViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UILabel HomeLabel { get; set; }
+		UIButton CheckoutButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		HomeTableView HomeTableView { get; set; }
+		UILabel ShoppingListLabel { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (HomeLabel != null) {
-				HomeLabel.Dispose ();
-				HomeLabel = null;
+			if (CheckoutButton != null) {
+				CheckoutButton.Dispose ();
+				CheckoutButton = null;
 			}
-			if (HomeTableView != null) {
-				HomeTableView.Dispose ();
-				HomeTableView = null;
+			if (ShoppingListLabel != null) {
+				ShoppingListLabel.Dispose ();
+				ShoppingListLabel = null;
 			}
 		}
 	}

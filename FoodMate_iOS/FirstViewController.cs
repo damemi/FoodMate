@@ -102,12 +102,12 @@ namespace FoodMate_iOS
 	
 		}
 
-		partial void UIButton14_TouchUpInside (UIButton sender)
+	/*	partial void UIButton14_TouchUpInside (UIButton sender)
 		{
 			Console.WriteLine("Login button pressed");
 			LoginToFacebook();
 
-		}
+		}*/
 	}
 }
 

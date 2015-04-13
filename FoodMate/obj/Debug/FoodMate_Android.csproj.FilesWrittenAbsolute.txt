@@ -20,3 +20,5 @@
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate/obj/Debug/FoodMate.dll.mdb
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/Parse.Android.dll
 /Users/Jaz/FoodMate copy/FoodMate/FoodMate/bin/Debug/Facebook.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate/obj/Debug/MonoAndroid,Version=v4.4.AssemblyAttribute.cs
+/Users/Jaz/SD&D/FoodMate/FoodMate/obj/Debug/FoodMate.dll

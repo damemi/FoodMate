@@ -1,16 +1,8 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.API21" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
-    <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="103" Column="1" />
-      <File FileName="FoodMate\AddItemActivity.cs" Line="38" Column="6" />
-      <File FileName="Shared\DatabaseOperations.cs" Line="44" Column="42" />
-      <File FileName="c:\Users\Mike\Documents\Projects\FoodMate\FoodMate\CustomListAdapter.cs" Line="50" Column="58" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.FoodMate__Android MonoForAntroid.PreferredDevice="Nexus 4" AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.DeviceDefault.Light" />
 </Properties>
