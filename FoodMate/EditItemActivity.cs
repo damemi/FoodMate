@@ -20,13 +20,13 @@ using System.Linq;
 using Shared;
 namespace FoodMate
 {
-	[Activity (Label = "Add Item")]			
-	public class AddItemActivity : Activity
+	[Activity (Label = "Edit Item")]			
+	public class EditItemActivity : Activity
 	{
 		async void editItem(String itemName) {
 			Console.WriteLine (itemName);
 			DatabaseOperations db_op = new DatabaseOperations();
-			db_op.addNewFood(itemName, (int)1);
+			db_op.addNewFood(itemName, 0, 0, 0);
 			var foodList = await db_op.getFoods ();
 
 			/*
@@ -53,8 +53,8 @@ namespace FoodMate
 
 			SetContentView (Resource.Layout.editItem);
 			var itemName = FindViewById<EditText>(Resource.Id.itemName);
-			var AddItemButton = FindViewById<Button>(Resource.Id.addItem);
-			AddItemButton.Click += delegate { editItem(itemName.Text); Finish();};
+			var EditItemButton = FindViewById<Button>(Resource.Id.editItem);
+			EditItemButton.Click += delegate { editItem(itemName.Text); Finish();};
 		}
 	}
 }

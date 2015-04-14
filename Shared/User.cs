@@ -25,7 +25,13 @@ namespace Shared
 
 		public String getGroup()
 		{
-			return _currentUser.Get<String> ("Group");
+			var user = _currentUser;
+			String groupName = _currentUser.Get<String> ("Group");
+			if (!(groupName == null)) {
+				return groupName;
+			} else {
+				return "";
+			}
 		}
 
 		public async void UpdateGroup(String groupName)

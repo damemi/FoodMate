@@ -21,12 +21,13 @@ using Shared;
 namespace FoodMate
 {
 	[Activity (Label = "Add Item")]			
-	public class EditItemActivity : Activity
+	public class AddItemActivity : Activity
 	{
-		async void editItem(String itemName) {
-			Console.WriteLine (itemName);
+
+		async void addItem(String itemName, int itemQuantity) {
 			DatabaseOperations db_op = new DatabaseOperations();
-			db_op.addNewFood(itemName, (int)1);
+
+			await db_op.addNewFood(itemName, itemQuantity, 0, 0);
 			var foodList = await db_op.getFoods ();
 
 			List<Food> inventory = new List<Food>();
@@ -34,8 +35,8 @@ namespace FoodMate
 				Food newFood = new Food(food);
 				inventory.Add(newFood);
 			}
-			//			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			//			foodView.Adapter = new CustomListAdapter(this, inventory);
+			var foodView = FindViewById<ListView>(Resource.Id.ListView);
+			foodView.Adapter = new CustomListAdapter(this, inventory);
 		}
 
 		protected override void OnCreate (Bundle bundle)
@@ -44,8 +45,13 @@ namespace FoodMate
 
 			SetContentView (Resource.Layout.addItem);
 			var itemName = FindViewById<EditText>(Resource.Id.itemName);
+			var itemQuantity = FindViewById<EditText>(Resource.Id.itemQuantity);
 			var AddItemButton = FindViewById<Button>(Resource.Id.addItem);
-			AddItemButton.Click += delegate { editItem(itemName.Text); Finish();};
+		
+			AddItemButton.Click += delegate { 
+				int qty = Convert.ToInt32 (itemQuantity.Text);
+				addItem(itemName.Text, qty); 
+				Finish();};
 		}
 	}
 }

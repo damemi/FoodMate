@@ -14,7 +14,7 @@ namespace Shared
 			ParseClient.Initialize("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
 		}
 
-		public async Task addNewFood(string name, int price, int barcode = 0)
+		public async Task addNewFood(string name, int quantity, int price, int barcode = 0)
 		{
 			//check if food already exists in database
 				//(not implemented yet)
@@ -25,6 +25,7 @@ namespace Shared
 				ParseObject food = new ParseObject ("Food");
 				food ["name"] = name;
 				food ["price"] = price;
+				food ["in_stock"] = quantity;
 				if (barcode != 0)
 					food ["barcode"] = barcode;
 				Console.WriteLine ("Adding new food to parse database");
@@ -39,7 +40,7 @@ namespace Shared
 		//Currently returns a list of all food objects
 		//Should be easy to filter by the user's group
 		public async Task<IEnumerable<ParseObject>> getFoods() {
-			var query = ParseObject.GetQuery ("Food");
+			var query = ParseObject.GetQuery ("Food").OrderByDescending("createdAt");
 			var results = await query.FindAsync();
 			return results;
 		}
