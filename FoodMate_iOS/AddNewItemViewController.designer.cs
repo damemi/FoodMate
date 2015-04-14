@@ -14,6 +14,10 @@ namespace FoodMate_iOS
 	[Register ("AddNewItemViewController")]
 	partial class AddNewItemViewController
 	{
+		[Action ("UIButton158_TouchUpInside:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void UIButton158_TouchUpInside (UIButton sender);
+
 		void ReleaseDesignerOutlets ()
 		{
 		}

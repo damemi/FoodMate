@@ -7,6 +7,55 @@
 	<key>com.apple.ibtool.document.notices</key>
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
-	<dict/>
+	<dict>
+		<key>Bd3-0a-U4c</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>Bd3-0a-U4c</string>
+					<string>Rif-IN-HqB</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>N1Z-xf-hmc</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>N1Z-xf-hmc</string>
+					<string>oF9-17-4To</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+		<key>tLF-ZD-0nQ</key>
+		<array>
+			<dict>
+				<key>affected-objects</key>
+				<array>
+					<string>510</string>
+					<string>tLF-ZD-0nQ</string>
+				</array>
+				<key>message</key>
+				<string>Plain Style unsupported in a Navigation Item</string>
+				<key>type</key>
+				<string>IBUnsupportedConfiguration</string>
+				<key>type-value</key>
+				<integer>9</integer>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

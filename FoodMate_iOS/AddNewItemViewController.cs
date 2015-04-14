@@ -26,6 +26,11 @@ namespace FoodMate_iOS
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
+
+		partial void UIButton158_TouchUpInside (UIButton sender)
+		{
+			throw new NotImplementedException ();
+		}
 	}
 }
 
