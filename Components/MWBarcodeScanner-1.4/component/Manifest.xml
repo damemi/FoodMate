@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="MWBarcodeScanner">
+  <name>Manateeworks Barcode Scanner</name>
+  <publisher>Manateeworks, Inc.</publisher>
+  <publisher-url>http://manateeworks.com</publisher-url>
+  <version>1.4</version>
+  <summary>Manateeworks Barcode Scanner</summary>
+  <samples>
+    <sample id="MWBCameraDemo.iOS">
+      <name>iOS Sample.</name>
+      <summary>Demonstrates MWBarcodeScanner on iOS.</summary>
+    </sample>
+    <sample id="MWBCameraDemo.Android">
+      <name>Android Sample.</name>
+      <summary>Demonstrates MWBarcodeScanner on Android</summary>
+    </sample>
+  </samples>
+</component>
