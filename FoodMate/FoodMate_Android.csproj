@@ -72,6 +72,8 @@
     <Compile Include="GenericViewPagerFragment.cs" />
     <Compile Include="InventoryActivity.cs" />
     <Compile Include="CustomListAdapter.cs" />
+    <Compile Include="AddItemActivity.cs" />
+    <Compile Include="EditItemActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -100,6 +102,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_action_settings.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_my_list.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_shopping_list.png" />
+    <AndroidResource Include="Resources\layout\editItem.axml" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

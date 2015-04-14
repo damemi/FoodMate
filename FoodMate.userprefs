@@ -1,28 +1,27 @@
-<<<<<<< HEAD
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.API21" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\AddItemActivity.cs">
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="100" Column="10" />
-=======
-﻿<Properties StartupItem="FoodMate/FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="FoodMate_iOS/MyHomeViewController.cs" Line="23" Column="23" />
-      <File FileName="FoodMate_iOS/ShoppingListViewController.cs" Line="3" Column="3" />
-      <File FileName="FoodMate_iOS/Main.cs" Line="4" Column="4" />
-      <File FileName="FoodMate_iOS/MyListViewController.cs" Line="3" Column="3" />
-      <File FileName="FoodMate_iOS/AddNewItemViewController.cs" Line="4" Column="4" />
->>>>>>> bdd70d88dbd2e41415798e9a2657aff4f5b11ed3
+      <File FileName="FoodMate\MainActivity.cs" Line="39" Column="43" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="48" Column="42" />
+      <File FileName="FoodMate\EditItemActivity.cs" Line="54" Column="40" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FoodMate_Android" expanded="True">
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="AddItemActivity.cs" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.FoodMate__Android AndroidDesignerPreferredDevice="Nexus 4" />
-=======
->>>>>>> bdd70d88dbd2e41415798e9a2657aff4f5b11ed3
 </Properties>

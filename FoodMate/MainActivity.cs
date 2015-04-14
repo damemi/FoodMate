@@ -25,7 +25,6 @@ namespace FoodMate
 	public class MainActivity : FragmentActivity
 	{
 		private const string AppId = "716545131791857";
-		//private const string ExtendedPermissions = "user_about_me,read_stream,publish_stream";
 		private const string ExtendedPermissions = "";
 
 		//GenericFragmentPagerAdaptor adaptor = new GenericFragmentPagerAdaptor (SupportFragmentManager);
@@ -35,7 +34,7 @@ namespace FoodMate
 		void updateUser() {
 		}
 
-		void editItemActivity() {
+		void editItemActivity(Food item) {
 			//var myIntent = new Intent (this, typeof EditItemActivity));
 			//StartActivityForResult (myIntent, 0);
 		}
@@ -108,7 +107,8 @@ namespace FoodMate
 									//foodView.OnItemClickListener
 
 									foodView.ItemClick += (object sender, AdapterView.ItemClickEventArgs e) => {
-										editItemActivity();
+										Food item = foodView.GetItemAtPosition(e.Position);
+										editItemActivity(item);
 									};
 
 									var AddItemButton = view.FindViewById<Button>(Resource.Id.addItemButton);

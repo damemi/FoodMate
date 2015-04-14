@@ -38,3 +38,4 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
 C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
 C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate.dll
 C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\obj\Debug\FoodMate.pdb
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
