@@ -45,14 +45,25 @@ namespace FoodMate
 
 		void editItemActivity(Object item) {
 			Console.WriteLine ("here");
-			//var myIntent = new Intent (this, typeof (EditItemActivity));
-			//StartActivityForResult (myIntent, 0);
+			var myIntent = new Intent (this, typeof (EditItemActivity));
+			StartActivityForResult (myIntent, 0);
 		}
 
-		void addItemActivity() {
+		async void addItemActivity() {
 			var myIntent = new Intent (this, typeof(AddItemActivity));
 			//myIntent.PutExtra ("pager", pager);
 			StartActivityForResult (myIntent, 0);
+
+			DatabaseOperations db_op = new DatabaseOperations();
+			var foodList = await db_op.getFoods ();
+
+			List<Food> inventory = new List<Food>();
+			foreach (ParseObject food in foodList) {
+				Food newFood = new Food(food);
+				inventory.Add(newFood);
+			}
+			var foodView = FindViewById<ListView>(Resource.Id.ListView);
+			foodView.Adapter = new CustomListAdapter(this, inventory);
 		}
 
 		async void LoginToFacebook() {

@@ -53,6 +53,7 @@ namespace FoodMate
 
 			SetContentView (Resource.Layout.editItem);
 			var itemName = FindViewById<EditText>(Resource.Id.itemName);
+
 			var EditItemButton = FindViewById<Button>(Resource.Id.editItem);
 			EditItemButton.Click += delegate { editItem(itemName.Text); Finish();};
 		}

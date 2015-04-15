@@ -1,35 +1,17 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.API21" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\AddItemActivity.cs">
     <Files>
-<<<<<<< HEAD
-      <File FileName="FoodMate\MainActivity.cs" Line="39" Column="43" />
-      <File FileName="FoodMate\AddItemActivity.cs" Line="48" Column="42" />
-      <File FileName="FoodMate\EditItemActivity.cs" Line="54" Column="40" />
-=======
-      <File FileName="FoodMate_iOS/MyHomeViewController.cs" Line="15" Column="15" />
-      <File FileName="FoodMate_iOS/ShoppingListViewController.cs" Line="1" Column="1" />
-      <File FileName="FoodMate_iOS/Main.cs" Line="1" Column="1" />
-      <File FileName="FoodMate_iOS/MyListViewController.cs" Line="1" Column="1" />
-      <File FileName="FoodMate_iOS/AddNewItemViewController.cs" Line="1" Column="1" />
-      <File FileName="FoodMate_iOS/MyListViewController.designer.cs" Line="1" Column="1" />
->>>>>>> 20eb2b74cd5ccd240c4a9ee6edaa223cf3c375a4
+      <File FileName="FoodMate\MainActivity.cs" Line="49" Column="6" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="35" Column="35" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="43" Column="76" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="FoodMate_Android" expanded="True">
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
-            </Node>
-            <Node name="AddItemActivity.cs" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="c:\Users\Mike\Documents\Projects\FoodMate\Shared\User.cs" line="29" column="1" />
+      <Breakpoint file="C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\AddItemActivity.cs" line="38" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.FoodMate__Android AndroidDesignerPreferredDevice="Nexus 4" />

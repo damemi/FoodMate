@@ -28,7 +28,7 @@ namespace FoodMate
 			DatabaseOperations db_op = new DatabaseOperations();
 
 			await db_op.addNewFood(itemName, itemQuantity, 0, 0);
-			var foodList = await db_op.getFoods ();
+			/*var foodList = await db_op.getFoods ();
 
 			List<Food> inventory = new List<Food>();
 			foreach (ParseObject food in foodList) {
@@ -36,7 +36,7 @@ namespace FoodMate
 				inventory.Add(newFood);
 			}
 			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			foodView.Adapter = new CustomListAdapter(this, inventory);
+			foodView.Adapter = new CustomListAdapter(this, inventory);*/
 		}
 
 		protected override void OnCreate (Bundle bundle)
