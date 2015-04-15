@@ -11,9 +11,8 @@ namespace FoodMate_iOS
 		static bool UserInterfaceIdiomIsPhone {
 			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
 		}
-
-		public MyListViewController ()
-			: base (UserInterfaceIdiomIsPhone ? "MyListViewController_iPhone" : "MyListViewController_iPad", null)
+			
+		public MyListViewController (IntPtr handle) : base (handle)
 		{
 		}
 
@@ -30,18 +29,6 @@ namespace FoodMate_iOS
 			base.ViewDidLoad ();
 			
 			// Perform any additional setup after loading the view, typically from a nib.
-		}
-
-		partial void UIButton463_TouchUpInside (UIButton sender)
-		{
-			AddNewItemViewController newItemController = this.Storyboard.InstantiateViewController("AddNewItemViewController") as AddNewItemViewController;
-			if (newItemController != null)
-			{
-			//	newItemController.CaseID = GetCurrentCaseID();
-				this.NavigationController.PushViewController(newItemController, true);
-			}  
-
-			//throw new NotImplementedException ();
 		}
 	}
 }

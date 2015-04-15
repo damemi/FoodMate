@@ -142,8 +142,8 @@
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="My List" id="oF9-17-4To">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="N1Z-xf-hmc">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="463">
+                        <barButtonItem style="plain" id="684" key="leftBarButtonItem">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="679">
                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add">
@@ -151,8 +151,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="UIButton463_TouchUpInside:" destination="49" eventType="touchUpInside" id="464"/>
-                                    <segue id="615" destination="141" kind="push"/>
+                                    <action selector="UIButton463_TouchUpInside:" destination="681" eventType="touchUpInside" id="680"/>
+                                    <segue id="706" destination="141" kind="push"/>
                                 </connections>
                             </button>
                         </barButtonItem>

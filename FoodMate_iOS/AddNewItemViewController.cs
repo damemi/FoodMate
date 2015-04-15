@@ -8,7 +8,7 @@ namespace FoodMate_iOS
 {
 	public partial class AddNewItemViewController : UIViewController
 	{
-		public AddNewItemViewController () : base ("AddNewItemViewController", null)
+		public AddNewItemViewController (IntPtr handle) : base (handle)
 		{
 		}
 
