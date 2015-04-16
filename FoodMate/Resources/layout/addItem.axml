@@ -5,6 +5,23 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+    <Button
+        android:text="Add Item"
+        android:layout_width="382.0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/addItem"
+        android:layout_toLeftOf="@+id/removeItem"
+        android:background="#24892b"
+        android:layout_marginRight="5.0dp" />
+    <Button
+        android:text="Remove Item"
+        android:layout_width="382.0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/additem"
+        android:id="@+id/removeItem"
+        android:background="#cc3333"
+        android:layout_marginRight="0.0dp" />
     <TextView
         android:text="Item Info"
         android:layout_width="match_parent"
@@ -29,20 +46,10 @@
         android:id="@+id/editText1"
         android:hint="Price (each, i.e. $5.00)" />
     <Button
-        android:text="Add Item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/addItem"
-        android:layout_marginRight="0.0dp" />
-    <Button
-        android:text="Remove Item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/removeItem" />
-    <Button
         android:text="Use Barcode Scanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#0000ff"
         android:id="@+id/Barcode" />
     <ListView
         android:minWidth="25px"

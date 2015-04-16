@@ -33,16 +33,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editItem"
+        android:background="#d76b00"
         android:layout_marginRight="0.0dp" />
     <Button
         android:text="Remove Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#cc3333"
         android:id="@+id/removeItem" />
     <Button
         android:text="Use Barcode Scanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#0000ff"
         android:id="@+id/Barcode" />
     <ListView
         android:minWidth="25px"
