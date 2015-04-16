@@ -306,9 +306,14 @@ containing a value of this type.
     }
     public static final class id {
         public static final int Barcode=0x7f080011;
+        public static final int Email=0x7f08003c;
+        public static final int FirstName=0x7f080039;
         public static final int GroupInfo=0x7f080038;
+        public static final int LastName=0x7f08003a;
         public static final int ListView=0x7f080033;
         public static final int Name=0x7f080034;
+        public static final int Phone=0x7f08003d;
+        public static final int UserName=0x7f08003b;
         public static final int addItem=0x7f080010;
         public static final int addItemButton=0x7f080032;
         public static final int bottom=0x7f080006;
@@ -345,10 +350,6 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f08002b;
         public static final int editItem=0x7f08002d;
         public static final int editText1=0x7f08000f;
-        public static final int editText2=0x7f080039;
-        public static final int editText3=0x7f08003a;
-        public static final int editText4=0x7f08003b;
-        public static final int editText5=0x7f08003c;
         public static final int inline=0x7f080007;
         public static final int itemName=0x7f08000d;
         public static final int itemQuantity=0x7f08000e;

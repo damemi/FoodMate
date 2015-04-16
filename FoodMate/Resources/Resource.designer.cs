@@ -441,14 +441,29 @@ namespace FoodMate
 			// aapt resource value: 0x7f080011
 			public const int Barcode = 2131230737;
 			
+			// aapt resource value: 0x7f08003c
+			public const int Email = 2131230780;
+			
+			// aapt resource value: 0x7f080039
+			public const int FirstName = 2131230777;
+			
 			// aapt resource value: 0x7f080038
 			public const int GroupInfo = 2131230776;
+			
+			// aapt resource value: 0x7f08003a
+			public const int LastName = 2131230778;
 			
 			// aapt resource value: 0x7f080033
 			public const int ListView = 2131230771;
 			
 			// aapt resource value: 0x7f080034
 			public const int Name = 2131230772;
+			
+			// aapt resource value: 0x7f08003d
+			public const int Phone = 2131230781;
+			
+			// aapt resource value: 0x7f08003b
+			public const int UserName = 2131230779;
 			
 			// aapt resource value: 0x7f080010
 			public const int addItem = 2131230736;
@@ -557,18 +572,6 @@ namespace FoodMate
 			
 			// aapt resource value: 0x7f08000f
 			public const int editText1 = 2131230735;
-			
-			// aapt resource value: 0x7f080039
-			public const int editText2 = 2131230777;
-			
-			// aapt resource value: 0x7f08003a
-			public const int editText3 = 2131230778;
-			
-			// aapt resource value: 0x7f08003b
-			public const int editText4 = 2131230779;
-			
-			// aapt resource value: 0x7f08003c
-			public const int editText5 = 2131230780;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
