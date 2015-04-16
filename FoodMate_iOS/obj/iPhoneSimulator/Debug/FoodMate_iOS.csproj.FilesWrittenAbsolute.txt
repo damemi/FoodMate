@@ -29,3 +29,5 @@
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/676-view-677.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/SettingsViewController.nib
