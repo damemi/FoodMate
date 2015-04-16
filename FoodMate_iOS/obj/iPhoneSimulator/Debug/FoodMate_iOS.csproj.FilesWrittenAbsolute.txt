@@ -1,7 +1,9 @@
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/LaunchScreen.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/141-view-142.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/49-view-50.nib
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/CZ4-MO-1fc-view-2VE-Yg-loa.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/AddNewItemViewController.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/CZ4-MO-1fc-view-28.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/Info.plist
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/MyHomeViewController.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/MyListViewController.nib
@@ -10,6 +12,7 @@
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-8YX-ce-x5E.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MyListViewController_iPhone.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MyListViewController_iPad.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/AddNewItemViewController.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/first.png
@@ -26,8 +29,3 @@
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Auth.iOS.dll
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/141-view-142.nib
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-141.nib
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/AddNewItemViewController.nib
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/AddNewItemViewController.nib
-/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/AddNewItemViewControlle.nib

@@ -8,10 +8,10 @@ namespace Shared
 {
 	public class Food
 	{
-		private string name { get; set; }
+		public string name { get; private set; }
 		private string ID { get; set; }
-		private int in_stock { get; set; }
-		private int price { get; set; }
+		public int in_stock { get; private set; }
+		public double price { get; private set; }
 		private int barcode { get; set; }
 		private DateTime expiration { get; set; }
 		private ParseObject _parseObj;
@@ -30,6 +30,7 @@ namespace Shared
 		public Food(ParseObject food) {
 			name = food.Get<String>("name");
 			_parseObj = food;
+			price = food.Get<Double> ("price");
 		}
 
 		public String getName() {

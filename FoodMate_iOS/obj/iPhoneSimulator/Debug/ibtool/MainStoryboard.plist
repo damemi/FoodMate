@@ -8,12 +8,12 @@
 	<dict/>
 	<key>com.apple.ibtool.document.warnings</key>
 	<dict>
-		<key>Bd3-0a-U4c</key>
+		<key>631</key>
 		<array>
 			<dict>
 				<key>affected-objects</key>
 				<array>
-					<string>Bd3-0a-U4c</string>
+					<string>631</string>
 					<string>Rif-IN-HqB</string>
 				</array>
 				<key>message</key>

@@ -9,12 +9,17 @@ using Xamarin.Forms;
 using Xamarin.Auth;
 using Parse;
 using Newtonsoft.Json.Linq;
+using Shared;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 
 namespace FoodMate_iOS
 {
 	public partial class MyHomeViewController : UIViewController
 	{
+		UITableView table;
 		public MyHomeViewController (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("MyHome", "MyHome");
@@ -34,7 +39,6 @@ namespace FoodMate_iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
@@ -45,7 +49,23 @@ namespace FoodMate_iOS
 
 		public override void ViewDidAppear (bool animated)
 		{
+
 			base.ViewDidAppear (animated);
+			table = new UITableView(View.Bounds); // defaults to Plain style
+			DatabaseOperations db_op = new DatabaseOperations ();
+			//List<Food> allFoods;
+			var task = Task.Run(async () => { await db_op.getFoods(); });
+			task.Wait();
+
+			List<Food> allFoods = db_op.AllFoods;
+			string[] tableItems = new string[allFoods.Count];
+			for (int i = 0; i < allFoods.Count; i++) 
+			{
+				tableItems [i] = allFoods[i].name;
+			}
+			table.Source = new TableSource(tableItems);
+			Add (table);
+
 		}
 
 		public override void ViewWillDisappear (bool animated)
