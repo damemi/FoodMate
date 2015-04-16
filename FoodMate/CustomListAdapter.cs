@@ -40,6 +40,16 @@ namespace FoodMate
 			get { return list [index]; }
 		}
 
+		public override Java.Lang.Object GetItem (int position) {
+			// could wrap a Contact in a Java.Lang.Object
+			// to return it here if needed
+			return null;
+		}
+
+		public Food getFood(int index) {
+			return list[index];
+		}
+
 		public override View GetView (int position, View convertView, ViewGroup parent)
 		{
 			View view = convertView;

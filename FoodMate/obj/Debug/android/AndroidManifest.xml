@@ -7,7 +7,6 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="FBWebViewAuthActivity" android:name="foodmate.FBWebViewAuthActivity" />
     <activity android:label="InventoryActivity" android:name="foodmate.InventoryActivity" />
     <activity android:label="Add Item" android:name="foodmate.AddItemActivity" />
     <activity android:label="Edit Item" android:name="foodmate.EditItemActivity" />

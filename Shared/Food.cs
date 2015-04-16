@@ -29,11 +29,20 @@ namespace Shared
 
 		public Food(ParseObject food) {
 			name = food.Get<String>("name");
+			in_stock = food.Get<int> ("in_stock");
 			_parseObj = food;
 		}
 
 		public String getName() {
 			return name;
+		}
+
+		public int getStock() {
+			return in_stock;
+		}
+
+		public String objId() {
+			return _parseObj.ObjectId;
 		}
 
 		public String getObjectId() {

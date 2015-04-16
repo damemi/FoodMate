@@ -28,6 +28,7 @@ namespace FoodMate
 			DatabaseOperations db_op = new DatabaseOperations();
 
 			await db_op.addNewFood(itemName, itemQuantity, 0, 0);
+			// Update food list
 			/*var foodList = await db_op.getFoods ();
 
 			List<Food> inventory = new List<Food>();

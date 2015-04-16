@@ -23,39 +23,43 @@ namespace FoodMate
 	[Activity (Label = "Edit Item")]			
 	public class EditItemActivity : Activity
 	{
-		async void editItem(String itemName) {
-			Console.WriteLine (itemName);
+
+		string _objectId;
+
+		async void editItem(string name, int qty) {
+			//Get actual Parse object
 			DatabaseOperations db_op = new DatabaseOperations();
-			db_op.addNewFood(itemName, 0, 0, 0);
-			var foodList = await db_op.getFoods ();
+			ParseObject item2 = await db_op.getFood (_objectId);
 
-			/*
-			var sampleTextView = FindViewById<TextView>(Resource.Id.textView1);
-
-			foreach (ParseObject foodObj in foodList) {
-				sampleTextView.Text = foodObj.Get<string>("name");
-			}
-			*/
-
-
-			List<Food> inventory = new List<Food>();
-			foreach (ParseObject food in foodList) {
-				Food newFood = new Food(food);
-				inventory.Add(newFood);
-			}
-			//			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			//			foodView.Adapter = new CustomListAdapter(this, inventory);
+			// Save to database
+			item2 ["name"] = name;
+			item2 ["in_stock"] = qty;
+			await item2.SaveAsync ();
 		}
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
+			_objectId = Intent.GetStringExtra ("objectId");
+
 			SetContentView (Resource.Layout.editItem);
-			var itemName = FindViewById<EditText>(Resource.Id.itemName);
+
+			// Populate with current item data
+			var itemNameBox = FindViewById<EditText>(Resource.Id.itemName);
+			var itemName = Intent.GetStringExtra ("itemName");
+			itemNameBox.Text = itemName;
+
+			FindViewById<EditText> (Resource.Id.itemQuantity).Text = Intent.GetIntExtra ("itemStock");
 
 			var EditItemButton = FindViewById<Button>(Resource.Id.editItem);
-			EditItemButton.Click += delegate { editItem(itemName.Text); Finish();};
+			EditItemButton.Click += delegate { 
+				// Get updated item data
+				int newItemQty = Convert.ToInt32(FindViewById<EditText>(Resource.Id.itemQuantity).Text);
+				string newItemName = FindViewById<EditText>(Resource.Id.itemName).Text;
+				editItem(newItemName, newItemQty); 
+				Finish();
+			};
 		}
 	}
 }

@@ -15,19 +15,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemName"
-        android:text="Item Name (i.e. Milk)" />
+        android:hint="Item Name" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemQuantity"
-        android:text="Quantity" />
+        android:hint="Quantity" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText1"
-        android:text="Price (each, i.e. $5.00)" />
+        android:hint="Price (each, i.e. $5.00)" />
     <Button
         android:text="Edit Item"
         android:layout_width="match_parent"

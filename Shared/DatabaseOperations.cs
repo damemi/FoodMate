@@ -45,6 +45,12 @@ namespace Shared
 			return results;
 		}
 
+		public async Task<ParseObject> getFood(string objectId) {
+			ParseQuery<ParseObject> query = ParseObject.GetQuery("Food");
+			ParseObject food = await query.GetAsync(objectId);
+			return food;
+		}
+
 		public void incrementFood(string id, int num_added)
 		{
 			//make sure food exists in database
