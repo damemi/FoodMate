@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -9,37 +9,44 @@
         android:text="Item Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
+        android:id="@+id/itemInfoText"
         android:textSize="24dp" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemName"
+        android:layout_below="@+id/itemInfoText"
         android:hint="Item name (ie Milk)" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/itemQuantity"
+        android:layout_below="@+id/itemName"
         android:hint="Quantity" />
     <EditText
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText1"
+        android:id="@+id/Price"
+        android:layout_below="@+id/itemQuantity"
+        android:layout_marginBottom="20.0dp"
         android:hint="Price (each, i.e. $5.00)" />
     <Button
         android:text="Add Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/addItem"
+        android:layout_below="@+id/Barcode"
         android:background="#24892b"
         android:layout_marginRight="0.0dp" />
     <Button
         android:text="Use Barcode Scanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/Price"
         android:background="#0000ff"
+        android:layout_marginBottom="20.0dp"
         android:id="@+id/Barcode" />
     <ListView
         android:minWidth="25px"
@@ -47,4 +54,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/listView1" />
-</LinearLayout>
+</RelativeLayout>

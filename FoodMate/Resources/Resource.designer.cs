@@ -441,35 +441,38 @@ namespace FoodMate
 			// aapt resource value: 0x7f080011
 			public const int Barcode = 2131230737;
 			
-			// aapt resource value: 0x7f08003c
-			public const int Email = 2131230780;
-			
-			// aapt resource value: 0x7f080039
-			public const int FirstName = 2131230777;
-			
-			// aapt resource value: 0x7f080038
-			public const int GroupInfo = 2131230776;
-			
-			// aapt resource value: 0x7f08003a
-			public const int LastName = 2131230778;
-			
-			// aapt resource value: 0x7f080033
-			public const int ListView = 2131230771;
-			
-			// aapt resource value: 0x7f080034
-			public const int Name = 2131230772;
-			
-			// aapt resource value: 0x7f08003d
-			public const int Phone = 2131230781;
+			// aapt resource value: 0x7f08003e
+			public const int Email = 2131230782;
 			
 			// aapt resource value: 0x7f08003b
-			public const int UserName = 2131230779;
+			public const int FirstName = 2131230779;
+			
+			// aapt resource value: 0x7f08003a
+			public const int GroupInfo = 2131230778;
+			
+			// aapt resource value: 0x7f08003c
+			public const int LastName = 2131230780;
+			
+			// aapt resource value: 0x7f080035
+			public const int ListView = 2131230773;
+			
+			// aapt resource value: 0x7f080036
+			public const int Name = 2131230774;
+			
+			// aapt resource value: 0x7f08003f
+			public const int Phone = 2131230783;
+			
+			// aapt resource value: 0x7f08000f
+			public const int Price = 2131230735;
+			
+			// aapt resource value: 0x7f08003d
+			public const int UserName = 2131230781;
 			
 			// aapt resource value: 0x7f080010
 			public const int addItem = 2131230736;
 			
-			// aapt resource value: 0x7f080032
-			public const int addItemButton = 2131230770;
+			// aapt resource value: 0x7f080034
+			public const int addItemButton = 2131230772;
 			
 			// aapt resource value: 0x7f080006
 			public const int bottom = 2131230726;
@@ -477,17 +480,17 @@ namespace FoodMate
 			// aapt resource value: 0x7f080003
 			public const int box_count = 2131230723;
 			
-			// aapt resource value: 0x7f080036
-			public const int btnLogin = 2131230774;
+			// aapt resource value: 0x7f080038
+			public const int btnLogin = 2131230776;
 			
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
 			
-			// aapt resource value: 0x7f080030
-			public const int button5 = 2131230768;
+			// aapt resource value: 0x7f080032
+			public const int button5 = 2131230770;
 			
-			// aapt resource value: 0x7f080031
-			public const int button6 = 2131230769;
+			// aapt resource value: 0x7f080033
+			public const int button6 = 2131230771;
 			
 			// aapt resource value: 0x7f080009
 			public const int center = 2131230729;
@@ -567,14 +570,17 @@ namespace FoodMate
 			// aapt resource value: 0x7f08002b
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230763;
 			
-			// aapt resource value: 0x7f08002d
-			public const int editItem = 2131230765;
+			// aapt resource value: 0x7f08002f
+			public const int editItem = 2131230767;
 			
-			// aapt resource value: 0x7f08000f
-			public const int editText1 = 2131230735;
+			// aapt resource value: 0x7f08002e
+			public const int editText1 = 2131230766;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
+			
+			// aapt resource value: 0x7f08000c
+			public const int itemInfoText = 2131230732;
 			
 			// aapt resource value: 0x7f08000d
 			public const int itemName = 2131230733;
@@ -594,14 +600,14 @@ namespace FoodMate
 			// aapt resource value: 0x7f080001
 			public const int normal = 2131230721;
 			
-			// aapt resource value: 0x7f08002f
-			public const int pager = 2131230767;
+			// aapt resource value: 0x7f080031
+			public const int pager = 2131230769;
 			
 			// aapt resource value: 0x7f080022
 			public const int picker_subtitle = 2131230754;
 			
-			// aapt resource value: 0x7f08002e
-			public const int removeItem = 2131230766;
+			// aapt resource value: 0x7f080030
+			public const int removeItem = 2131230768;
 			
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
@@ -612,17 +618,17 @@ namespace FoodMate
 			// aapt resource value: 0x7f080005
 			public const int standard = 2131230725;
 			
-			// aapt resource value: 0x7f08000c
-			public const int textView1 = 2131230732;
+			// aapt resource value: 0x7f08002d
+			public const int textView1 = 2131230765;
 			
-			// aapt resource value: 0x7f080037
-			public const int textView2 = 2131230775;
+			// aapt resource value: 0x7f080039
+			public const int textView2 = 2131230777;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
 			
-			// aapt resource value: 0x7f080035
-			public const int txtvUserName = 2131230773;
+			// aapt resource value: 0x7f080037
+			public const int txtvUserName = 2131230775;
 			
 			static Id()
 			{
