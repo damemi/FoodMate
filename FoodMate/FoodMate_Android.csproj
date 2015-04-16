@@ -67,7 +67,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="FBWebViewAuthActivity.cs" />
     <Compile Include="GenericFragmentPagerAdaptor.cs" />
     <Compile Include="GenericViewPagerFragment.cs" />
     <Compile Include="InventoryActivity.cs" />

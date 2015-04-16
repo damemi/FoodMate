@@ -35,11 +35,6 @@
         android:id="@+id/addItem"
         android:layout_marginRight="0.0dp" />
     <Button
-        android:text="Remove Item"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/removeItem" />
-    <Button
         android:text="Use Barcode Scanner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

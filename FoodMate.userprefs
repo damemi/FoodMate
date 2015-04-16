@@ -1,16 +1,16 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\AddItemActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="49" Column="6" />
-      <File FileName="FoodMate\AddItemActivity.cs" Line="35" Column="35" />
-      <File FileName="Shared\DatabaseOperations.cs" Line="43" Column="76" />
+      <File FileName="FoodMate\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\EditItemActivity.cs" Line="1" Column="1" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="c:\Users\Mike\Documents\Projects\FoodMate\Shared\User.cs" line="29" column="1" />
-      <Breakpoint file="C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\AddItemActivity.cs" line="38" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
