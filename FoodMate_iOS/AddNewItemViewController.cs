@@ -3,12 +3,13 @@ using System;
 
 using Foundation;
 using UIKit;
+using Shared;
 
 namespace FoodMate_iOS
 {
 	public partial class AddNewItemViewController : UIViewController
 	{
-		public AddNewItemViewController () : base ("AddNewItemViewController", null)
+		public AddNewItemViewController (IntPtr ptr) : base (ptr)
 		{
 		}
 
@@ -29,7 +30,14 @@ namespace FoodMate_iOS
 
 		partial void UIButton158_TouchUpInside (UIButton sender)
 		{
-			throw new NotImplementedException ();
+			Console.WriteLine("Adding new food, button pressed");
+
+			DatabaseOperations db_op = new DatabaseOperations();
+			double price = Double.Parse(PriceField.Text);
+			string name = NameField.Text;
+			//double price = [PriceField doubleValue];
+			//double price = Convert.ToDouble(PriceField.ToString());
+			db_op.addNewFood(name, price);
 		}
 	}
 }

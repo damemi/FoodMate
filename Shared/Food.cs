@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
@@ -8,10 +9,10 @@ namespace Shared
 {
 	public class Food
 	{
-		private string name { get; set; }
+		public string name { get; private set; }
 		private string ID { get; set; }
-		private int in_stock { get; set; }
-		private int price { get; set; }
+		public int in_stock { get; private set; }
+		public double price { get; private set; }
 		private int barcode { get; set; }
 		private DateTime expiration { get; set; }
 		private ParseObject _parseObj;
@@ -30,6 +31,7 @@ namespace Shared
 		public Food(ParseObject food) {
 			name = food.Get<String>("name");
 			in_stock = food.Get<int> ("in_stock");
+			price = food.Get<Double> ("price");
 			_parseObj = food;
 		}
 
@@ -50,4 +52,3 @@ namespace Shared
 		}
 	}
 }
-

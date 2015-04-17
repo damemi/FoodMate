@@ -32,7 +32,7 @@ namespace FoodMate_iOS
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
-		partial void UIButton463_TouchUpInside (UIButton sender)
+	/*	partial void UIButton463_TouchUpInside (UIButton sender)
 		{
 			AddNewItemViewController newItemController = this.Storyboard.InstantiateViewController("AddNewItemViewController") as AddNewItemViewController;
 			if (newItemController != null)
@@ -42,7 +42,7 @@ namespace FoodMate_iOS
 			}  
 
 			//throw new NotImplementedException ();
-		}
+		}*/
 	}
 }
 

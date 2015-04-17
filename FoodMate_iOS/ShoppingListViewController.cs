@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Drawing;
-
 using Foundation;
 using UIKit;
-
 using Shared;
 
 namespace FoodMate_iOS

@@ -1,1 +1,19 @@
-<LinearLayout android:background="#ffffff" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"><TextView android:text="Welcome to FoodMate" android:textAppearance="?android:attr/textAppearanceMedium" android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/txtvUserName" android:textColor="#ff0f0101" /><Button android:id="@+id/btnLogin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/facebookLogin" /></LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+        android:text="Welcome to FoodMate"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtvUserName"
+        android:textColor="#ff0f0101" />
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/facebookLogin" />
+</LinearLayout>

@@ -14,16 +14,8 @@ namespace FoodMate_iOS
 	[Register ("MyHomeViewController")]
 	partial class MyHomeViewController
 	{
-		[Outlet]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		UIView MyHome { get; set; }
-
 		void ReleaseDesignerOutlets ()
 		{
-			if (MyHome != null) {
-				MyHome.Dispose ();
-				MyHome = null;
-			}
 		}
 	}
 }

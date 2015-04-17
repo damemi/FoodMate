@@ -117,6 +117,7 @@
     <InterfaceDefinition Include="MyListViewController_iPhone.xib" />
     <InterfaceDefinition Include="MyListViewController_iPad.xib" />
     <InterfaceDefinition Include="AddNewItemViewController.xib" />
+    <InterfaceDefinition Include="SettingsViewController.xib" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\first.png" />
@@ -152,6 +153,10 @@
     <Compile Include="AddNewItemViewController.cs" />
     <Compile Include="AddNewItemViewController.designer.cs">
       <DependentUpon>AddNewItemViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsViewController.cs" />
+    <Compile Include="SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
