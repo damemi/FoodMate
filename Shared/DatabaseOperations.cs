@@ -43,15 +43,15 @@ namespace Shared
 		//Currently returns a list of all food objects
 		//Should be easy to filter by the user's group
 		public async Task getFoods() {
-			Console.WriteLine ("Async task");
+		/*	var query = from food in ParseObject.GetQuery ("Food")
+			            where food.ContainsKey ("name")
+			            select food;*/
 			var query = ParseObject.GetQuery ("Food").OrderByDescending("createdAt");
 			var results = await query.FindAsync();
-			Console.WriteLine ("Async task returning");
 			foreach(var result in results)
 			{
 				Food food = new Food (result);
 				AllFoods.Add(food);
-				Console.WriteLine (food.getName ());
 			}
 		}
 
@@ -62,15 +62,18 @@ namespace Shared
 			//incrememt in_stock number
 		}
 
-		public List<Food> getUserFoods(ParseObject user)
+		public List<Food> getUserFoods(ParseUser user)
 		{
 			List<Food> userFoods = new List<Food> ();
+			var query = ParseObject.GetQuery ("User");
 			return userFoods;
 		}
 
 		public List<Food> getShoppingListFoods()
 		{
 			List<Food> shoppingListFoods = new List<Food> ();
+			//var query = ParseObject.GetQuery ("User").OrderByDescending("createdAt");
+
 			return shoppingListFoods;
 
 		}
