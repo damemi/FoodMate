@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Drawing;
 
 using Foundation;
 using UIKit;
@@ -9,20 +8,14 @@ using Xamarin.Forms;
 using Xamarin.Auth;
 using Parse;
 using Newtonsoft.Json.Linq;
-using Shared;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-
 
 namespace FoodMate_iOS
 {
-	public partial class MyHomeViewController : UIViewController
+	public partial class SettingsViewController : UIViewController
 	{
-		UITableView table;
-		public MyHomeViewController (IntPtr handle) : base (handle)
+		public SettingsViewController (IntPtr handle) : base (handle)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("MyHome", "MyHome");
+			Title = NSBundle.MainBundle.LocalizedString ("Settings", "Settings");
 			TabBarItem.Image = UIImage.FromBundle ("first");
 		}
 
@@ -30,7 +23,7 @@ namespace FoodMate_iOS
 		{
 			// Releases the view if it doesn't have a superview.
 			base.DidReceiveMemoryWarning ();
-			
+
 			// Release any cached data, images, etc that aren't in use.
 		}
 
@@ -39,6 +32,7 @@ namespace FoodMate_iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
 
@@ -49,23 +43,7 @@ namespace FoodMate_iOS
 
 		public override void ViewDidAppear (bool animated)
 		{
-
 			base.ViewDidAppear (animated);
-			table = new UITableView(View.Bounds); // defaults to Plain style
-			DatabaseOperations db_op = new DatabaseOperations ();
-			//List<Food> allFoods;
-			var task = Task.Run(async () => { await db_op.getFoods(); });
-			task.Wait();
-
-			List<Food> allFoods = db_op.AllFoods;
-			string[] tableItems = new string[allFoods.Count];
-			for (int i = 0; i < allFoods.Count; i++) 
-			{
-				tableItems [i] = allFoods[i].name;
-			}
-			table.Source = new TableSource(tableItems);
-			Add (table);
-
 		}
 
 		public override void ViewWillDisappear (bool animated)
@@ -77,9 +55,6 @@ namespace FoodMate_iOS
 		{
 			base.ViewDidDisappear (animated);
 		}
-
-		#endregion
-
 		void LoginToFacebook ()
 		{
 
@@ -119,15 +94,15 @@ namespace FoodMate_iOS
 			var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
 
 			var user = await ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-	
+
 		}
 
-	/*	partial void UIButton14_TouchUpInside (UIButton sender)
+		partial void FacebookLoginButton_TouchUpInside (UIButton sender)
 		{
-			Console.WriteLine("Login button pressed");
 			LoginToFacebook();
-
-		}*/
+		}
+		#endregion
 	}
+
 }
 

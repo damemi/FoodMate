@@ -8,13 +8,16 @@ namespace Shared
 {
 	public class DatabaseOperations
 	{
+		public List<Food> AllFoods { get; private set; }
+
 		public DatabaseOperations ()
 		{
 			Console.WriteLine ("Database Operations");
 			ParseClient.Initialize("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
+			AllFoods = new List<Food> ();
 		}
 
-		public async Task addNewFood(string name, int quantity, int price, int barcode = 0)
+		public async Task addNewFood(string name, double price, int quantity=0, int barcode = 0)
 		{
 			//check if food already exists in database
 				//(not implemented yet)
@@ -39,10 +42,17 @@ namespace Shared
 
 		//Currently returns a list of all food objects
 		//Should be easy to filter by the user's group
-		public async Task<IEnumerable<ParseObject>> getFoods() {
+		public async Task getFoods() {
+		/*	var query = from food in ParseObject.GetQuery ("Food")
+			            where food.ContainsKey ("name")
+			            select food;*/
 			var query = ParseObject.GetQuery ("Food").OrderByDescending("createdAt");
 			var results = await query.FindAsync();
-			return results;
+			foreach(var result in results)
+			{
+				Food food = new Food (result);
+				AllFoods.Add(food);
+			}
 		}
 
 		public async Task<ParseObject> getFood(string objectId) {
@@ -56,6 +66,22 @@ namespace Shared
 			//make sure food exists in database
 
 			//incrememt in_stock number
+		}
+
+		public List<Food> getUserFoods(ParseUser user)
+		{
+			List<Food> userFoods = new List<Food> ();
+			var query = ParseObject.GetQuery ("User");
+			return userFoods;
+		}
+
+		public List<Food> getShoppingListFoods()
+		{
+			List<Food> shoppingListFoods = new List<Food> ();
+			//var query = ParseObject.GetQuery ("User").OrderByDescending("createdAt");
+
+			return shoppingListFoods;
+
 		}
 	}
 }

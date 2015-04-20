@@ -11,30 +11,30 @@ using UIKit;
 
 namespace FoodMate_iOS
 {
-	[Register ("AddNewItemViewController")]
-	partial class AddNewItemViewController
+	[Register ("SettingsViewController")]
+	partial class SettingsViewController
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextField NameField { get; set; }
+		UIButton FacebookLoginButton { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		UITextField PriceField { get; set; }
+		UIView Settings { get; set; }
 
-		[Action ("UIButton158_TouchUpInside:")]
+		[Action ("FacebookLoginButton_TouchUpInside:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton158_TouchUpInside (UIButton sender);
+		partial void FacebookLoginButton_TouchUpInside (UIButton sender);
 
 		void ReleaseDesignerOutlets ()
 		{
-			if (NameField != null) {
-				NameField.Dispose ();
-				NameField = null;
+			if (FacebookLoginButton != null) {
+				FacebookLoginButton.Dispose ();
+				FacebookLoginButton = null;
 			}
-			if (PriceField != null) {
-				PriceField.Dispose ();
-				PriceField = null;
+			if (Settings != null) {
+				Settings.Dispose ();
+				Settings = null;
 			}
 		}
 	}
