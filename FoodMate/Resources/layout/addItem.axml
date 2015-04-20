@@ -5,6 +5,9 @@
     android:layout_height="fill_parent"
     android:minWidth="25px"
     android:minHeight="25px">
+<!--
+    	test comment
+    -->
     <TextView
         android:text="Item Info"
         android:layout_width="match_parent"

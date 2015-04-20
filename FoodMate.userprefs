@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\MainActivity.cs" Line="17" Column="13" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
