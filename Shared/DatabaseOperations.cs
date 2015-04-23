@@ -9,12 +9,14 @@ namespace Shared
 	public class DatabaseOperations
 	{
 		public List<Food> AllFoods { get; private set; }
+		public List<Food> OutOfStockFoods { get; private set; }
 
 		public DatabaseOperations ()
 		{
 			Console.WriteLine ("Database Operations");
 			ParseClient.Initialize("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
 			AllFoods = new List<Food> ();
+			OutOfStockFoods = new List<Food> ();
 		}
 
 		public async Task addNewFood(string name, double price, int quantity=0, int barcode = 0)
@@ -48,10 +50,18 @@ namespace Shared
 			            select food;*/
 			var query = ParseObject.GetQuery ("Food").OrderByDescending("createdAt");
 			var results = await query.FindAsync();
-			foreach(var result in results)
-			{
+			foreach(var result in results) {
 				Food food = new Food (result);
 				AllFoods.Add(food);
+			}
+		}
+
+		public async Task getOutOfStockFoods() {
+			var query = ParseObject.GetQuery ("Food").WhereEqualTo ("in_stock", 0);
+			var results = await query.FindAsync ();
+			foreach (var result in results) {
+				Food food = new Food (result);
+				OutOfStockFoods.Add (food);
 			}
 		}
 

@@ -110,8 +110,11 @@ namespace FoodMate
 				DatabaseOperations db_op = new DatabaseOperations();
 				var task = Task.Run(async() => { await db_op.getFoods (); });
 				task.Wait();
-
 				List<Food> inventory = db_op.AllFoods;
+
+				var task = Task.Run(async() => { await db_op.getOutOfStockFoods():});
+				task.Wait();
+				List<Food> outOfStock = db_op.OutOfStockFoods;
 					
 				// Actually make Facebook request now for user info
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
@@ -181,6 +184,21 @@ namespace FoodMate
 									var view = i.Inflate(Resource.Layout.inventory, v, false);
 
 									//@TODO populate list with foods that have in_stock==0
+
+									var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
+									foodView.Adapter = new CustomListAdapter(this, outOfStock);	
+
+									// Delegate item to launch "Edit" activity and button to launch "Add" activity
+									foodView.ItemClick += (object sender2, AdapterView.ItemClickEventArgs e) => {
+										Food item = outOfStock[e.Position];
+										editItemActivity(item);
+
+									};
+
+									var AddItemButton = view.FindViewById<Button>(Resource.Id.addItemButton);
+									AddItemButton.Click += delegate { 
+										addItemActivity(); 
+									};
 
 									return view;
 								}
