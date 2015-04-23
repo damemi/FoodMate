@@ -108,12 +108,10 @@ namespace FoodMate
 				// Kind of a side step, but we'll need the inventory to display further down
 				// so grab it now, build into a generic list of Food objects
 				DatabaseOperations db_op = new DatabaseOperations();
-				var foodList = await db_op.getFoods ();
-				List<Food> inventory = new List<Food>();
-				foreach (ParseObject food in foodList) {
-					Food newFood = new Food(food);
-					inventory.Add(newFood);
-				}
+				var task = Task.Run(async() => { await db_op.getFoods (); });
+				task.Wait();
+
+				List<Food> inventory = db_op.AllFoods;
 					
 				// Actually make Facebook request now for user info
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
@@ -177,19 +175,25 @@ namespace FoodMate
 							);
 
 							// Next two are not yet implemented
+							// Shopping list
 							adaptor.AddFragmentView((i, v, b) =>
 								{
-									var view = i.Inflate(Resource.Layout.tab, v, false);
-									var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView1);
-									sampleTextView.Text = "Shopping List";
+									var view = i.Inflate(Resource.Layout.inventory, v, false);
+
+									//@TODO populate list with foods that have in_stock==0
+
 									return view;
 								}
 							);
+
+							// My List
 							adaptor.AddFragmentView((i, v, b) =>
 								{
-									var view = i.Inflate(Resource.Layout.tab, v, false);
-									var sampleTextView = view.FindViewById<TextView>(Resource.Id.textView1);
-									sampleTextView.Text = "My List";
+									var view = i.Inflate(Resource.Layout.inventory, v, false);
+
+									//@TODO populate list with foods that have user_id in the list of
+									//		users that have requested it
+
 									return view;
 								}
 							);
