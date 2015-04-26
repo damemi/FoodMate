@@ -1,9 +1,27 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.API21" />
   <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
     <Files>
-      <File FileName="FoodMate\MainActivity.cs" Line="53" Column="11" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="64" Column="32" />
+      <File FileName="FoodMate\MainActivity.cs" Line="201" Column="12" />
+      <File FileName="FoodMate_iOS\MyHomeViewController.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="18" Column="1" />
+      <File FileName="FoodMate\EditItemActivity.cs" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="FoodMate_Android" expanded="True">
+            <Node name="Resources" expanded="True">
+              <Node name="layout" expanded="True" />
+            </Node>
+            <Node name="MainActivity.cs" selected="True" />
+          </Node>
+          <Node name="FoodMate_iOS" expanded="True" />
+          <Node name="Shared" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>

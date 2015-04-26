@@ -57,7 +57,7 @@ namespace Shared
 		}
 
 		public async Task getOutOfStockFoods() {
-			var query = ParseObject.GetQuery ("Food").WhereEqualTo ("in_stock", 0);
+			var query = ParseObject.GetQuery ("Food").WhereEqualTo ("in_stock", 0).OrderByDescending("createdAt");
 			var results = await query.FindAsync ();
 			foreach (var result in results) {
 				Food food = new Food (result);

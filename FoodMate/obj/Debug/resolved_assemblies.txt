@@ -1,6 +1,6 @@
-C:\Users\Karl Olsen\Desktop\SD&D\FoodMate\bin\Debug\FoodMate.dll
-C:\Users\Karl Olsen\Desktop\SD&D\Components\facebook-sdk-6.2.2\lib\android\Facebook.dll
-C:\Users\Karl Olsen\Desktop\SD&D\Components\parse-1.3.4\lib\android\Parse.Android.dll
-C:\Users\Karl Olsen\Desktop\SD&D\packages\Xamarin.Android.Support.v4.21.0.3.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
-C:\Users\Karl Olsen\Desktop\SD&D\Components\xamarin.auth-1.2.3.1\lib\android\Xamarin.Auth.Android.dll
-C:\Users\Karl Olsen\Desktop\SD&D\packages\Xamarin.Facebook.3.22.0.0\lib\MonoAndroid40\Xamarin.Facebook.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\FoodMate.dll
+C:\Users\Mike\Documents\Projects\FoodMate\Components\facebook-sdk-6.2.2\lib\android\Facebook.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Mike\Documents\Projects\FoodMate\Components\parse-1.3.4\lib\android\Parse.Android.dll
+C:\Users\Mike\Documents\Projects\FoodMate\packages\Xamarin.Android.Support.v4.22.0.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll
+C:\Users\Mike\Documents\Projects\FoodMate\Components\xamarin.auth-1.2.3.1\lib\android\Xamarin.Auth.Android.dll
