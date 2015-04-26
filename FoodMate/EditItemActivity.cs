@@ -50,7 +50,7 @@ namespace FoodMate
 			var itemName = Intent.GetStringExtra ("itemName");
 			itemNameBox.Text = itemName;
 
-			FindViewById<EditText> (Resource.Id.itemQuantity).Text = Intent.GetIntExtra ("itemStock");
+			FindViewById<EditText> (Resource.Id.itemQuantity).Text = Convert.ToString (Intent.GetIntExtra ("itemStock", 0));
 
 			var EditItemButton = FindViewById<Button>(Resource.Id.editItem);
 			EditItemButton.Click += delegate { 
