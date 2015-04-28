@@ -2,12 +2,17 @@
 using System.Drawing;
 using Foundation;
 using UIKit;
+
 using Shared;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace FoodMate_iOS
 {
 	public partial class ShoppingListViewController : UIViewController
 	{
+		UITableView table;
 		public ShoppingListViewController (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("ShoppingList", "ShoppingList");
@@ -39,6 +44,26 @@ namespace FoodMate_iOS
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+			// After the initial is constructed, create a tableView
+			table = new UITableView (View.Bounds);
+			// Create db object to query data from database
+			DatabaseOperations db_op = new DatabaseOperations ();
+
+			// Wait for database query
+			var task = Task.Run(async () => { await db_op.getOutOfStockFoods(); });
+			task.Wait();
+
+			// Get data of food
+			List<Food> OutOfStockFoods = db_op.OutOfStockFoods;
+			string[] tableItems = new string[OutOfStockFoods.Count];
+
+			// Add data to the table
+			for (int i = 0; i < OutOfStockFoods.Count; i++) 
+			{
+				tableItems [i] = OutOfStockFoods[i].name;
+			}
+			table.Source = new TableSource(tableItems);
+			Add (table);
 		}
 
 		public override void ViewWillDisappear (bool animated)
