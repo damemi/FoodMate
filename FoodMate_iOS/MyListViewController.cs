@@ -8,13 +8,10 @@ namespace FoodMate_iOS
 {
 	public partial class MyListViewController : UIViewController
 	{
-		static bool UserInterfaceIdiomIsPhone {
-			get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-		}
-
-		public MyListViewController ()
-			: base (UserInterfaceIdiomIsPhone ? "MyListViewController_iPhone" : "MyListViewController_iPad", null)
+		public MyListViewController (IntPtr handle) : base (handle)
 		{
+			Title = NSBundle.MainBundle.LocalizedString ("My List", "My List");
+			TabBarItem.Image = UIImage.FromBundle ("first");
 		}
 
 		public override void DidReceiveMemoryWarning ()

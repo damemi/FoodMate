@@ -15,6 +15,6 @@
 	<key>softwareIconNeedsShine</key>
 	<true/>
 	<key>softwareVersionBundleId</key>
-	<string>com.FoodMate.FoodMate_iOS</string>
+	<string>com.foodmate</string>
 </dict>
 </plist>

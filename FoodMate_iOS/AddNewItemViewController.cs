@@ -9,7 +9,7 @@ namespace FoodMate_iOS
 {
 	public partial class AddNewItemViewController : UIViewController
 	{
-		public AddNewItemViewController (IntPtr ptr) : base (ptr)
+		public AddNewItemViewController(IntPtr ptr) : base (ptr)
 		{
 		}
 
@@ -24,6 +24,10 @@ namespace FoodMate_iOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
+			var g = new UITapGestureRecognizer(() => View.EndEditing(true));
+			g.CancelsTouchesInView = false; //for iOS5
+			View.AddGestureRecognizer(g);
+
 			
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
@@ -38,6 +42,14 @@ namespace FoodMate_iOS
 			//double price = [PriceField doubleValue];
 			//double price = Convert.ToDouble(PriceField.ToString());
 			db_op.addNewFood(name, price);
+		/*	if (MyHomeViewController != null)
+			{
+				//	newItemController.CaseID = GetCurrentCaseID();
+				this.NavigationController.PushViewController(MyHomeViewController, true);
+			}  */
+
+		//	NavigationController.PushViewController(new MyHomeViewController(handle), true);
+		
 		}
 	}
 }
