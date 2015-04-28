@@ -1,11 +1,12 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Shared\DatabaseOperations.cs">
     <Files>
-      <File FileName="Shared\DatabaseOperations.cs" Line="34" Column="49" />
-      <File FileName="FoodMate\HomeScreenActivity.cs" Line="75" Column="1" />
-      <File FileName="FoodMate\MainActivity.cs" Line="85" Column="9" />
-      <File FileName="FoodMate\FacebookLoginActivity.cs" Line="84" Column="16" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="97" Column="26" />
+      <File FileName="Shared\Food.cs" Line="36" Column="1" />
+      <File FileName="FoodMate\HomeScreenActivity.cs" Line="95" Column="1" />
+      <File FileName="FoodMate\MainActivity.cs" Line="127" Column="17" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="28" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -16,7 +17,9 @@
             <Node name="Resources" expanded="True">
               <Node name="layout" expanded="True" />
             </Node>
-            <Node name="MainActivity.cs" selected="True" />
+          </Node>
+          <Node name="FoodMate_iOS" expanded="True">
+            <Node name="Main.cs" selected="True" />
           </Node>
           <Node name="Shared" expanded="True" />
         </State>
@@ -26,6 +29,7 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="c:\Users\Mike\Documents\Projects\FoodMate\Shared\User.cs" line="33" column="1" />
+      <Breakpoint file="C:\Users\Mike\Documents\Projects\FoodMate\Shared\DatabaseOperations.cs" line="97" column="1" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />

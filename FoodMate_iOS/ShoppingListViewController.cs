@@ -15,7 +15,7 @@ namespace FoodMate_iOS
 		UITableView table;
 		public ShoppingListViewController (IntPtr handle) : base (handle)
 		{
-			Title = NSBundle.MainBundle.LocalizedString ("ShoppingList", "ShoppingList");
+			Title = NSBundle.MainBundle.LocalizedString ("Shopping List", "Shopping List");
 			TabBarItem.Image = UIImage.FromBundle ("second");
 		}
 

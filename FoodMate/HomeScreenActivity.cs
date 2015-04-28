@@ -92,7 +92,7 @@ namespace FoodMate
 			List<Food> outOfStock = db_op.OutOfStockFoods;
 
 			var task3 = Task.Run(async() => { await db_op.getRequestedFoods(userId); });
-			task2.Wait();
+			task3.Wait();
 			List<Food> requested = db_op.RequestedFoods;
 
 				// Start doing tabbed display stuff. This works like this:

@@ -59,7 +59,7 @@
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                 <state key="normal" title="Checkout">
-                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping List" id="Rif-IN-HqB">
                         <barButtonItem style="plain" id="631" key="leftBarButtonItem">
@@ -100,7 +100,7 @@
                 <tabBarController id="8YX-ce-x5E" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
-                        <rect key="frame" x="0.0" y="431" width="320" height="49"/>
+                        <rect key="frame" x="0.0" y="519" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -172,49 +172,49 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text=" Item Info" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="148">
-                                <rect key="frame" x="0.0" y="94" width="320" height="34"/>
+                                <rect key="frame" x="0.0" y="67" width="320" height="34"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Name (i.e. Milk)" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="149" clearsOnBeginEditing="YES">
-                                <rect key="frame" x="16" y="144" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="149" clearsOnBeginEditing="YES" placeholder="Item Name (i.e Milk)">
+                                <rect key="frame" x="16" y="117" width="288" height="30"/>
                                 <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price (i.e. $2.50)" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="150" clearsOnBeginEditing="YES">
-                                <rect key="frame" x="16" y="182" width="288" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="150" clearsOnBeginEditing="YES" placeholder="Price (i.e. $2.50)" clearButtonMode="unlessEditing">
+                                <rect key="frame" x="16" y="155" width="288" height="30"/>
                                 <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text=" Optional Info" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="151">
-                                <rect key="frame" x="0.0" y="295" width="320" height="34"/>
+                                <rect key="frame" x="0.0" y="202" width="320" height="34"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
-                                <color key="textColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="UPC Barcode" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="152">
-                                <rect key="frame" x="16" y="337" width="288" height="30"/>
+                                <rect key="frame" x="16" y="244" width="288" height="30"/>
                                 <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Expiration Date" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="153">
-                                <rect key="frame" x="16" y="375" width="288" height="30"/>
+                                <rect key="frame" x="16" y="282" width="288" height="30"/>
                                 <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="158">
-                                <rect key="frame" x="20" y="223" width="280" height="43"/>
+                                <rect key="frame" x="20" y="337" width="280" height="43"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="22"/>
                                 <state key="normal" title="Add Item">
-                                    <color key="titleColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -223,6 +223,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="2lf-lb-Usu"/>
                     <connections>
@@ -238,12 +239,12 @@
         <scene sceneID="34S-Ee-Cvc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rw7-aR-4Sd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="first" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="" id="u1e-5L-l1D"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="v2J-kj-bUs" translucent="NO">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                         <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                         <color key="tintColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                         <textAttributes key="titleTextAttributes">
@@ -265,17 +266,18 @@
         <scene sceneID="Bd5-UX-0pT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T86-OT-sRm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shopping List" image="second" id="Z7h-1E-pvt"/>
+                    <tabBarItem key="tabBarItem" title="Shopping List" image="" id="Z7h-1E-pvt"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fC1-Ty-QBw" translucent="YES">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                             <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                             <color key="textShadowColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
                         </textAttributes>
+                        <color key="tintColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -290,12 +292,12 @@
         <scene sceneID="FjY-RQ-Vag">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="P7q-Gi-7Pi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My List" image="first.png" id="72"/>
+                    <tabBarItem key="tabBarItem" title="My List" image="" id="72"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fm0-qx-3j0" alpha="0.0">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                        <color key="barTintColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                             <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
@@ -325,13 +327,13 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" minimumFontSize="10" id="739" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
                                 <rect key="frame" x="0.0" y="20" width="320" height="53"/>
-                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Settings" lineBreakMode="tailTruncation" minimumFontSize="10" id="738" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="103" y="28" width="126" height="38"/>
+                                <rect key="frame" x="109" y="28" width="126" height="38"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="26"/>
                                 <color key="textColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
@@ -366,7 +368,7 @@
                             </label>
                         </subviews>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="721" image="first.png"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="721" image=""/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="Settings" destination="677" id="name-outlet-677"/>
@@ -391,5 +393,5 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
     </inferredMetricsTieBreakers>
-    <color key="tintColor" colorSpace="calibratedRGB" red="1" green="0.4" blue="0.4" alpha="1"/>
+    <color key="tintColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
 </document>

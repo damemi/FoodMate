@@ -92,24 +92,11 @@ namespace Shared
 		}
 
 		public async Task getRequestedFoods(string userId) {
-
-			await getFoods ();
 			foreach (var f in AllFoods) {
 				if (f.wanted_by.Contains (userId)) {
 					RequestedFoods.Add (f);
 				}
 			}
-
-			/*
-			var query = ParseObject.GetQuery ("Food").WhereEqualTo ("wanted_by", userId).OrderByDescending("createdAt");
-
-			var results = await query.FindAsync ();
-			foreach (var result in results) {
-				Food food = new Food (result);
-				RequestedFoods.Add (food);
-			}
-			*/
-
 
 		}
 

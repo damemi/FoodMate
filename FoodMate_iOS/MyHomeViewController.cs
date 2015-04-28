@@ -20,7 +20,7 @@ namespace FoodMate_iOS
 	public partial class MyHomeViewController : UIViewController
 	{
 		UITableView table;
-		public MyHomeViewController (IntPtr handle) : base (handle)
+		public MyHomeViewController(IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("MyHome", "MyHome");
 			TabBarItem.Image = UIImage.FromBundle ("first");
