@@ -39,9 +39,10 @@ namespace FoodMate_iOS
 			DatabaseOperations db_op = new DatabaseOperations();
 			double price = Double.Parse(PriceField.Text);
 			string name = NameField.Text;
+			int amount = int.Parse(amountField.Text);
 			//double price = [PriceField doubleValue];
 			//double price = Convert.ToDouble(PriceField.ToString());
-			db_op.addNewFood(name, price);
+			db_op.addNewFood(name, price, amount);
 		/*	if (MyHomeViewController != null)
 			{
 				//	newItemController.CaseID = GetCurrentCaseID();
