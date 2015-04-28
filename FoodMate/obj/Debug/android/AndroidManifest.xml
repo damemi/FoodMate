@@ -10,6 +10,7 @@
     <activity android:label="InventoryActivity" android:name="foodmate.InventoryActivity" />
     <activity android:label="Add Item" android:name="foodmate.AddItemActivity" />
     <activity android:label="Edit Item" android:name="foodmate.EditItemActivity" />
+    <activity android:label="FoodMate" android:name="foodmate.HomeScreenActivity" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth.WebAuthenticatorActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="FoodMate.FoodMate.mono.MonoRuntimeProvider.__mono_init__" />

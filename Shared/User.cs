@@ -23,6 +23,10 @@ namespace Shared
 		{
 		}
 
+		public String objId() {
+			return _currentUser.ObjectId;
+		}
+
 		public String getGroup()
 		{
 			var user = _currentUser;

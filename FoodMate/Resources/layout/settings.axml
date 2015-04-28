@@ -9,20 +9,21 @@
         android:text="Group Info"
         android:layout_width="match_parent"
         android:layout_height="31.3dp"
-        android:id="@+id/textView2"
-        android:layout_marginBottom="0dp"
+        android:id="@+id/groupInfoText"
+        android:layout_marginBottom="5.0dp"
         android:textSize="24dp" />
     <EditText
         android:inputType="text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/GroupInfo" />
+        android:id="@+id/GroupInfo"
+        android:hint="Group Name" />
     <TextView
         android:text="User Info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_marginBottom="20.3dp"
+        android:id="@+id/userInfoText"
+        android:layout_marginBottom="10.dp"
         android:textSize="24dp"
         android:layout_marginRight="0.0dp"
         android:layout_marginLeft="0.0dp" />
@@ -30,25 +31,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/FirstName"
-        android:text="First Name" />
+        android:layout_marginBottom="10.0dp"
+        android:hint="First Name" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/LastName"
-        android:text="Last Name" />
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/UserName"
-        android:text="Username(?)" />
+        android:layout_marginBottom="10.0dp"
+        android:hint="Last Name" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Email"
-        android:text="E-mail" />
+        android:layout_marginBottom="10.0dp"
+        android:hint="E-mail" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Phone"
-        android:text="Phone #" />
+        android:hint="Phone #" />
+    <Button
+        android:text="Update Info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/settingsUpdate" />
 </LinearLayout>
