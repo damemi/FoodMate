@@ -17,7 +17,7 @@ namespace FacebookSample.Android
 	{
 		// Replace here you own Facebook App Id, if you don't have one go to
 		// https://developers.facebook.com/apps
-		private const string AppId = "YOUR_FACEBOOK_APP_ID_HERE";
+		private const string AppId = "716545131791857";
 		
 		/// <summary>
 		/// Extended permissions is a comma separated list of permissions to ask the user.

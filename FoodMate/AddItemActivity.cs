@@ -27,17 +27,16 @@ namespace FoodMate
 		async void addItem(String itemName, int itemQuantity) {
 			DatabaseOperations db_op = new DatabaseOperations();
 
-			await db_op.addNewFood(itemName, itemQuantity, 0, 0);
-			// Update food list
-			/*var foodList = await db_op.getFoods ();
+			await db_op.addNewFood (itemName, 0, itemQuantity, 0);
 
-			List<Food> inventory = new List<Food>();
-			foreach (ParseObject food in foodList) {
-				Food newFood = new Food(food);
-				inventory.Add(newFood);
-			}
+			/*
+			var task = Task.Run(async() => { await db_op.getFoods (); });
+			task.Wait();
+			List<Food> inventory = db_op.AllFoods;
+
 			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			foodView.Adapter = new CustomListAdapter(this, inventory);*/
+			foodView.Adapter = new CustomListAdapter(this, inventory);
+			*/
 		}
 
 		protected override void OnCreate (Bundle bundle)
@@ -51,6 +50,7 @@ namespace FoodMate
 		
 			AddItemButton.Click += delegate { 
 				int qty = Convert.ToInt32 (itemQuantity.Text);
+
 				addItem(itemName.Text, qty); 
 				Finish();};
 		}

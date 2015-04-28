@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <Button
+        android:text="Make Payment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dp"
+        android:background="#21acb0"
+        android:id="@+id/makePaymentButton" />
+    <Button
+        android:text="Request Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#24892b"
+        android:id="@+id/requestItemButton" />
+    <ListView
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myListView" />
+</LinearLayout>

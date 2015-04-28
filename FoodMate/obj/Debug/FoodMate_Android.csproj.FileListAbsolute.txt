@@ -74,3 +74,6 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\i
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\edititem.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\mylist.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\shoppinglist.xml

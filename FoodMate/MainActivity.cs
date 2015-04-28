@@ -40,7 +40,7 @@ namespace FoodMate
 		// This function uses the Xamarin.Auth Facebook component to log in,
 		// authorize the user, and set up the tabbed-page interface. It should probably
 		// be broken into its own activity somewhere in here.
-		async void LoginToFacebook() {
+		async Task LoginToFacebook() {
 			var auth = new OAuth2Authenticator (
 				clientId: AppId,
 				scope: "",
@@ -48,7 +48,7 @@ namespace FoodMate
 				redirectUrl: new Uri ("http://www.facebook.com/connect/login_success.html"));
 
 			// When the user has finished logging in
-			auth.Completed += (sender, ee) => {
+			auth.Completed += async (sender, ee) => {
 				if (!ee.IsAuthenticated) {
 					var builder = new AlertDialog.Builder (this);
 					builder.SetMessage ("Not Authenticated");
@@ -64,7 +64,7 @@ namespace FoodMate
 					
 				// Actually make Facebook request now for user info
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
-				request.GetResponseAsync().ContinueWith (t => {
+				await request.GetResponseAsync().ContinueWith (t => {
 					// Some error handling
 					var builder = new AlertDialog.Builder (this);
 					if (t.IsFaulted) {
@@ -80,10 +80,16 @@ namespace FoodMate
 						var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
 						currentUser = new User(ParseUser.CurrentUser);
 						isLoggedIn = true;
+
+						var myIntent = new Intent (this, typeof (HomeScreenActivity));
+						myIntent.PutExtra ("userId", currentUser.objId());
+						StartActivity (myIntent);
 					}
+						
 				}, UIScheduler);
 
-
+				//var myIntent = new Intent (this, typeof (HomeScreenActivity));
+				//StartActivity (myIntent);
 			};
 
 			var intent = auth.GetUI (this);
@@ -91,6 +97,16 @@ namespace FoodMate
 
 		}
 			
+		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
+		{
+			base.OnActivityResult(requestCode, resultCode, data);
+			if (resultCode == Result.Ok) {
+				var homeIntent = new Intent (this, typeof(HomeScreenActivity));
+				homeIntent.PutExtra ("userId", data.GetStringExtra ("userId"));
+				StartActivity (homeIntent);
+			}
+		}
+
 		private static readonly TaskScheduler UIScheduler = TaskScheduler.FromCurrentSynchronizationContext();
 
 		protected override void OnCreate (Bundle bundle)
@@ -107,16 +123,8 @@ namespace FoodMate
 			// Link login button to login action
 			var btnLogin = FindViewById<Button> (Resource.Id.btnLogin);
 			btnLogin.Click += delegate {
-				LoginToFacebook ();
-				//if(isLoggedIn){
-					var myIntent = new Intent (this, typeof (HomeScreenActivity));
-
-					// Pass data about the item to the next window
-					//myIntent.PutExtra ("userId", currentUser.objId());
-
-					// Start window
-					StartActivity (myIntent);
-				//}
+				var task = Task.Run( async() => { await LoginToFacebook(); });
+				task.Wait();
 			};
 
 		}

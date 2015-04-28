@@ -24,6 +24,7 @@ namespace FoodMate
 	[Activity (Label = "FoodMate")]			
 	public class HomeScreenActivity : FragmentActivity
 	{
+		string userId;
 
 		// @TODO: Present new user information
 		void updateUser() {
@@ -49,6 +50,12 @@ namespace FoodMate
 			StartActivityForResult (myIntent, 0);
 		}
 
+		async void requestItemActivity() {
+			var myIntent = new Intent (this, typeof(RequestItemActivity));
+			myIntent.PutExtra ("userId", userId);
+			StartActivityForResult (myIntent, 0);
+		}
+
 		// Function to add item and update item display screen
 		// Currently, the part of the code that updates is firing as soon
 		//   as the user chooses the add item button. Need it to fire after,
@@ -59,7 +66,6 @@ namespace FoodMate
 
 			// Connect to database and  get food list
 			DatabaseOperations db_op = new DatabaseOperations();
-			//var foodList = await db_op.getFoods ();
 
 			// Build generic list to be past to ListView page element
 			var task = Task.Run(async() => { await db_op.getFoods (); });
@@ -74,6 +80,8 @@ namespace FoodMate
 		{
 			base.OnCreate (bundle);
 
+			userId = Intent.GetStringExtra ("userId");
+
 			DatabaseOperations db_op = new DatabaseOperations();
 			var task = Task.Run(async() => { await db_op.getFoods (); });
 			task.Wait();
@@ -82,6 +90,10 @@ namespace FoodMate
 			var task2 = Task.Run(async() => { await db_op.getOutOfStockFoods(); });
 			task2.Wait();
 			List<Food> outOfStock = db_op.OutOfStockFoods;
+
+			var task3 = Task.Run(async() => { await db_op.getRequestedFoods(userId); });
+			task2.Wait();
+			List<Food> requested = db_op.RequestedFoods;
 
 				// Start doing tabbed display stuff. This works like this:
 				// "Home" layout page has a "ViewPager" element inside of it.
@@ -128,11 +140,9 @@ namespace FoodMate
 				// Shopping list
 				adaptor.AddFragmentView((i, v, b) =>
 					{
-						var view = i.Inflate(Resource.Layout.inventory, v, false);
+						var view = i.Inflate(Resource.Layout.shoppingList, v, false);
 
-						//@TODO populate list with foods that have in_stock==0
-
-						var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
+						var foodView = view.FindViewById<ListView>(Resource.Id.shoppingListView);
 						foodView.Adapter = new CustomListAdapter(this, outOfStock);	
 
 						// Delegate item to launch "Edit" activity and button to launch "Add" activity
@@ -154,10 +164,24 @@ namespace FoodMate
 				// My List
 				adaptor.AddFragmentView((i, v, b) =>
 					{
-						var view = i.Inflate(Resource.Layout.inventory, v, false);
+						var view = i.Inflate(Resource.Layout.myList, v, false);
 
-						//@TODO populate list with foods that have user_id in the list of
-						//		users that have requested it
+						if(requested != null) {
+							var foodView = view.FindViewById<ListView>(Resource.Id.myListView);
+							foodView.Adapter = new CustomListAdapter(this, requested);	
+
+							// Delegate item to launch "Edit" activity and button to launch "Add" activity
+							foodView.ItemClick += (object sender2, AdapterView.ItemClickEventArgs e) => {
+								Food item = requested[e.Position];
+								editItemActivity(item);
+
+							};
+						}
+						
+						var RequestItemButton = view.FindViewById<Button>(Resource.Id.requestItemButton);
+						RequestItemButton.Click += delegate { 
+							requestItemActivity(); 
+						};
 
 						return view;
 					}
