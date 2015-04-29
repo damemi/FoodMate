@@ -49,6 +49,7 @@ namespace FoodMate
 			myIntent.PutExtra ("objectId", item.objId ());
 			myIntent.PutExtra ("itemName", item.getName ());
 			myIntent.PutExtra ("itemStock", item.getStock ());
+			myIntent.PutExtra ("userId", userId);
 
 			// Start window
 			StartActivityForResult (myIntent, 0);
@@ -85,6 +86,20 @@ namespace FoodMate
 			}
 			inventoryList.Adapter = new CustomListAdapter(this, inventory);
 			pager.Adapter.NotifyDataSetChanged ();
+
+			/*
+			var task2 = Task.Run(async() => { await db_op.getOutOfStockFoods(); });
+			task2.Wait();
+			List<Food> outOfStock = db_op.OutOfStockFoods;
+			var foodView = FindViewById<ListView>(Resource.Id.shoppingListView);
+			foodView.Adapter = new CustomListAdapter(this, outOfStock);
+
+			var task3 = Task.Run(async() => { await db_op.getRequestedFoods(userId); });
+			task3.Wait();
+			List<Food> requested = db_op.RequestedFoods;
+			foodView = FindViewById<ListView>(Resource.Id.myListView);
+			foodView.Adapter = new CustomListAdapter(this, requested);
+			*/
 		}
 
 		protected override void OnCreate (Bundle bundle)

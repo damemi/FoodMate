@@ -25,6 +25,7 @@ namespace FoodMate
 	{
 
 		string _objectId;
+		string _userId;
 
 		async void editItem(string name, int qty) {
 			//Get actual Parse object
@@ -44,11 +45,24 @@ namespace FoodMate
 			await item2.DeleteAsync ();
 		}
 
-		protected override void OnCreate (Bundle bundle)
+		async void voteItem() {
+			//Get actual Parse object
+			DatabaseOperations db_op = new DatabaseOperations();
+			ParseObject item2 = await db_op.getFood (_objectId);
+			List<object> wanted_by = item2.Get<List<object>> ("wanted_by");
+			if (!(wanted_by.Contains(_userId))) {
+				wanted_by.Add (_userId);
+				item2 ["wanted_by"] = wanted_by;
+				await item2.SaveAsync ();
+			}
+		}
+
+		protected async override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
 			_objectId = Intent.GetStringExtra ("objectId");
+			_userId = Intent.GetStringExtra ("userId");
 
 			SetContentView (Resource.Layout.editItem);
 
@@ -56,6 +70,21 @@ namespace FoodMate
 			var itemNameBox = FindViewById<EditText>(Resource.Id.itemName);
 			var itemName = Intent.GetStringExtra ("itemName");
 			itemNameBox.Text = itemName;
+
+			DatabaseOperations db_op = new DatabaseOperations();
+			ParseObject obj = await db_op.getFood (_objectId);
+			List<object> wanted_by = obj.Get<List<object>> ("wanted_by");
+			List<User> requestedUsers = new List<User> ();
+			foreach (string userId in wanted_by) {
+				if (userId == "0" || userId == "1") {
+					continue;
+				}
+				ParseUser user = await db_op.getUser (userId);
+				requestedUsers.Add (new User(user));
+			}
+
+			ListView requestedList = FindViewById<ListView>(Resource.Id.requestedListView);
+			requestedList.Adapter = new RequestedListAdapter(this, requestedUsers);
 
 			FindViewById<EditText> (Resource.Id.itemQuantity).Text = Convert.ToString (Intent.GetIntExtra ("itemStock", 0));
 
@@ -72,6 +101,13 @@ namespace FoodMate
 			RemoveItemButton.Click += delegate { 
 				// Delete item from inventory
 				removeItem(); 
+				Finish();
+			};
+
+			var VoteItemButton = FindViewById<Button>(Resource.Id.voteForItem);
+			VoteItemButton.Click += delegate { 
+				// Add user id to list of requested users
+				voteItem(); 
 				Finish();
 			};
 		}

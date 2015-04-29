@@ -111,6 +111,12 @@ namespace Shared
 			return food;
 		}
 
+		public async Task<ParseUser> getUser(string objectId) {
+			//ParseQuery<ParseUser> query = ParseUser.Query.GetAsync(objectId);
+			ParseUser user = await ParseUser.Query.GetAsync(objectId);
+			return user;
+		}
+
 		public void incrementFood(string id, int num_added)
 		{
 			//make sure food exists in database

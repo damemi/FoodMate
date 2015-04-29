@@ -73,6 +73,7 @@
     <Compile Include="HomeScreenActivity.cs" />
     <Compile Include="FacebookLoginActivity.cs" />
     <Compile Include="RequestItemActivity.cs" />
+    <Compile Include="RequestedListAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

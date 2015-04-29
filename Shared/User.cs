@@ -22,6 +22,11 @@ namespace Shared
 		public async Task updateUser()
 		{
 		}
+	
+		public String getName() {
+			return "name";
+		}
+
 
 		public String objId() {
 			return _currentUser.ObjectId;

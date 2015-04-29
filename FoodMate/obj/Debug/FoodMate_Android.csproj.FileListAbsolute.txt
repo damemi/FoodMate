@@ -48,7 +48,6 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Android.Sup
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Parse.Android.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.xml
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate.pdb
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\android\bin\FoodMate.FoodMate.apk
