@@ -37,6 +37,13 @@ namespace FoodMate
 			await item2.SaveAsync ();
 		}
 
+		async void removeItem() {
+			//Get actual Parse object
+			DatabaseOperations db_op = new DatabaseOperations();
+			ParseObject item2 = await db_op.getFood (_objectId);
+			await item2.DeleteAsync ();
+		}
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -58,6 +65,13 @@ namespace FoodMate
 				int newItemQty = Convert.ToInt32(FindViewById<EditText>(Resource.Id.itemQuantity).Text);
 				string newItemName = FindViewById<EditText>(Resource.Id.itemName).Text;
 				editItem(newItemName, newItemQty); 
+				Finish();
+			};
+
+			var RemoveItemButton = FindViewById<Button>(Resource.Id.removeItem);
+			RemoveItemButton.Click += delegate { 
+				// Delete item from inventory
+				removeItem(); 
 				Finish();
 			};
 		}

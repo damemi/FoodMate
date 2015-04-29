@@ -24,6 +24,9 @@ namespace FoodMate
 	[Activity (Label = "FoodMate")]			
 	public class HomeScreenActivity : FragmentActivity
 	{
+		private ListView inventoryList = null;
+		private ViewPager pager = null;
+
 		string userId;
 
 		// @TODO: Present new user information
@@ -33,6 +36,7 @@ namespace FoodMate
 		// In progress: update display of inventory dynamically
 		void updateInventory(ref ViewPager pager) {
 			pager.SetCurrentItem (0, true);
+
 			var foodView = FindViewById<ListView>(Resource.Id.ListView);
 			pager.Adapter.NotifyDataSetChanged ();
 		}
@@ -72,8 +76,15 @@ namespace FoodMate
 			task.Wait();
 			List<Food> inventory = db_op.AllFoods;
 
-			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			foodView.Adapter = new CustomListAdapter(this, inventory);
+			//var foodView = FindViewById<ListView>(Resource.Id.ListView);
+			//foodView.Adapter = new CustomListAdapter(this, inventory);
+			if (inventoryList.Adapter != null)
+			{
+				inventoryList.Adapter.Dispose();
+				inventoryList.Adapter = null;
+			}
+			inventoryList.Adapter = new CustomListAdapter(this, inventory);
+			pager.Adapter.NotifyDataSetChanged ();
 		}
 
 		protected override void OnCreate (Bundle bundle)
@@ -106,7 +117,7 @@ namespace FoodMate
 				ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 
 				// pager is the main ViewPager element, adaptor holds all of the pages
-				var pager = FindViewById<ViewPager> (Resource.Id.pager);
+				pager = FindViewById<ViewPager> (Resource.Id.pager);
 				var adaptor = new GenericFragmentPagerAdaptor (SupportFragmentManager);
 
 				// Add pages to the adapter. Similar to just setting up any view
@@ -118,11 +129,15 @@ namespace FoodMate
 						// Main "ListView" element in the "inventory" layout page, which is given an
 						// adapter which will hold each element in the list. The elements in the list
 						// also have their own layout, and the adapter is a custom type we've defined.
-						var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
-						foodView.Adapter = new CustomListAdapter(this, inventory);	
+						//var foodView = view.FindViewById<ListView>(Resource.Id.ListView);
+						//foodView.Adapter = new CustomListAdapter(this, inventory);	
+
+					inventoryList = view.FindViewById<ListView>(Resource.Id.ListView);
+					inventoryList.Adapter = new CustomListAdapter(this, inventory);
 
 						// Delegate item to launch "Edit" activity and button to launch "Add" activity
-						foodView.ItemClick += (object sender2, AdapterView.ItemClickEventArgs e) => {
+						//foodView.ItemClick += (object sender2, AdapterView.ItemClickEventArgs e) => {
+						inventoryList.ItemClick += (object sender2, AdapterView.ItemClickEventArgs e) => {	
 							Food item = inventory[e.Position];
 							editItemActivity(item);
 
