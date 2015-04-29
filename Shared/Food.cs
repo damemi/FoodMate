@@ -36,6 +36,10 @@ namespace Shared
 			_parseObj = food;
 		}
 
+		public ParseObject getParseObject() {
+			return _parseObj;
+		}
+
 		public String getName() {
 			return name;
 		}

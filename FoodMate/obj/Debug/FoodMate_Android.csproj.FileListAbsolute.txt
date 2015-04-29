@@ -48,6 +48,7 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Android.Sup
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Parse.Android.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\Xamarin.Auth.Android.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate.dll
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate.pdb
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\android\bin\FoodMate.FoodMate.apk
@@ -72,8 +73,7 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\i
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_my_list.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\drawable-hdpi\ic_shopping_list.png
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\edititem.xml
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
-C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\mylist.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\shoppinglist.xml
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt

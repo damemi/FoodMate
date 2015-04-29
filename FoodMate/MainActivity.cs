@@ -64,7 +64,7 @@ namespace FoodMate
 					
 				// Actually make Facebook request now for user info
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
-				await request.GetResponseAsync().ContinueWith (t => {
+				request.GetResponseAsync().ContinueWith (t => {
 					// Some error handling
 					var builder = new AlertDialog.Builder (this);
 					if (t.IsFaulted) {

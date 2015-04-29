@@ -18,6 +18,7 @@ namespace Shared
 			ParseClient.Initialize("zCD97bagtQLE7wZFtACpo6XzJm8OFznvF8ynUJoA", "C5jmH2AOT0T1GqF1tZpUT9bGthdfaqWjFveJbgGY");
 			AllFoods = new List<Food> ();
 			OutOfStockFoods = new List<Food> ();
+			RequestedFoods = new List<Food> ();
 		}
 
 		public async Task addNewFood(string name, double price, int quantity, int barcode = 0)
@@ -92,9 +93,13 @@ namespace Shared
 		}
 
 		public async Task getRequestedFoods(string userId) {
-			foreach (var f in AllFoods) {
-				if (f.wanted_by.Contains (userId)) {
-					RequestedFoods.Add (f);
+			var query = ParseObject.GetQuery ("Food").OrderByDescending("createdAt");
+			var results = await query.FindAsync ();
+			foreach (var f in results) {
+				List<object> wanted_by = f.Get<List<object>> ("wanted_by");
+				if (wanted_by.Contains (userId)) {
+					Food food = new Food (f);
+					RequestedFoods.Add (food);
 				}
 			}
 
