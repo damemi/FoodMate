@@ -61,10 +61,11 @@ namespace FoodMate
 				accessToken = ee.Account.Properties["access_token"].ToString();
 				expiresIn = Convert.ToDouble(ee.Account.Properties["expires_in"]);
 				expiryDate = DateTime.Now + TimeSpan.FromSeconds( expiresIn );
-					
+
 				// Actually make Facebook request now for user info
+
 				var request = new OAuth2Request ("GET", new Uri ("https://graph.facebook.com/me"), null, ee.Account);
-				request.GetResponseAsync().ContinueWith (t => {
+				request.GetResponseAsync().ContinueWith (async(t) => {
 					// Some error handling
 					var builder = new AlertDialog.Builder (this);
 					if (t.IsFaulted) {
@@ -77,8 +78,13 @@ namespace FoodMate
 						//Get user id, store in User object
 						var obj = JsonValue.Parse (t.Result.GetResponseText());
 						var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
-						var user = ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-						currentUser = new User(ParseUser.CurrentUser);
+						Console.WriteLine((string) obj["name"]);
+						var user = await ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
+
+						//user["fb_id"] = id;
+						//await user.SaveAsync();
+
+						currentUser = new User(ParseUser.CurrentUser, id);
 						isLoggedIn = true;
 
 						var myIntent = new Intent (this, typeof (HomeScreenActivity));

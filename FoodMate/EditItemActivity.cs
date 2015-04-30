@@ -52,6 +52,7 @@ namespace FoodMate
 			List<object> wanted_by = item2.Get<List<object>> ("wanted_by");
 			if (!(wanted_by.Contains(_userId))) {
 				wanted_by.Add (_userId);
+				Console.WriteLine (_userId);
 				item2 ["wanted_by"] = wanted_by;
 				await item2.SaveAsync ();
 			}

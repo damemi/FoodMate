@@ -1,17 +1,41 @@
 ﻿using System;
-using System.Threading;
+using System.Json;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Android.App;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Android.OS;
+using Android.Support.V4.View;
+using Android.Support.V4.App;
+
+using Facebook;
+using Android.Graphics;
+
 using Parse;
+using Xamarin.Auth;
+using System.Linq;
+using Shared;
 
 namespace Shared
 {
 	public class User
 	{
 		private ParseUser _currentUser;
-		public User (ParseUser currentUser)
+		private String _userName;
+		public User (ParseUser currentUser, string id = "0")
 		{
+			if (id != "0") {
+				currentUser["fb_id"] = id;
+				var task = Task.Run (async() => {
+					await currentUser.SaveAsync ();
+				});
+				task.Wait ();
+			}
 			_currentUser = currentUser;
+			_userName = null;
 		}
 
 		public async Task SaveAsync()
@@ -23,8 +47,23 @@ namespace Shared
 		{
 		}
 	
-		public String getName() {
-			return "name";
+		public async Task getName() {
+			ParseUser puser = await ParseUser.Query.GetAsync(_currentUser.ObjectId);
+			string userId = puser.Get<string> ("fb_id");
+			Console.WriteLine (userId);
+			var fb = new FacebookClient ();
+			fb.AccessToken = ParseFacebookUtils.AccessToken;
+			fb.GetCompleted +=
+				(o, e) => {
+				var result = (IDictionary<string, object>) e.GetResultData();
+				var name = (string) result["name"];
+				_userName = name;
+			};
+			await fb.GetTaskAsync(userId);
+		}
+
+		public String getUserName() {
+			return _userName;
 		}
 
 

@@ -1,28 +1,13 @@
 ﻿<Properties StartupItem="FoodMate\FoodMate_Android.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.1a259950" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Shared\User.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.API21" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FoodMate\EditItemActivity.cs">
     <Files>
-      <File FileName="Shared\DatabaseOperations.cs" Line="115" Column="6" />
-      <File FileName="FoodMate\EditItemActivity.cs" Line="79" Column="28" />
-      <File FileName="Shared\User.cs" Line="27" Column="18" />
-      <File FileName="FoodMate\HomeScreenActivity.cs" Line="150" Column="6" />
-      <File FileName="FoodMate\RequestedListAdapter.cs" Line="14" Column="14" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\EditItemActivity.cs" Line="81" Column="6" />
+      <File FileName="Shared\User.cs" Line="27" Column="16" />
+      <File FileName="FoodMate\HomeScreenActivity.cs" Line="1" Column="1" />
+      <File FileName="FoodMate\RequestedListAdapter.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="FoodMate_Android" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="layout" expanded="True" />
-            </Node>
-          </Node>
-          <Node name="Shared" expanded="True">
-            <Node name="User.cs" selected="True" />
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
