@@ -27,6 +27,8 @@ namespace FoodMate
 		private ListView inventoryList = null;
 		private ViewPager pager = null;
 
+		List<Food> inventory;
+
 		string userId;
 
 		// @TODO: Present new user information
@@ -76,18 +78,19 @@ namespace FoodMate
 			// Build generic list to be past to ListView page element
 			var task = Task.Run(async() => { await db_op.getFoods (); });
 			task.Wait();
-			List<Food> inventory = db_op.AllFoods;
+			inventory = db_op.AllFoods;
 
-			//var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			//foodView.Adapter = new CustomListAdapter(this, inventory);
-			if (inventoryList.Adapter != null)
+			var foodView = FindViewById<ListView>(Resource.Id.ListView);
+			foodView.Adapter = new CustomListAdapter(this, inventory);
+			Console.WriteLine ("here");
+			/*if (inventoryList.Adapter != null)
 			{
 				inventoryList.Adapter.Dispose();
 				inventoryList.Adapter = null;
 			}
 			inventoryList.Adapter = new CustomListAdapter(this, inventory);
 			pager.Adapter.NotifyDataSetChanged ();
-
+*/
 			/*
 			var task2 = Task.Run(async() => { await db_op.getOutOfStockFoods(); });
 			task2.Wait();
@@ -112,7 +115,7 @@ namespace FoodMate
 			DatabaseOperations db_op = new DatabaseOperations();
 			var task = Task.Run(async() => { await db_op.getFoods (); });
 			task.Wait();
-			List<Food> inventory = db_op.AllFoods;
+			inventory = db_op.AllFoods;
 
 			var task2 = Task.Run(async() => { await db_op.getOutOfStockFoods(); });
 			task2.Wait();
