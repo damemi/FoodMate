@@ -13,6 +13,7 @@ using Android.Support.V4.App;
 
 using Facebook;
 using Android.Graphics;
+using ZXing;
 
 using Parse;
 using Xamarin.Auth;
@@ -24,19 +25,11 @@ namespace FoodMate
 	public class AddItemActivity : Activity
 	{
 
-		async void addItem(String itemName, int itemQuantity) {
+		async void addItem(String itemName, int itemQuantity, string barcode = "0") {
 			DatabaseOperations db_op = new DatabaseOperations();
 
-			await db_op.addNewFood (itemName, 0, itemQuantity, 0);
+			await db_op.addNewFood (itemName, 0, itemQuantity, barcode);
 
-			/*
-			var task = Task.Run(async() => { await db_op.getFoods (); });
-			task.Wait();
-			List<Food> inventory = db_op.AllFoods;
-
-			var foodView = FindViewById<ListView>(Resource.Id.ListView);
-			foodView.Adapter = new CustomListAdapter(this, inventory);
-			*/
 		}
 
 		protected override void OnCreate (Bundle bundle)
@@ -47,12 +40,27 @@ namespace FoodMate
 			var itemName = FindViewById<EditText>(Resource.Id.itemName);
 			var itemQuantity = FindViewById<EditText>(Resource.Id.itemQuantity);
 			var AddItemButton = FindViewById<Button>(Resource.Id.addItem);
+			var buttonScan = FindViewById<Button>(Resource.Id.Barcode);
+
+			string barcode = null;
 		
 			AddItemButton.Click += delegate { 
 				int qty = Convert.ToInt32 (itemQuantity.Text);
 
-				addItem(itemName.Text, qty); 
-				Finish();};
+
+				addItem(itemName.Text, qty, barcode); 
+				Finish();
+			};
+
+			buttonScan.Click += async delegate {
+				//NOTE: On Android you MUST pass a Context into the Constructor!
+				var scanner = new ZXing.Mobile.MobileBarcodeScanner(this);
+				var result = await scanner.Scan();
+
+				if (result != null)
+					barcode = result.Text;
+					Console.WriteLine("Scanned Barcode: " + result.Text);
+			};
 		}
 	}
 }

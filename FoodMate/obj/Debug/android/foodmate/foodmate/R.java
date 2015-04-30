@@ -34,6 +34,7 @@ public final class R {
         public static final int addItem=0x7f070004;
         public static final int addItemButton=0x7f07000e;
         public static final int btnLogin=0x7f070012;
+        public static final int contentFrame=0x7f07001f;
         public static final int editItem=0x7f070007;
         public static final int groupInfoText=0x7f070015;
         public static final int itemInfoText=0x7f070000;
@@ -65,6 +66,8 @@ public final class R {
         public static final int settings=0x7f030007;
         public static final int shoppinglist=0x7f030008;
         public static final int tab=0x7f030009;
+        public static final int zxingscanneractivitylayout=0x7f03000a;
+        public static final int zxingscannerfragmentlayout=0x7f03000b;
     }
     public static final class string {
         public static final int app_name=0x7f040002;

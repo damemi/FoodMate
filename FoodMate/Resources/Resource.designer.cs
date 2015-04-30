@@ -27,6 +27,9 @@ namespace FoodMate
 		public static void UpdateIdValues()
 		{
 			global::FacebookMonoDroid.Resource.String.library_name = global::FoodMate.Resource.String.library_name;
+			global::ZXing.Mobile.Resource.Id.contentFrame = global::FoodMate.Resource.Id.contentFrame;
+			global::ZXing.Mobile.Resource.Layout.zxingscanneractivitylayout = global::FoodMate.Resource.Layout.zxingscanneractivitylayout;
+			global::ZXing.Mobile.Resource.Layout.zxingscannerfragmentlayout = global::FoodMate.Resource.Layout.zxingscannerfragmentlayout;
 		}
 		
 		public partial class Attribute
@@ -128,6 +131,9 @@ namespace FoodMate
 			// aapt resource value: 0x7f070012
 			public const int btnLogin = 2131165202;
 			
+			// aapt resource value: 0x7f07001f
+			public const int contentFrame = 2131165215;
+			
 			// aapt resource value: 0x7f070007
 			public const int editItem = 2131165191;
 			
@@ -227,6 +233,12 @@ namespace FoodMate
 			
 			// aapt resource value: 0x7f030009
 			public const int tab = 2130903049;
+			
+			// aapt resource value: 0x7f03000a
+			public const int zxingscanneractivitylayout = 2130903050;
+			
+			// aapt resource value: 0x7f03000b
+			public const int zxingscannerfragmentlayout = 2130903051;
 			
 			static Layout()
 			{

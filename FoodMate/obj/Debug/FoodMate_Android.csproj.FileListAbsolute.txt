@@ -76,3 +76,7 @@ C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\mylist.x
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\res\layout\shoppinglist.xml
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\R.cs.flag
 C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\uploadflags.txt
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\obj\Debug\FoodMate_Android.csprojResolveAssemblyReference.cache
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\zxing.monoandroid.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\ZXing.Net.Mobile.dll
+C:\Users\Mike\Documents\Projects\FoodMate\FoodMate\bin\Debug\zxing.monoandroid.xml

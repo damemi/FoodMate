@@ -73,6 +73,8 @@ class MonoPackageManager_Resources {
 		"Parse.Android.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Auth.Android.dll",
+		"zxing.monoandroid.dll",
+		"ZXing.Net.Mobile.dll",
 	};
 	public static final String[] Dependencies = new String[]{
 	};
