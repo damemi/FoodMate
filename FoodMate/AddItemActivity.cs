@@ -25,10 +25,17 @@ namespace FoodMate
 	public class AddItemActivity : Activity
 	{
 
-		async void addItem(String itemName, int itemQuantity, string barcode = "0") {
+		async void addItem(String itemName, int itemQuantity, string barcode = "0", string objectId = "0") {
 			DatabaseOperations db_op = new DatabaseOperations();
 
-			await db_op.addNewFood (itemName, 0, itemQuantity, barcode);
+			if (objectId == "0") {
+				await db_op.addNewFood (itemName, 0, itemQuantity, barcode);
+			} else {
+				ParseObject item = await db_op.getFood (objectId);
+				item ["name"] = itemName;
+				item ["in_stock"] = itemQuantity;
+				await item.SaveAsync ();
+			}
 
 		}
 
@@ -43,12 +50,12 @@ namespace FoodMate
 			var buttonScan = FindViewById<Button>(Resource.Id.Barcode);
 
 			string barcode = null;
+			string userId = Intent.GetStringExtra ("userId");
+			string objectId = "0";
 		
 			AddItemButton.Click += delegate { 
 				int qty = Convert.ToInt32 (itemQuantity.Text);
-
-
-				addItem(itemName.Text, qty, barcode); 
+				addItem(itemName.Text, qty, barcode, objectId); 
 				Finish();
 			};
 
@@ -57,9 +64,34 @@ namespace FoodMate
 				var scanner = new ZXing.Mobile.MobileBarcodeScanner(this);
 				var result = await scanner.Scan();
 
-				if (result != null)
+				if (result != null) {
 					barcode = result.Text;
+					var query = ParseObject.GetQuery ("Food").WhereEqualTo ("barcode", barcode);
+					var results = await query.FindAsync ();
+					if(results.Count() > 0) {
+
+						foreach(var r in results) {
+							itemName.Text = r.Get<string>("name");
+							itemQuantity.Text = Convert.ToString(r.Get<int>("in_stock"));
+							objectId = r.ObjectId;
+						}
+
+						/*
+						DatabaseOperations db_op = new DatabaseOperations();
+						string objectId = null;
+						foreach(var r in results) {
+							objectId = r.ObjectId;
+							ParseObject item2 = await db_op.getFood (objectId);
+							List<object> wanted_by = item2.Get<List<object>> ("wanted_by");
+							if (!(wanted_by.Contains(userId))) {
+								wanted_by.Add (userId);
+								item2 ["wanted_by"] = wanted_by;
+								await item2.SaveAsync ();
+							}
+						}*/
+					}
 					Console.WriteLine("Scanned Barcode: " + result.Text);
+				}
 			};
 		}
 	}

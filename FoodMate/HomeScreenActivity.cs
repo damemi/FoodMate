@@ -67,6 +67,7 @@ namespace FoodMate
 		//   so that the new item is selected in the DB query and updated to display.
 		async void addItemActivity() {
 			var myIntent = new Intent (this, typeof(AddItemActivity));
+			myIntent.PutExtra ("userId", userId);
 			StartActivityForResult (myIntent, 0);
 
 			// Connect to database and  get food list
