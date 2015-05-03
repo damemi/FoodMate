@@ -164,6 +164,14 @@
     <Compile Include="SettingsViewController.designer.cs">
       <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditFoodViewController.cs" />
+    <Compile Include="EditFoodViewController.designer.cs">
+      <DependentUpon>EditFoodViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemViewController.cs" />
+    <Compile Include="ItemViewController.designer.cs">
+      <DependentUpon>ItemViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

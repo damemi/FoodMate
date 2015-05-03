@@ -11,10 +11,11 @@ namespace FoodMate_iOS
 		{
 		}
 	}
-	public class TableSource : UITableViewSource {
+	public class HomeTableSource : UITableViewSource {
 		string[] tableItems;
 		string cellIdentifier = "TableCell";
-		public TableSource (string[] items)
+		public event EventHandler RowTouched;
+		public HomeTableSource (string[] items)
 		{
 			tableItems = items;
 		}
@@ -31,6 +32,14 @@ namespace FoodMate_iOS
 			cell.TextLabel.Text = tableItems[indexPath.Row];
 			return cell;
 		}
+
+		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
+		{
+			RowTouched(this, EventArgs.Empty);
+
+			tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
+		}
+
 	}
 
 }

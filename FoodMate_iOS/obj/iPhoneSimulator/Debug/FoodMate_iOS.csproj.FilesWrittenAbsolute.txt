@@ -31,3 +31,8 @@
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Parse.iOS.dll
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/676-view-677.nib
 /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/SettingsViewController.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/788-view-789.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-788.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/ItemViewController.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/965-view-966.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-T86-OT-sRm.nib

@@ -9,17 +9,18 @@ using Xamarin.Forms;
 using Xamarin.Auth;
 using Parse;
 using Newtonsoft.Json.Linq;
-using Shared;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
 
+using Shared;
 
 namespace FoodMate_iOS
 {
 	public partial class MyHomeViewController : UIViewController
 	{
 		UITableView table;
+	
 		public MyHomeViewController(IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("MyHome", "MyHome");
@@ -63,9 +64,16 @@ namespace FoodMate_iOS
 			{
 				tableItems [i] = allFoods[i].name;
 			}
-			table.Source = new TableSource(tableItems);
+			var source = new HomeTableSource (tableItems);
+			table.Source = source;
 			Add (table);
 
+			source.RowTouched += (sender, e) => {
+				Console.WriteLine("Row touched");
+				ItemViewController itemView = new ItemViewController ();
+				this.NavigationController.PushViewController(itemView, true); 
+			};
+	
 		}
 
 		public override void ViewWillDisappear (bool animated)
@@ -95,6 +103,7 @@ namespace FoodMate_iOS
 
 			UIViewController vc = auth.GetUI ();
 			PresentViewController (vc, true, null);
+		
 		}
 
 		public async void LoginComplete( object sender, AuthenticatorCompletedEventArgs e )
@@ -121,13 +130,6 @@ namespace FoodMate_iOS
 			var user = await ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
 	
 		}
-
-	/*	partial void UIButton14_TouchUpInside (UIButton sender)
-		{
-			Console.WriteLine("Login button pressed");
-			LoginToFacebook();
-
-		}*/
 	}
 }
 

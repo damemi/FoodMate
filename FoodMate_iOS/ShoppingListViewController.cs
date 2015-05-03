@@ -62,7 +62,7 @@ namespace FoodMate_iOS
 			{
 				tableItems [i] = OutOfStockFoods[i].name;
 			}
-			table.Source = new TableSource(tableItems);
+			table.Source = new HomeTableSource(tableItems);
 			Add (table);
 		}
 
