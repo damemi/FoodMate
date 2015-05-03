@@ -1,10 +1,10 @@
-# Version: 8.9.1.3 (f7736a4)
-# [first argument, ignore] # /Users/Jaz/SD&D/FoodMate/FoodMate_iOS/mtouch.exe
-/Library/Frameworks/Xamarin.iOS.framework/Versions/8.9.1.3/bin/mtouch-64 \
+# Version: 8.10.0.267 (6481535)
+# [first argument, ignore] # /Users/bowennie/Desktop/FoodMate/FoodMate_iOS/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.10.0.267/bin/mtouch \
 	--cache \
-	/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/bowennie/Desktop/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
-	/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.app \
+	/Users/bowennie/Desktop/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/FoodMate_iOS.app \
 	--executable \
 	FoodMate_iOS \
 	--debug \
@@ -12,10 +12,13 @@
 	--sdkroot \
 	/Applications/Xcode.app/Contents/Developer \
 	--sdk \
-	8.2 \
+	8.3 \
 	--targetver \
-	7.0 \
+	8.2 \
 	--abi=i386 \
+	--symbollist \
+	/Users/bowennie/Desktop/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/mtouch-symbols.list \
+	--dsym=no \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.dll \
 	-r \
@@ -23,17 +26,21 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Xamarin.iOS.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/bowennie/Desktop/FoodMate/packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/parse-1.3.5/lib/ios-unified/Parse.iOS.dll \
 	-r \
-	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/MWBarcodeScanner-1.4/lib/ios-unified/MWBarcodeScanner.dll \
 	-r \
-	../packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	../Components/parse-1.3.5/lib/ios-unified/Parse.iOS.dll \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	-r \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/System.Core.dll \
 	-r \
@@ -125,15 +132,19 @@
 	-r \
 	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/Xamarin.iOS/Facades/System.Xml.XmlSerializer.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	/Users/bowennie/Desktop/FoodMate/packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
 	-r \
-	../packages/Xamarin.Forms.1.4.0.6341/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/parse-1.3.5/lib/ios-unified/Parse.iOS.dll \
 	-r \
-	../Components/xamarin.auth-1.2.3.1/lib/ios-unified/Xamarin.Auth.iOS.dll \
+	/Users/bowennie/Desktop/FoodMate/Components/MWBarcodeScanner-1.4/lib/ios-unified/MWBarcodeScanner.dll \
 	-r \
-	../packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Platform.iOS.dll \
 	-r \
-	../Components/parse-1.3.5/lib/ios-unified/Parse.iOS.dll \
-	/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug//FoodMate_iOS.exe \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Core.dll \
+	-r \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Xaml.dll \
+	-r \
+	/Users/bowennie/Desktop/FoodMate/packages/Xamarin.Forms.1.4.2.6359/lib/Xamarin.iOS10/Xamarin.Forms.Platform.dll \
+	/Users/bowennie/Desktop/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug//FoodMate_iOS.exe \

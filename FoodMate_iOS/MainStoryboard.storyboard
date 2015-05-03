@@ -26,8 +26,22 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem style="plain" id="786" key="rightBarButtonItem">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="783">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue id="784" destination="785" kind="push"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="scanButton" destination="783" id="name-outlet-783"/>
                     </connections>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="28" key="view">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -84,10 +98,25 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem style="plain" id="792" key="rightBarButtonItem">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="787">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton463_TouchUpInside:" destination="789" eventType="touchUpInside" id="788"/>
+                                    <segue id="790" destination="791" kind="push"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CheckoutButton" destination="85" id="name-outlet-85"/>
                         <outlet property="ShoppingList" destination="gMD-aP-Fq6" id="name-outlet-gMD-aP-Fq6"/>
+                        <outlet property="scanButton" destination="787" id="name-outlet-787"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3qq-4t-Ow8" sceneMemberID="firstResponder"/>
@@ -149,10 +178,25 @@
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <barButtonItem style="plain" id="798" key="rightBarButtonItem">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="793">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Scan">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton463_TouchUpInside:" destination="795" eventType="touchUpInside" id="794"/>
+                                    <segue id="796" destination="797" kind="push"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MyList" destination="50" id="name-outlet-50"/>
+                        <outlet property="scanButton" destination="793" id="name-outlet-793"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="51" userLabel="First Responder" sceneMemberID="firstResponder"/>

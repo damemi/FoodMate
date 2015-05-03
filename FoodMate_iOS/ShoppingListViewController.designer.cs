@@ -20,6 +20,10 @@ namespace FoodMate_iOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton scanButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView ShoppingList { get; set; }
 
 		[Action ("CheckoutButton_TouchUpInside:")]
@@ -31,6 +35,10 @@ namespace FoodMate_iOS
 			if (CheckoutButton != null) {
 				CheckoutButton.Dispose ();
 				CheckoutButton = null;
+			}
+			if (scanButton != null) {
+				scanButton.Dispose ();
+				scanButton = null;
 			}
 			if (ShoppingList != null) {
 				ShoppingList.Dispose ();

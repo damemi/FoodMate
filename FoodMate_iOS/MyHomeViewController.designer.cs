@@ -14,8 +14,16 @@ namespace FoodMate_iOS
 	[Register ("MyHomeViewController")]
 	partial class MyHomeViewController
 	{
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton scanButton { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (scanButton != null) {
+				scanButton.Dispose ();
+				scanButton = null;
+			}
 		}
 	}
 }

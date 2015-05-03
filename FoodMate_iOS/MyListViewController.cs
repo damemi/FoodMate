@@ -18,15 +18,27 @@ namespace FoodMate_iOS
 		{
 			// Releases the view if it doesn't have a superview.
 			base.DidReceiveMemoryWarning ();
-			
 			// Release any cached data, images, etc that aren't in use.
 		}
 
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
 			// Perform any additional setup after loading the view, typically from a nib.
+			scanButton.TouchUpInside += async (sender, e) => {
+
+				//Make an instance of scanner
+				var scanner = new MWBarcodeScanner.Scanner();
+
+				//Call the scaner and wait for result
+				var result =  await scanner.Scan();
+
+				//If canceled, result is null
+				if (result != null){
+					new UIAlertView(result.type, result.code, null, "Close", null).Show();
+				}
+
+			};
 		}
 
 	/*	partial void UIButton463_TouchUpInside (UIButton sender)
