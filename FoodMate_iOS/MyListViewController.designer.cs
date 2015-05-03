@@ -18,15 +18,19 @@ namespace FoodMate_iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView MyList { get; set; }
 
-		[Action ("UIButton463_TouchUpInside:")]
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton463_TouchUpInside (UIButton sender);
+		UIButton scanButton { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
 			if (MyList != null) {
 				MyList.Dispose ();
 				MyList = null;
+			}
+			if (scanButton != null) {
+				scanButton.Dispose ();
+				scanButton = null;
 			}
 		}
 	}
