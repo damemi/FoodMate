@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Auth;
 using Parse;
 using Newtonsoft.Json.Linq;
+using Shared;
 
 namespace FoodMate_iOS
 {
@@ -94,12 +95,18 @@ namespace FoodMate_iOS
 			var id = obj["id"].ToString().Replace("\"",""); // Id has extraneous quotation marks
 
 			var user = await ParseFacebookUtils.LogInAsync(id, accessToken,expiryDate);
-
+			var objId = user.ObjectId;
+			var SaveUser = NSUserDefaults.StandardUserDefaults;
+			SaveUser.SetString (objId, "objId");
+			Console.WriteLine ("User ID is: " + objId);
 		}
 
 		partial void FacebookLoginButton_TouchUpInside (UIButton sender)
 		{
 			LoginToFacebook();
+			var userSettings = NSUserDefaults.StandardUserDefaults;
+			Console.WriteLine("User ID is: " + userSettings.StringForKey("objId"));
+
 		}
 		#endregion
 	}
