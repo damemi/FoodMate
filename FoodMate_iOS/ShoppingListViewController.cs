@@ -57,7 +57,7 @@ namespace FoodMate_iOS
 		{
 			base.ViewDidAppear (animated);
 			// After the initial is constructed, create a tableView
-			table = new UITableView (View.Bounds);
+			table = new UITableView(new RectangleF(0,60,320,390));
 			// Create db object to query data from database
 			DatabaseOperations db_op = new DatabaseOperations ();
 
