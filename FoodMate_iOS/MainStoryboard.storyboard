@@ -431,7 +431,7 @@
         </scene>
         <scene sceneID="964">
             <objects>
-                <viewController id="965" sceneMemberID="viewController" customClass="ItemViewController" storyboardIdentifier="ItemViewController" useStoryboardIdentifierAsRestorationIdentifier="YES">
+                <viewController id="965" sceneMemberID="viewController" customClass="ItemViewController" storyboardIdentifier="ItemViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" title="ItemViewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="962"/>
                         <viewControllerLayoutGuide type="bottom" id="963"/>
@@ -440,9 +440,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text=" Item Info" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="1021">
+                                <rect key="frame" x="0.0" y="99" width="320" height="34"/>
+                                <color key="backgroundColor" red="0.90196078431372551" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="20"/>
+                                <color key="textColor" colorSpace="calibratedRGB" red="1" green="0.6" blue="0.2" alpha="1"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1025" clearsOnBeginEditing="YES" placeholder="Item Name (i.e Milk)">
+                                <rect key="frame" x="16" y="141" width="288" height="30"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1026" clearsOnBeginEditing="YES" placeholder="Price (i.e. $2.50)" clearButtonMode="unlessEditing">
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1027" clearsOnBeginEditing="YES" placeholder="amount (i.e. 3)" clearButtonMode="unlessEditing">
+                                <rect key="frame" x="16" y="229" width="288" height="30"/>
+                                <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="OriyaSangamMN" family="Oriya Sangam MN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                     </view>
                     <connections>
                         <segue id="1008" destination="T86-OT-sRm" kind="custom"/>
+                        <outlet property="ItemView" destination="966" id="name-outlet-966"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="967" userLabel="First Responder" sceneMemberID="firstResponder"/>

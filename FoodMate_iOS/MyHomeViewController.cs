@@ -82,12 +82,21 @@ namespace FoodMate_iOS
 			table.Source = source;
 			Add (table);
 
+			//var detail = Storyboard.InstantiateViewController("ItemView") as  ItemViewController;
+			ItemViewController itemView = (ItemViewController)this.Storyboard.InstantiateViewController("ItemViewController");
+
+		//	NavigationController.PushViewController(detail, true);
 			source.RowTouched += (sender, e) => {
+				this.NavigationController.PushViewController(itemView, true); 
+
+			//	NavigationController.PushViewController (detail, true);
+			};
+			/*source.RowTouched += (sender, e) => {
 				Console.WriteLine("Row touched");
-				ItemViewController itemView = new ItemViewController ();
+				ItemViewController itemView = new ItemViewController ("ItemViewController");
 				this.NavigationController.PushViewController(itemView, true); 
 			};
-	
+	*/
 		}
 
 		public override void ViewWillDisappear (bool animated)

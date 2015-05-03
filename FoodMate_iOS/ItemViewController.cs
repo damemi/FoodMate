@@ -13,7 +13,7 @@ namespace FoodMate_iOS
 {
 	partial class ItemViewController : UIViewController
 	{
-		public ItemViewController (/*IntPtr handle*/) : base (/*handle*/)
+		public ItemViewController (IntPtr handle) : base (handle)
 		{
 			
 		}

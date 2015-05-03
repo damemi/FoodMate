@@ -81,3 +81,13 @@
 /Users/bowennie/Desktop/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Xaml.dll
 /Users/bowennie/Desktop/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
 >>>>>>> a0de60673825cc371efca1b8fa66aea606547189
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/close_button.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/flashbuttonoff.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/flashbuttonon.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/overlay.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/overlay@2x.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/zoom.png
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/MWScannerViewController.nib/designtime.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/obj/iPhoneSimulator/Debug/MWScannerViewController.nib/runtime.nib
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/MWBarcodeScanner.dll
+/Users/Jaz/SD&D/FoodMate/FoodMate_iOS/bin/iPhoneSimulator/Debug/Xamarin.Forms.Platform.dll
