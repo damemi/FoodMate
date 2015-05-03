@@ -35,7 +35,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue id="784" destination="785" kind="push"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -108,7 +107,6 @@
                                 </state>
                                 <connections>
                                     <action selector="UIButton463_TouchUpInside:" destination="789" eventType="touchUpInside" id="788"/>
-                                    <segue id="790" destination="791" kind="push"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -164,20 +162,6 @@
                         <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="My List" id="oF9-17-4To">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="N1Z-xf-hmc">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="463">
-                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="UIButton463_TouchUpInside:" destination="49" eventType="touchUpInside" id="464"/>
-                                    <segue id="615" destination="141" kind="push"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
                         <barButtonItem style="plain" id="798" key="rightBarButtonItem">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="793">
                                 <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
@@ -188,7 +172,20 @@
                                 </state>
                                 <connections>
                                     <action selector="UIButton463_TouchUpInside:" destination="795" eventType="touchUpInside" id="794"/>
-                                    <segue id="796" destination="797" kind="push"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem style="plain" id="888" key="leftBarButtonItem">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="883">
+                                <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="UIButton463_TouchUpInside:" destination="885" eventType="touchUpInside" id="884"/>
+                                    <segue id="919" destination="141" kind="push"/>
                                 </connections>
                             </button>
                         </barButtonItem>
