@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="FoodMate.FoodMate">
   <application android:label="FoodMate" android:theme="@style/MyCustomTheme" android:icon="@drawable/icon2" android:name="mono.android.app.Application" android:debuggable="true">
-    <activity android:icon="@drawable/icon2" android:label="FoodMate" android:name="foodmate.MainActivity">
+    <activity android:icon="@drawable/icon2" android:label="FoodMate" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:label="InventoryActivity" android:name="foodmate.InventoryActivity" />
-    <activity android:label="Add Item" android:name="foodmate.AddItemActivity" />
-    <activity android:label="Edit Item" android:name="foodmate.EditItemActivity" />
-    <activity android:label="FoodMate" android:name="foodmate.HomeScreenActivity" />
-    <activity android:label="FacebookLoginActivity" android:name="foodmate.FacebookLoginActivity" />
-    <activity android:label="Edit Item" android:name="foodmate.RequestItemActivity" />
-    <activity android:label="Web Authenticator" android:name="xamarin.auth.FormAuthenticatorActivity" />
-    <activity android:label="Web Authenticator" android:name="xamarin.auth.WebAuthenticatorActivity" />
-    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="zxing.mobile.ZxingActivity" />
+    <activity android:label="InventoryActivity" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.InventoryActivity" />
+    <activity android:label="Add Item" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.AddItemActivity" />
+    <activity android:label="Edit Item" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.EditItemActivity" />
+    <activity android:label="FoodMate" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.HomeScreenActivity" />
+    <activity android:label="FacebookLoginActivity" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.FacebookLoginActivity" />
+    <activity android:label="Edit Item" android:name="md506d2b4a2a9c6361101751a551f4fb2b6.RequestItemActivity" />
+    <activity android:label="Web Authenticator" android:name="md550f8a10a740eb4fb6376baab8337ce22.FormAuthenticatorActivity" />
+    <activity android:label="Web Authenticator" android:name="md550f8a10a740eb4fb6376baab8337ce22.WebAuthenticatorActivity" />
+    <activity android:configChanges="keyboardHidden|orientation|screenLayout" android:label="Scanner" android:name="md5e1d4744ef128cd013cac92521f1a8e76.ZxingActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="FoodMate.FoodMate.mono.MonoRuntimeProvider.__mono_init__" />
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

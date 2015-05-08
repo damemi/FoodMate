@@ -242,10 +242,11 @@ namespace FoodMate
 				pager.SetOnPageChangeListener(new ViewPageListenerForActionBar(ActionBar));
 
 				ActionBar.Tab tab = ActionBar.NewTab();
-				ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_home));
-				ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_shopping_list));
-				ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_my_list));
-				ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "", Resource.Drawable.ic_action_settings));
+				//tab.
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Home", Resource.Drawable.ic_home));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Shopping List", Resource.Drawable.ic_shopping_list));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "My List", Resource.Drawable.ic_my_list));
+			ActionBar.AddTab(pager.GetViewPageTab(ActionBar, "Settings", Resource.Drawable.ic_action_settings));
 
 				//var settingsPage = adaptor.GetItem(3);
 				//var editText = FindViewById<TextView>(Resource.Id.textView1);

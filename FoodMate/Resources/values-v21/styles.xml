@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <!-- Inherit from the light Material Theme -->
-    <style name="MyCustomTheme" parent="@android:Theme.Material.Light">
+    <style name="MyCustomTheme" parent="android:style/Theme.Material.Light">
         <item name="android:colorPrimary">@color/my_orange</item>
     </style>
-
 </resources>
