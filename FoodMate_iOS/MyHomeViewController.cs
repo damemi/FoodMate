@@ -52,6 +52,18 @@ namespace FoodMate_iOS
 				//If canceled, result is null
 				if (result != null){
 					new UIAlertView(result.type, result.code, null, "Close", null).Show();
+					AddNewItemViewController newItemView = (AddNewItemViewController)this.Storyboard.InstantiateViewController("AddNewItemViewController");
+					newItemView.barCode = result.code;
+
+					var query = ParseObject.GetQuery ("Food").WhereEqualTo ("barcode", result.code);
+					var results = await query.FindAsync ();
+					foreach(var r in results) {
+						newItemView.itemName = r.Get<string>("name");
+						newItemView.itemAmount = Convert.ToString(r.Get<int>("in_stock"));
+						newItemView.objectId = r.ObjectId;
+					}
+
+					this.NavigationController.PushViewController(newItemView, true);
 				}
 
 			};

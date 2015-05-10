@@ -16,7 +16,15 @@ namespace FoodMate_iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton addNewItemButton { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField amountField { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField barCodeField { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -26,15 +34,19 @@ namespace FoodMate_iOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UITextField PriceField { get; set; }
 
-		[Action ("UIButton158_TouchUpInside:")]
-		[GeneratedCode ("iOS Designer", "1.0")]
-		partial void UIButton158_TouchUpInside (UIButton sender);
-
 		void ReleaseDesignerOutlets ()
 		{
+			if (addNewItemButton != null) {
+				addNewItemButton.Dispose ();
+				addNewItemButton = null;
+			}
 			if (amountField != null) {
 				amountField.Dispose ();
 				amountField = null;
+			}
+			if (barCodeField != null) {
+				barCodeField.Dispose ();
+				barCodeField = null;
 			}
 			if (NameField != null) {
 				NameField.Dispose ();

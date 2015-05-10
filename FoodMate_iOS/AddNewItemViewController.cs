@@ -4,13 +4,22 @@ using System;
 using Foundation;
 using UIKit;
 using Shared;
+using Parse;
 
 namespace FoodMate_iOS
 {
 	public partial class AddNewItemViewController : UIViewController
 	{
+		public string barCode;
+		public string objectId;
+		public string itemName;
+		public string itemAmount;
 		public AddNewItemViewController(IntPtr ptr) : base (ptr)
 		{
+			barCode = "0";
+			objectId = "";
+			itemName = "";
+			itemAmount = "";
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -27,30 +36,32 @@ namespace FoodMate_iOS
 			var g = new UITapGestureRecognizer(() => View.EndEditing(true));
 			g.CancelsTouchesInView = false; //for iOS5
 			View.AddGestureRecognizer(g);
-
-			
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
-
-		partial void UIButton158_TouchUpInside (UIButton sender)
-		{
-			Console.WriteLine("Adding new food, button pressed");
-
-			DatabaseOperations db_op = new DatabaseOperations();
-			double price = Double.Parse(PriceField.Text);
-			string name = NameField.Text;
-			int amount = int.Parse(amountField.Text);
-			//double price = [PriceField doubleValue];
-			//double price = Convert.ToDouble(PriceField.ToString());
-			db_op.addNewFood(name, price, amount);
-		/*	if (MyHomeViewController != null)
+			if (barCode != "0") 
 			{
-				//	newItemController.CaseID = GetCurrentCaseID();
-				this.NavigationController.PushViewController(MyHomeViewController, true);
-			}  */
+				barCodeField.Text = barCode;
+			}
+			if (objectId != "" && itemName != "" && itemAmount != "") 
+			{
+				NameField.Text = itemName;
+				amountField.Text = itemAmount;
+			}
 
-		//	NavigationController.PushViewController(new MyHomeViewController(handle), true);
-		
+			addNewItemButton.TouchUpInside += async (sender, e) => {
+				DatabaseOperations db_op = new DatabaseOperations();
+
+				if (objectId == "") {
+					double price = Double.Parse(PriceField.Text);
+					string name = NameField.Text;
+					int amount = int.Parse(amountField.Text);
+					await db_op.addNewFood (name, price, amount, barCode);
+				} else {
+					ParseObject item = await db_op.getFood (objectId);
+					item ["name"] = NameField.Text;
+					item ["in_stock"] = int.Parse(amountField.Text);
+					await item.SaveAsync ();
+				}
+			};
+			// Perform any additional setup after loading the view, typically from a nib.
 		}
 	}
 }
