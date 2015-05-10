@@ -61,6 +61,7 @@ namespace FoodMate_iOS
 						newItemView.itemName = r.Get<string>("name");
 						newItemView.itemAmount = Convert.ToString(r.Get<int>("in_stock"));
 						newItemView.objectId = r.ObjectId;
+						newItemView.itemPrice = r.Get<double>("price");
 					}
 
 					this.NavigationController.PushViewController(newItemView, true);

@@ -14,6 +14,8 @@ namespace FoodMate_iOS
 		public string objectId;
 		public string itemName;
 		public string itemAmount;
+		public double itemPrice;
+
 		public AddNewItemViewController(IntPtr ptr) : base (ptr)
 		{
 			barCode = "0";
@@ -44,6 +46,7 @@ namespace FoodMate_iOS
 			{
 				NameField.Text = itemName;
 				amountField.Text = itemAmount;
+				PriceField.Text = System.Convert.ToString (itemPrice);
 			}
 
 			addNewItemButton.TouchUpInside += async (sender, e) => {
@@ -58,6 +61,7 @@ namespace FoodMate_iOS
 					ParseObject item = await db_op.getFood (objectId);
 					item ["name"] = NameField.Text;
 					item ["in_stock"] = int.Parse(amountField.Text);
+					item ["price"] = double.Parse(PriceField.Text);
 					await item.SaveAsync ();
 				}
 			};
