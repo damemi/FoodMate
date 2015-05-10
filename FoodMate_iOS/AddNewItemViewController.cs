@@ -64,6 +64,9 @@ namespace FoodMate_iOS
 					item ["price"] = double.Parse(PriceField.Text);
 					await item.SaveAsync ();
 				}
+
+				MyHomeViewController homeView = (MyHomeViewController)this.Storyboard.InstantiateViewController("MyHomeViewController");
+				NavigationController.PushViewController(homeView, true);
 			};
 			// Perform any additional setup after loading the view, typically from a nib.
 		}
