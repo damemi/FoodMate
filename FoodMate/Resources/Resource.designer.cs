@@ -110,11 +110,11 @@ namespace FoodMate
 			// aapt resource value: 0x7f070019
 			public const int LastName = 2131165209;
 			
-			// aapt resource value: 0x7f07000f
-			public const int ListView = 2131165199;
+			// aapt resource value: 0x7f07000e
+			public const int ListView = 2131165198;
 			
-			// aapt resource value: 0x7f070010
-			public const int Name = 2131165200;
+			// aapt resource value: 0x7f07000f
+			public const int Name = 2131165199;
 			
 			// aapt resource value: 0x7f07001b
 			public const int Phone = 2131165211;
@@ -125,17 +125,20 @@ namespace FoodMate
 			// aapt resource value: 0x7f070004
 			public const int addItem = 2131165188;
 			
-			// aapt resource value: 0x7f07000e
-			public const int addItemButton = 2131165198;
+			// aapt resource value: 0x7f07000c
+			public const int addItemButton = 2131165196;
 			
-			// aapt resource value: 0x7f070012
-			public const int btnLogin = 2131165202;
+			// aapt resource value: 0x7f070011
+			public const int btnLogin = 2131165201;
 			
-			// aapt resource value: 0x7f07001f
-			public const int contentFrame = 2131165215;
+			// aapt resource value: 0x7f070020
+			public const int contentFrame = 2131165216;
 			
 			// aapt resource value: 0x7f070007
 			public const int editItem = 2131165191;
+			
+			// aapt resource value: 0x7f07000d
+			public const int editItemButton = 2131165197;
 			
 			// aapt resource value: 0x7f070015
 			public const int groupInfoText = 2131165205;
@@ -152,8 +155,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f070002
 			public const int itemQuantity = 2131165186;
 			
-			// aapt resource value: 0x7f07000c
-			public const int makePaymentButton = 2131165196;
+			// aapt resource value: 0x7f070012
+			public const int makePaymentButton = 2131165202;
 			
 			// aapt resource value: 0x7f070014
 			public const int myListView = 2131165204;
@@ -173,17 +176,17 @@ namespace FoodMate
 			// aapt resource value: 0x7f07001c
 			public const int settingsUpdate = 2131165212;
 			
-			// aapt resource value: 0x7f07000d
-			public const int shopAlertButton = 2131165197;
-			
 			// aapt resource value: 0x7f07001d
-			public const int shoppingListView = 2131165213;
+			public const int shopAlertButton = 2131165213;
 			
 			// aapt resource value: 0x7f07001e
-			public const int textView1 = 2131165214;
+			public const int shoppingListView = 2131165214;
 			
-			// aapt resource value: 0x7f070011
-			public const int txtvUserName = 2131165201;
+			// aapt resource value: 0x7f07001f
+			public const int textView1 = 2131165215;
+			
+			// aapt resource value: 0x7f070010
+			public const int txtvUserName = 2131165200;
 			
 			// aapt resource value: 0x7f070017
 			public const int userInfoText = 2131165207;

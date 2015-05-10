@@ -4,12 +4,19 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
     <Button
-        android:text="Make Payment"
+        android:text="Add Item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20.0dp"
-        android:background="#21acb0"
-        android:id="@+id/makePaymentButton" />
+        android:background="#24892b"
+        android:id="@+id/addItemButton" />
+    <Button
+        android:text="Edit Item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20.0dp"
+        android:background="#d76b00"
+        android:id="@+id/editItemButton" />
     <Button
         android:text="Send Shopping Alert"
         android:layout_width="match_parent"
@@ -18,11 +25,12 @@
         android:background="#ff0101"
         android:id="@+id/shopAlertButton" />
     <Button
-        android:text="Add Item"
+        android:text="Make Payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#24892b"
-        android:id="@+id/addItemButton" />
+        android:layout_marginBottom="10.0dp"
+        android:background="#21acb0"
+        android:id="@+id/makePaymentButton" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"
