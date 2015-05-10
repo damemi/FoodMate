@@ -21,7 +21,7 @@ namespace Shared
 			RequestedFoods = new List<Food> ();
 		}
 
-		public async Task addNewFood(string name, double price, int quantity, int barcode = 0)
+		public async Task addNewFood(string name, double price, int quantity, string barcode = "0")
 		{
 			//check if food already exists in database
 				//(not implemented yet)
@@ -34,7 +34,7 @@ namespace Shared
 				food ["price"] = price;
 				food ["in_stock"] = quantity;
 				food ["wanted_by"] = new List<String> {"0"};
-				if (barcode != 0)
+				if (barcode != "0")
 					food ["barcode"] = barcode;
 				Console.WriteLine ("Adding new food to parse database");
 				await food.SaveAsync();

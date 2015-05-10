@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CFBundleDisplayName</key>
-	<string>FoodMate_iOS</string>
+	<string>FoodMate</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.foodmate</string>
+	<string>com.domainname.FoodMate</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
