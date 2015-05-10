@@ -109,7 +109,7 @@ namespace FoodMate_iOS
 				foreach(var r in results) {
 					itemView.objectId = r.ObjectId;
 				}
-				this.NavigationController.PushViewController(itemView, true); 
+				this.NavigationController.PushViewController(itemView, true);
 			};
 		}
 

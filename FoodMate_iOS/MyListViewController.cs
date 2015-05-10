@@ -1,14 +1,20 @@
-﻿
-using System;
-
+﻿using System;
+using System.Drawing;
 using Foundation;
 using UIKit;
 using Parse;
+
+using Shared;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace FoodMate_iOS
 {
 	public partial class MyListViewController : UIViewController
 	{
+		UITableView table;
+		List<Food> myRequestFood;
 		public MyListViewController (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("My List", "My List");
@@ -55,17 +61,49 @@ namespace FoodMate_iOS
 			};
 		}
 
-	/*	partial void UIButton463_TouchUpInside (UIButton sender)
+		public override void ViewDidAppear (bool animated)
 		{
-			AddNewItemViewController newItemController = this.Storyboard.InstantiateViewController("AddNewItemViewController") as AddNewItemViewController;
-			if (newItemController != null)
-			{
-			//	newItemController.CaseID = GetCurrentCaseID();
-				this.NavigationController.PushViewController(newItemController, true);
-			}  
+			base.ViewDidAppear (animated);
+			// After the initial is constructed, create a tableView
+			table = new UITableView(new RectangleF(0,60,320,455));
+			// Create db object to query data from database
+			DatabaseOperations db_op = new DatabaseOperations ();
 
-			//throw new NotImplementedException ();
-		}*/
+			var userSettings = NSUserDefaults.StandardUserDefaults;
+			Console.WriteLine("User ID is: " + userSettings.StringForKey("objId"));
+			// Wait for database query
+			var task = Task.Run(async () => { await db_op.getRequestedFoods(userSettings.StringForKey("objId")); });
+			task.Wait();
+
+			// Get data of food
+			myRequestFood = db_op.RequestedFoods;
+			string[] tableItems = new string[myRequestFood.Count];
+
+			// Add data to the table
+			for (int i = 0; i < myRequestFood.Count; i++) 
+			{
+				tableItems [i] = myRequestFood[i].name;
+			}
+
+			var source = new HomeTableSource (tableItems);
+			table.Source = source;
+			Add (table);
+
+			ItemViewController itemView = (ItemViewController)this.Storyboard.InstantiateViewController("ItemViewController");
+
+			source.RowTouched += async (sender, e) => {
+				itemView.foodName = myRequestFood[source.currentIndex].getName();
+				itemView.price = myRequestFood[source.currentIndex].price;
+				itemView.amount = myRequestFood[source.currentIndex].getStock();
+
+				var query = ParseObject.GetQuery ("Food").WhereEqualTo ("name", itemView.foodName);
+				var results = await query.FindAsync ();
+				foreach(var r in results) {
+					itemView.objectId = r.ObjectId;
+				}
+				this.NavigationController.PushViewController(itemView, true);
+			};
+		}
 	}
 }
 
