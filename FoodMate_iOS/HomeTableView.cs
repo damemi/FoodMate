@@ -14,10 +14,12 @@ namespace FoodMate_iOS
 	public class HomeTableSource : UITableViewSource {
 		string[] tableItems;
 		string cellIdentifier = "TableCell";
+		public int currentIndex;
 		public event EventHandler RowTouched;
 		public HomeTableSource (string[] items)
 		{
 			tableItems = items;
+			currentIndex = -1;
 		}
 		public override nint RowsInSection (UITableView tableview, nint section)
 		{
@@ -35,8 +37,8 @@ namespace FoodMate_iOS
 
 		public override void RowSelected(UITableView tableView, NSIndexPath indexPath)
 		{
+			currentIndex = indexPath.Row;
 			RowTouched(this, EventArgs.Empty);
-
 			tableView.DeselectRow (indexPath, true); // normal iOS behaviour is to remove the blue highlight
 		}
 

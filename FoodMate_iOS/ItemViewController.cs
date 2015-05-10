@@ -13,13 +13,20 @@ namespace FoodMate_iOS
 {
 	partial class ItemViewController : UIViewController
 	{
+		public string foodName;
+
 		public ItemViewController (IntPtr handle) : base (handle)
 		{
-			
+			foodName = "";
 		}
 		public override void ViewDidAppear (bool animated)
 		{
 			base.ViewDidAppear (animated);
+		}
+		public override void ViewDidLoad ()
+		{
+			base.ViewDidLoad ();
+			itemNameField.Text = foodName;
 		}
 	}
 }

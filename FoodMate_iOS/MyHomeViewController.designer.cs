@@ -16,10 +16,18 @@ namespace FoodMate_iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIView Home { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton scanButton { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (Home != null) {
+				Home.Dispose ();
+				Home = null;
+			}
 			if (scanButton != null) {
 				scanButton.Dispose ();
 				scanButton = null;

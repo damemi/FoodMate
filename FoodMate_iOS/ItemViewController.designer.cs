@@ -16,10 +16,18 @@ namespace FoodMate_iOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UITextField itemNameField { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIView ItemView { get; set; }
 
 		void ReleaseDesignerOutlets ()
 		{
+			if (itemNameField != null) {
+				itemNameField.Dispose ();
+				itemNameField = null;
+			}
 			if (ItemView != null) {
 				ItemView.Dispose ();
 				ItemView = null;
