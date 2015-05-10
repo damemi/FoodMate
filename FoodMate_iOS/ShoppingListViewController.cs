@@ -14,6 +14,8 @@ namespace FoodMate_iOS
 	public partial class ShoppingListViewController : UIViewController
 	{
 		UITableView table;
+		List<Food> OutOfStockFoods;
+
 		public ShoppingListViewController (IntPtr handle) : base (handle)
 		{
 			Title = NSBundle.MainBundle.LocalizedString ("Shopping List", "Shopping List");
@@ -80,7 +82,7 @@ namespace FoodMate_iOS
 			task.Wait();
 
 			// Get data of food
-			List<Food> OutOfStockFoods = db_op.OutOfStockFoods;
+			OutOfStockFoods = db_op.OutOfStockFoods;
 			string[] tableItems = new string[OutOfStockFoods.Count];
 
 			// Add data to the table
@@ -88,8 +90,25 @@ namespace FoodMate_iOS
 			{
 				tableItems [i] = OutOfStockFoods[i].name;
 			}
-			table.Source = new HomeTableSource(tableItems);
+
+			var source = new HomeTableSource (tableItems);
+			table.Source = source;
 			Add (table);
+
+			ItemViewController itemView = (ItemViewController)this.Storyboard.InstantiateViewController("ItemViewController");
+
+			source.RowTouched += async (sender, e) => {
+				itemView.foodName = OutOfStockFoods[source.currentIndex].getName();
+				itemView.price = OutOfStockFoods[source.currentIndex].price;
+				itemView.amount = OutOfStockFoods[source.currentIndex].getStock();
+
+				var query = ParseObject.GetQuery ("Food").WhereEqualTo ("name", itemView.foodName);
+				var results = await query.FindAsync ();
+				foreach(var r in results) {
+					itemView.objectId = r.ObjectId;
+				}
+				this.NavigationController.PushViewController(itemView, true); 
+			};
 		}
 
 		public override void ViewWillDisappear (bool animated)
