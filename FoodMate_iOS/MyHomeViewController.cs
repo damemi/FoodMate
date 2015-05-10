@@ -97,21 +97,20 @@ namespace FoodMate_iOS
 			table.Source = source;
 			Add (table);
 
-			//var detail = Storyboard.InstantiateViewController("ItemView") as  ItemViewController;
 			ItemViewController itemView = (ItemViewController)this.Storyboard.InstantiateViewController("ItemViewController");
 
-		//	NavigationController.PushViewController(detail, true);
-			source.RowTouched += (sender, e) => {
-				Console.WriteLine(source.currentIndex);
+			source.RowTouched += async (sender, e) => {
 				itemView.foodName = allFoods[source.currentIndex].getName();
+				itemView.price = allFoods[source.currentIndex].price;
+				itemView.amount = allFoods[source.currentIndex].getStock();
+
+				var query = ParseObject.GetQuery ("Food").WhereEqualTo ("name", itemView.foodName);
+				var results = await query.FindAsync ();
+				foreach(var r in results) {
+					itemView.objectId = r.ObjectId;
+				}
 				this.NavigationController.PushViewController(itemView, true); 
 			};
-			/*source.RowTouched += (sender, e) => {
-				Console.WriteLine("Row touched");
-				ItemViewController itemView = new ItemViewController ("ItemViewController");
-				this.NavigationController.PushViewController(itemView, true); 
-			};
-	*/
 		}
 
 		public override void ViewWillDisappear (bool animated)

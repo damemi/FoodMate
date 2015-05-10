@@ -12,14 +12,14 @@ namespace Shared
 		private string ID { get; set; }
 		public int in_stock { get; private set; }
 		public double price { get; private set; }
-		private int barcode { get; set; }
+		private string barcode { get; set; }
 		private DateTime expiration { get; set; }
 		private ParseObject _parseObj;
 		public List<object> wanted_by { get; set; }
 
 		//food constructor. in_stock, barcode and expiration date are optional parameters.
 		// name, id and price are required
-		public Food(string _name, string _id, int _price, int _in_stock = 0, int _barcode = 0)
+		public Food(string _name, string _id, double _price, int _in_stock = 0, string _barcode = "0")
 		{
 			name = _name;
 			ID = _id;
@@ -54,6 +54,11 @@ namespace Shared
 
 		public String getObjectId() {
 			return _parseObj.Get<String> ("objectId");
+		}
+
+		public string getBarCode()
+		{
+			return barcode;
 		}
 	}
 }
