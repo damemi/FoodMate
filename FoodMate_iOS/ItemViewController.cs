@@ -9,6 +9,8 @@ using Xamarin.Auth;
 using Parse;
 using Newtonsoft.Json.Linq;
 using Shared;
+using System.Collections.Generic;
+
 namespace FoodMate_iOS
 {
 	partial class ItemViewController : UIViewController
@@ -16,7 +18,6 @@ namespace FoodMate_iOS
 		public string foodName;
 		public double price;
 		public int amount;
-		public string barcode;
 		public string objectId;
 
 		public ItemViewController (IntPtr handle) : base (handle)
@@ -42,6 +43,19 @@ namespace FoodMate_iOS
 				item ["name"] = itemNameField.Text;
 				item ["in_stock"] = int.Parse(itemAmountField.Text);
 				item ["price"] = double.Parse(itemPriceField.Text);
+				await item.SaveAsync ();
+
+				MyHomeViewController homeView = (MyHomeViewController)this.Storyboard.InstantiateViewController("MyHomeViewController");
+				NavigationController.PushViewController(homeView, true);
+			};
+
+			requestButton.TouchUpInside += async (sender, e) => {
+				DatabaseOperations db_op = new DatabaseOperations();
+				ParseObject item = await db_op.getFood (objectId);
+				List<object> wanted_by = item.Get<List<object>> ("wanted_by");
+				var userSettings = NSUserDefaults.StandardUserDefaults;
+				wanted_by.Add(userSettings.StringForKey("objId"));
+				item["wanted_by"] = wanted_by;
 				await item.SaveAsync ();
 
 				MyHomeViewController homeView = (MyHomeViewController)this.Storyboard.InstantiateViewController("MyHomeViewController");
