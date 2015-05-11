@@ -50,7 +50,8 @@ namespace FoodMate
 			// Pass data about the item to the next window
 			myIntent.PutExtra ("objectId", item.objId ());
 			myIntent.PutExtra ("itemName", item.getName ());
-			myIntent.PutExtra ("itemStock", item.getStock ());
+			myIntent.PutExtra ("itemStock", item.getPrice ());
+			myIntent.PutExtra ("itemPrice", item.getStock ());
 			myIntent.PutExtra ("userId", userId);
 
 			// Start window

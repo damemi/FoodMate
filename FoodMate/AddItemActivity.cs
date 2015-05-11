@@ -25,7 +25,7 @@ namespace FoodMate
 	public class AddItemActivity : Activity
 	{
 
-		async void addItem(String itemName, int itemQuantity, string barcode = "0", string objectId = "0") {
+		async void addItem(String itemName, int itemQuantity, double itemPrice, string barcode = "0", string objectId = "0") {
 			DatabaseOperations db_op = new DatabaseOperations();
 
 			if (objectId == "0") {
@@ -34,6 +34,7 @@ namespace FoodMate
 				ParseObject item = await db_op.getFood (objectId);
 				item ["name"] = itemName;
 				item ["in_stock"] = itemQuantity;
+				item ["price"] = itemPrice;
 				await item.SaveAsync ();
 			}
 
@@ -46,6 +47,7 @@ namespace FoodMate
 			SetContentView (Resource.Layout.addItem);
 			var itemName = FindViewById<EditText>(Resource.Id.itemName);
 			var itemQuantity = FindViewById<EditText>(Resource.Id.itemQuantity);
+			var itemPrice = FindViewById<EditText>(Resource.Id.Price);
 			var AddItemButton = FindViewById<Button>(Resource.Id.addItem);
 			var buttonScan = FindViewById<Button>(Resource.Id.Barcode);
 
@@ -55,7 +57,8 @@ namespace FoodMate
 		
 			AddItemButton.Click += delegate { 
 				int qty = Convert.ToInt32 (itemQuantity.Text);
-				addItem(itemName.Text, qty, barcode, objectId); 
+				double price = Convert.ToDouble (itemPrice.Text);
+				addItem(itemName.Text, qty, price, barcode, objectId); 
 				Finish();
 			};
 

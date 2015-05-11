@@ -52,6 +52,10 @@ namespace Shared
 			return _parseObj.ObjectId;
 		}
 
+		public double getPrice()	{
+			return price;
+		}
+
 		public String getObjectId() {
 			return _parseObj.Get<String> ("objectId");
 		}

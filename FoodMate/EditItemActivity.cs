@@ -27,7 +27,7 @@ namespace FoodMate
 		string _objectId;
 		string _userId;
 
-		async void editItem(string name, int qty) {
+		async void editItem(string name, int qty, double pri) {
 			//Get actual Parse object
 			DatabaseOperations db_op = new DatabaseOperations();
 			ParseObject item2 = await db_op.getFood (_objectId);
@@ -35,6 +35,7 @@ namespace FoodMate
 			// Save to database
 			item2 ["name"] = name;
 			item2 ["in_stock"] = qty;
+			item2 ["price"] = pri;
 			await item2.SaveAsync ();
 		}
 
@@ -87,13 +88,15 @@ namespace FoodMate
 			requestedList.Adapter = new RequestedListAdapter(this, requestedUsers);
 
 			FindViewById<EditText> (Resource.Id.itemQuantity).Text = Convert.ToString (Intent.GetIntExtra ("itemStock", 0));
+			FindViewById<EditText> (Resource.Id.itemPrice).Text = Convert.ToString (Intent.GetIntExtra ("itemPrice", 0));
 
 			var EditItemButton = FindViewById<Button>(Resource.Id.editItem);
 			EditItemButton.Click += delegate { 
 				// Get updated item data
 				int newItemQty = Convert.ToInt32(FindViewById<EditText>(Resource.Id.itemQuantity).Text);
+				double newPrice = Convert.ToDouble(FindViewById<EditText>(Resource.Id.itemPrice).Text);
 				string newItemName = FindViewById<EditText>(Resource.Id.itemName).Text;
-				editItem(newItemName, newItemQty); 
+				editItem(newItemName, newItemQty, newPrice); 
 				Finish();
 			};
 
