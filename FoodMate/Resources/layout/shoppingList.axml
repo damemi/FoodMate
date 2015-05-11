@@ -17,15 +17,16 @@
         android:layout_marginBottom="20.0dp"
         android:background="#d76b00"
         android:id="@+id/editItemButton" />
-    <Button
+<!--    <Button
         android:text="Send Shopping Alert"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20.0dp"
         android:background="#ff0101"
         android:id="@+id/shopAlertButton" />
+-->
     <Button
-        android:text="Make Payment"
+        android:text="Checkout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10.0dp"

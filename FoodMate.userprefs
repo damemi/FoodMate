@@ -2,8 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Shared\DatabaseOperations.cs" Line="42" Column="23" />
-      <File FileName="Shared\User.cs" Line="1" Column="1" />
+      <File FileName="Shared\DatabaseOperations.cs" Line="71" Column="49" />
+      <File FileName="Shared\User.cs" Line="74" Column="25" />
+      <File FileName="FoodMate\AddItemActivity.cs" Line="43" Column="4" />
+      <File FileName="FoodMate\MainActivity.cs" Line="67" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
