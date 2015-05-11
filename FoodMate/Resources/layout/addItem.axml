@@ -28,7 +28,7 @@
         android:layout_below="@+id/itemName"
         android:hint="Quantity" />
     <EditText
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/Price"

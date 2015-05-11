@@ -34,7 +34,7 @@ public final class R {
         public static final int addItem=0x7f070004;
         public static final int addItemButton=0x7f07000c;
         public static final int btnLogin=0x7f070011;
-        public static final int contentFrame=0x7f070020;
+        public static final int contentFrame=0x7f07001f;
         public static final int editItem=0x7f070007;
         public static final int editItemButton=0x7f07000d;
         public static final int groupInfoText=0x7f070015;
@@ -49,9 +49,8 @@ public final class R {
         public static final int requestItemButton=0x7f070013;
         public static final int requestedListView=0x7f07000a;
         public static final int settingsUpdate=0x7f07001c;
-        public static final int shopAlertButton=0x7f07001d;
-        public static final int shoppingListView=0x7f07001e;
-        public static final int textView1=0x7f07001f;
+        public static final int shoppingListView=0x7f07001d;
+        public static final int textView1=0x7f07001e;
         public static final int txtvUserName=0x7f070010;
         public static final int userInfoText=0x7f070017;
         public static final int voteForItem=0x7f070009;

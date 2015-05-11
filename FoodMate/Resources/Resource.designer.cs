@@ -131,8 +131,8 @@ namespace FoodMate
 			// aapt resource value: 0x7f070011
 			public const int btnLogin = 2131165201;
 			
-			// aapt resource value: 0x7f070020
-			public const int contentFrame = 2131165216;
+			// aapt resource value: 0x7f07001f
+			public const int contentFrame = 2131165215;
 			
 			// aapt resource value: 0x7f070007
 			public const int editItem = 2131165191;
@@ -177,13 +177,10 @@ namespace FoodMate
 			public const int settingsUpdate = 2131165212;
 			
 			// aapt resource value: 0x7f07001d
-			public const int shopAlertButton = 2131165213;
+			public const int shoppingListView = 2131165213;
 			
 			// aapt resource value: 0x7f07001e
-			public const int shoppingListView = 2131165214;
-			
-			// aapt resource value: 0x7f07001f
-			public const int textView1 = 2131165215;
+			public const int textView1 = 2131165214;
 			
 			// aapt resource value: 0x7f070010
 			public const int txtvUserName = 2131165200;
